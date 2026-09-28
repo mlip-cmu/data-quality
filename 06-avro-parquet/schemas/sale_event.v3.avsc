@@ -1,0 +1,62 @@
+{
+  "type": "record",
+  "name": "SaleEvent",
+  "namespace": "supermarket.pos",
+  "doc": "One line on a receipt, sent by a checkout terminal",
+  "fields": [
+    {
+      "name": "event_id",
+      "type": "string"
+    },
+    {
+      "name": "event_time",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    },
+    {
+      "name": "store_id",
+      "type": "int"
+    },
+    {
+      "name": "product_id",
+      "type": "int"
+    },
+    {
+      "name": "quantity",
+      "type": "string"
+    },
+    {
+      "name": "unit",
+      "type": {
+        "type": "enum",
+        "name": "Unit",
+        "symbols": [
+          "count",
+          "kg",
+          "liter"
+        ]
+      }
+    },
+    {
+      "name": "unit_price",
+      "type": {
+        "type": "bytes",
+        "logicalType": "decimal",
+        "precision": 8,
+        "scale": 2
+      }
+    },
+    {
+      "name": "promo",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "name": "register_id",
+      "type": "string",
+      "doc": "renamed from terminal_id"
+    }
+  ]
+}
