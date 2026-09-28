@@ -1,0 +1,1073 @@
+delivery_id,order_date,delivery_date,supplier_id,supplier_name,store_id,store_city,store_zip,product_id,product_name,category,quantity,unit,received_by,received_at,entered_at
+612931,2025-02-28,2025-03-01,201,Fresh Fields Produce,1,Pittsburgh,15213,101,Banana,produce,54.0,kg,E012,2025-03-01 10:55:00,2025-03-01 10:58:00
+612932,2025-02-28,2025-03-01,211,Ohio Valley Farms,1,Pittsburgh,15213,102,Cucumber,produce,72.0,count,E012,2025-03-01 07:05:00,2025-03-01 07:28:00
+612933,2025-02-28,2025-03-01,211,Ohio Valley Farms,1,Pittsburgh,15213,103,Cauliflower,produce,24.0,count,E012,2025-03-01 13:12:00,2025-03-01 14:21:00
+612934,2025-02-28,2025-03-01,201,Fresh Fields Produce,1,Pittsburgh,15213,104,Organic Banana,produce,18.0,kg,E013,2025-03-01 12:37:00,2025-03-01 12:44:00
+612935,2025-02-28,2025-03-01,211,Ohio Valley Farms,1,Pittsburgh,15213,105,Gala Apple,produce,54.0,kg,E013,2025-03-01 06:11:00,2025-03-01 07:27:00
+612936,2025-02-28,2025-03-01,201,Fresh Fields Produce,1,Pittsburgh,15213,106,Tomato,produce,20.0,kg,E011,2025-03-01 10:51:00,2025-03-01 10:53:00
+612937,2025-02-28,2025-03-01,211,Ohio Valley Farms,1,Pittsburgh,15213,107,Iceberg Lettuce,produce,24.0,count,E013,2025-03-01 13:53:00,2025-03-01 13:53:00
+612938,2025-02-28,2025-03-01,201,Fresh Fields Produce,1,Pittsburgh,15213,108,Avocado,produce,48.0,count,E014,2025-03-01 09:37:00,2025-03-01 10:27:00
+612939,2025-02-28,2025-03-01,211,Ohio Valley Farms,1,Pittsburgh,15213,109,Carrots 2 lb Bag,produce,20.0,count,E014,2025-03-01 10:13:00,2025-03-01 10:17:00
+612940,2025-02-28,2025-03-01,211,Ohio Valley Farms,1,Pittsburgh,15213,110,Potato,produce,60.0,kg,E012,2025-03-01 08:38:00,2025-03-01 09:02:00
+612941,2025-02-28,2025-03-01,211,Ohio Valley Farms,1,Pittsburgh,15213,111,Yellow Onion,produce,20.0,kg,E011,2025-03-01 06:30:00,2025-03-01 06:39:00
+612942,2025-02-28,2025-03-01,201,Fresh Fields Produce,1,Pittsburgh,15213,114,Watermelon,produce,16.0,count,E012,2025-03-01 12:15:00,2025-03-01 12:18:00
+612943,2025-02-28,2025-03-01,201,Fresh Fields Produce,1,Pittsburgh,15213,115,Blueberries 6 oz,produce,12.0,count,E014,2025-03-01 12:40:00,2025-03-01 13:30:00
+612944,2025-02-28,2025-03-01,202,Keystone Dairy,1,Pittsburgh,15213,116,Whole Milk 1/2 gal,dairy,36.0,count,E011,2025-03-01 07:47:00,2025-03-01 08:07:00
+612945,2025-02-28,2025-03-01,202,Keystone Dairy,1,Pittsburgh,15213,117,Whole Milk 1 gal,dairy,36.0,count,E013,2025-03-01 09:34:00,2025-03-01 09:42:00
+612946,2025-02-28,2025-03-01,202,Keystone Dairy,1,Pittsburgh,15213,118,Large Eggs 12 ct,dairy,45.0,count,E014,2025-03-01 08:03:00,2025-03-05 08:57:00
+612947,2025-02-28,2025-03-01,202,Keystone Dairy,1,Pittsburgh,15213,119,Greek Yogurt 32 oz,dairy,24.0,count,E011,2025-03-01 12:45:00,2025-03-02 13:24:00
+612948,2025-02-28,2025-03-01,202,Keystone Dairy,1,Pittsburgh,15213,120,Cheddar Cheese 8 oz,dairy,12.0,count,E012,2025-03-01 12:39:00,2025-03-01 12:39:00
+612949,2025-02-26,2025-03-01,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,8.0,count,E012,2025-03-01 11:13:00,2025-03-01 11:30:00
+612950,2025-02-28,2025-03-01,203,Allegheny Bakery,1,Pittsburgh,15213,123,White Bread,bakery,24.0,count,E013,2025-03-01 09:39:00,2025-03-01 09:57:00
+612951,2025-02-28,2025-03-01,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,24.0,count,E014,2025-03-01 12:08:00,2025-03-01 12:14:00
+612952,2025-02-28,2025-03-01,203,Allegheny Bakery,1,Pittsburgh,15213,125,Bagels 6 ct,bakery,36.0,count,E012,2025-03-01 13:37:00,2025-03-01 14:18:00
+612953,2025-02-28,2025-03-01,203,Allegheny Bakery,1,Pittsburgh,15213,126,Croissant,bakery,24.0,count,E014,2025-03-01 10:23:00,2025-03-01 10:36:00
+612954,2025-02-27,2025-03-01,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,10.0,kg,E014,2025-03-01 09:42:00,2025-03-01 10:02:00
+612955,2025-02-27,2025-03-01,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,10.0,kg,E012,2025-03-01 11:42:00,2025-03-01 12:12:00
+612956,2025-02-27,2025-03-01,204,Laurel Highlands Meats,1,Pittsburgh,15213,129,Pork Chops,meat,10.0,kg,E013,2025-03-01 12:37:00,2025-03-01 13:49:00
+612957,2025-02-27,2025-03-01,205,Great Lakes Seafood,1,Pittsburgh,15213,130,Atlantic Salmon,seafood,10.0,kg,E012,2025-03-01 12:09:00,2025-03-01 12:24:00
+612958,2025-02-27,2025-03-01,205,Great Lakes Seafood,1,Pittsburgh,15213,131,Frozen Shrimp 1 lb,frozen,12.0,count,E014,2025-03-01 12:51:00,2025-03-01 13:11:00
+612959,2025-02-26,2025-03-01,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,16.0,count,E014,2025-03-01 13:00:00,2025-03-01 13:33:00
+612960,2025-02-26,2025-03-01,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,16.0,count,E011,2025-03-01 08:20:00,2025-03-01 08:41:00
+612961,2025-02-26,2025-03-01,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,10.0,count,E011,2025-03-01 10:11:00,2025-03-01 10:25:00
+612962,2025-02-26,2025-03-01,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,6.0,count,E012,2025-03-01 08:28:00,2025-03-01 09:08:00
+612963,2025-02-26,2025-03-01,206,Three Rivers Beverages,1,Pittsburgh,15213,137,Iced Tea 1 gal,beverages,12.0,count,E012,2025-03-01 13:46:00,2025-03-01 14:35:00
+612964,2025-02-26,2025-03-01,207,Heartland Pantry,1,Pittsburgh,15213,138,Spaghetti 1 lb,pantry,20.0,count,E013,2025-03-01 11:39:00,2025-03-01 13:25:00
+612965,2025-02-26,2025-03-01,207,Heartland Pantry,1,Pittsburgh,15213,139,Marinara Sauce 24 oz,pantry,12.0,count,E013,2025-03-01 10:13:00,2025-03-01 10:46:00
+612966,2025-02-26,2025-03-01,207,Heartland Pantry,1,Pittsburgh,15213,140,Long Grain Rice 2 lb,pantry,12.0,count,E014,2025-03-01 06:51:00,2025-03-01 07:33:00
+612967,2025-02-26,2025-03-01,207,Heartland Pantry,1,Pittsburgh,15213,141,Long Grain Rice 5 lb,pantry,8.0,count,E014,2025-03-01 07:34:00,2025-03-01 07:55:00
+612968,2025-02-26,2025-03-01,207,Heartland Pantry,1,Pittsburgh,15213,142,Peanut Butter 16 oz,pantry,12.0,count,E012,2025-03-01 09:26:00,2025-03-01 09:38:00
+612969,2025-02-26,2025-03-01,207,Heartland Pantry,1,Pittsburgh,15213,144,Corn Flakes 18 oz,pantry,12.0,count,E011,2025-03-01 07:05:00,2025-03-01 07:06:00
+612970,2025-02-26,2025-03-01,207,Heartland Pantry,1,Pittsburgh,15213,145,Olive Oil 1 L,pantry,12.0,count,E012,2025-03-01 13:19:00,2025-03-01 13:32:00
+612971,2025-02-26,2025-03-01,208,Sunrise Frozen Foods,1,Pittsburgh,15213,147,Frozen Pizza,frozen,10.0,count,E011,2025-03-01 11:52:00,2025-03-01 12:20:00
+612972,2025-02-26,2025-03-01,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,8.0,count,E011,2025-03-01 13:09:00,2025-03-01 13:41:00
+612973,2025-02-26,2025-03-01,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,12.0,count,E013,2025-03-01 06:21:00,2025-03-01 06:56:00
+612974,2025-02-26,2025-03-01,209,CleanHome Supplies,1,Pittsburgh,15213,152,Dish Soap 20 oz,household,12.0,count,E011,2025-03-01 13:27:00,2025-03-01 14:30:00
+612975,2025-02-26,2025-03-01,209,CleanHome Supplies,1,Pittsburgh,15213,153,Laundry Detergent 100 oz,household,8.0,count,E012,2025-03-01 13:48:00,2025-03-01 14:56:00
+612976,2025-02-27,2025-03-01,210,EcoRefill Co.,1,Pittsburgh,15213,156,Refill Olive Oil,refill,20.0,liter,E013,2025-03-01 10:33:00,2025-03-01 11:15:00
+612977,2025-02-28,2025-03-01,211,Ohio Valley Farms,1,Pittsburgh,15213,158,Fresh Basil,produce,12.0,count,E014,2025-03-01 12:11:00,2025-03-01 12:24:00
+612978,2025-02-27,2025-03-01,204,Laurel Highlands Meats,1,Pittsburgh,15213,159,Sliced Deli Turkey,meat,10.0,kg,E014,2025-03-01 09:02:00,2025-03-01 09:13:00
+612979,2025-02-27,2025-03-01,212,Blue Ridge Grocery Supply,1,Pittsburgh,15213,160,Hummus 10 oz,dairy,12.0,count,E011,2025-03-01 08:33:00,2025-03-01 08:35:00
+613268,2025-03-01,2025-03-02,211,Ohio Valley Farms,1,Pittsburgh,15213,103,Cauliflower,produce,24.0,count,E014,2025-03-02 07:26:00,2025-03-02 07:47:00
+613269,2025-03-01,2025-03-02,211,Ohio Valley Farms,1,Pittsburgh,15213,107,Iceberg Lettuce,produce,24.0,count,E012,2025-03-02 06:05:00,2025-03-02 06:08:00
+613270,2025-03-01,2025-03-02,201,Fresh Fields Produce,1,Pittsburgh,15213,112,Strawberries 1 lb,produce,24.0,count,E014,2025-03-02 06:42:00,2025-03-02 06:44:00
+613271,2025-03-01,2025-03-02,201,Fresh Fields Produce,1,Pittsburgh,15213,115,Blueberries 6 oz,produce,24.0,count,E012,2025-03-02 09:32:00,2025-03-02 11:21:00
+613272,2025-03-01,2025-03-02,202,Keystone Dairy,1,Pittsburgh,15213,116,Whole Milk 1/2 gal,dairy,36.0,count,E011,2025-03-02 12:01:00,2025-03-05 12:20:00
+613273,2025-03-01,2025-03-02,202,Keystone Dairy,1,Pittsburgh,15213,118,Large Eggs 12 ct,dairy,15.0,count,E013,2025-03-02 11:15:00,2025-03-02 11:24:00
+613274,2025-03-01,2025-03-02,202,Keystone Dairy,1,Pittsburgh,15213,121,Salted Butter 1 lb,dairy,18.0,count,E014,2025-03-02 06:17:00,2025-03-02 06:31:00
+613275,2025-02-27,2025-03-02,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,8.0,count,E011,2025-03-02 10:46:00,2025-03-02 13:01:00
+613276,2025-03-01,2025-03-02,203,Allegheny Bakery,1,Pittsburgh,15213,123,White Bread,bakery,36.0,count,E013,2025-03-02 12:33:00,2025-03-02 13:11:00
+613277,2025-03-01,2025-03-02,203,Allegheny Bakery,1,Pittsburgh,15213,125,Bagels 6 ct,bakery,12.0,count,E012,2025-03-02 08:33:00,2025-03-06 09:17:00
+613278,2025-03-01,2025-03-02,203,Allegheny Bakery,1,Pittsburgh,15213,126,Croissant,bakery,24.0,count,E011,2025-03-02 12:58:00,2025-03-02 14:32:00
+613279,2025-02-28,2025-03-02,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,30.0,kg,E011,2025-03-02 11:55:00,2025-03-02 11:59:00
+613280,2025-02-28,2025-03-02,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,10.0,kg,E013,2025-03-02 07:04:00,2025-03-02 07:16:00
+613281,2025-02-28,2025-03-02,204,Laurel Highlands Meats,1,Pittsburgh,15213,129,Pork Chops,meat,10.0,kg,E012,2025-03-02 10:31:00,2025-03-02 11:04:00
+613282,2025-02-28,2025-03-02,205,Great Lakes Seafood,1,Pittsburgh,15213,130,Atlantic Salmon,seafood,5.0,kg,E014,2025-03-02 11:56:00,2025-03-02 12:59:00
+613283,2025-02-28,2025-03-02,205,Great Lakes Seafood,1,Pittsburgh,15213,131,Frozen Shrimp 1 lb,frozen,12.0,count,E013,2025-03-02 07:55:00,2025-03-02 08:21:00
+613284,2025-02-27,2025-03-02,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,20.0,count,E014,2025-03-02 13:51:00,2025-03-02 14:04:00
+613285,2025-02-27,2025-03-02,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,16.0,count,E013,2025-03-02 08:18:00,2025-03-02 08:20:00
+613286,2025-02-27,2025-03-02,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,12.0,count,E014,2025-03-02 06:27:00,2025-03-07 06:34:00
+613287,2025-02-27,2025-03-02,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,12.0,count,E012,2025-03-02 13:22:00,2025-03-02 13:26:00
+613288,2025-02-27,2025-03-02,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,12.0,count,E012,2025-03-02 06:31:00,2025-03-02 07:11:00
+613289,2025-02-27,2025-03-02,207,Heartland Pantry,1,Pittsburgh,15213,140,Long Grain Rice 2 lb,pantry,12.0,count,E014,2025-03-02 09:37:00,2025-03-06 09:59:00
+613290,2025-02-27,2025-03-02,207,Heartland Pantry,1,Pittsburgh,15213,142,Peanut Butter 16 oz,pantry,12.0,count,E011,2025-03-02 12:11:00,2025-03-02 12:33:00
+613291,2025-02-27,2025-03-02,207,Heartland Pantry,1,Pittsburgh,15213,144,Corn Flakes 18 oz,pantry,24.0,count,E013,2025-03-02 07:11:00,2025-03-02 07:46:00
+613292,2025-02-27,2025-03-02,207,Heartland Pantry,1,Pittsburgh,15213,145,Olive Oil 1 L,pantry,12.0,count,E011,2025-03-02 12:46:00,2025-03-02 12:49:00
+613293,2025-02-27,2025-03-02,208,Sunrise Frozen Foods,1,Pittsburgh,15213,146,Vanilla Ice Cream 1.5 qt,frozen,18.0,count,E013,2025-03-02 10:06:00,2025-03-02 10:32:00
+613294,2025-02-27,2025-03-02,208,Sunrise Frozen Foods,1,Pittsburgh,15213,147,Frozen Pizza,frozen,20.0,count,E014,2025-03-02 11:21:00,2025-03-02 11:29:00
+613295,2025-02-27,2025-03-02,208,Sunrise Frozen Foods,1,Pittsburgh,15213,148,Frozen Peas 16 oz,frozen,12.0,count,E014,2025-03-02 12:42:00,2025-03-02 13:05:00
+613296,2025-02-27,2025-03-02,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,8.0,count,E012,2025-03-02 11:35:00,2025-03-02 11:55:00
+613297,2025-02-27,2025-03-02,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,16.0,count,E011,2025-03-02 08:46:00,2025-03-02 10:20:00
+613298,2025-02-27,2025-03-02,209,CleanHome Supplies,1,Pittsburgh,15213,152,Dish Soap 20 oz,household,12.0,count,E012,2025-03-02 10:47:00,2025-03-02 10:57:00
+613299,2025-02-27,2025-03-02,209,CleanHome Supplies,1,Pittsburgh,15213,153,Laundry Detergent 100 oz,household,4.0,count,E014,2025-03-02 06:54:00,2025-03-02 07:30:00
+613300,2025-02-28,2025-03-02,204,Laurel Highlands Meats,1,Pittsburgh,15213,159,Sliced Deli Turkey,meat,5.0,kg,E013,2025-03-02 07:48:00,2025-03-02 09:00:00
+613301,2025-02-28,2025-03-02,212,Blue Ridge Grocery Supply,1,Pittsburgh,15213,160,Hummus 10 oz,dairy,12.0,count,E011,2025-03-02 09:21:00,2025-03-02 09:39:00
+613557,2025-03-02,2025-03-03,201,Fresh Fields Produce,1,Pittsburgh,15213,101,Banana,produce,72.0,kg,E012,2025-03-03 11:04:00,2025-03-03 11:20:00
+613558,2025-03-02,2025-03-03,211,Ohio Valley Farms,1,Pittsburgh,15213,102,Cucumber,produce,72.0,count,E014,2025-03-03 12:11:00,2025-03-03 12:16:00
+613559,2025-03-02,2025-03-03,201,Fresh Fields Produce,1,Pittsburgh,15213,104,Organic Banana,produce,36.0,kg,E014,2025-03-03 13:40:00,2025-03-06 14:09:00
+613560,2025-03-02,2025-03-03,201,Fresh Fields Produce,1,Pittsburgh,15213,106,Tomato,produce,20.0,kg,E012,2025-03-03 09:04:00,2025-03-03 09:28:00
+613561,2025-03-02,2025-03-03,211,Ohio Valley Farms,1,Pittsburgh,15213,109,Carrots 2 lb Bag,produce,40.0,count,E011,2025-03-03 08:40:00,2025-03-03 08:40:00
+613562,2025-03-02,2025-03-03,211,Ohio Valley Farms,1,Pittsburgh,15213,111,Yellow Onion,produce,40.0,kg,E014,2025-03-03 10:46:00,2025-03-03 11:25:00
+613563,2025-03-02,2025-03-03,202,Keystone Dairy,1,Pittsburgh,15213,116,Whole Milk 1/2 gal,dairy,27.0,count,E014,2025-03-03 12:40:00,2025-03-03 12:53:00
+613564,2025-03-02,2025-03-03,202,Keystone Dairy,1,Pittsburgh,15213,117,Whole Milk 1 gal,dairy,44.0,count,E011,2025-03-03 07:11:00,2025-03-03 07:23:00
+613565,2025-03-02,2025-03-03,202,Keystone Dairy,1,Pittsburgh,15213,119,Greek Yogurt 32 oz,dairy,24.0,count,E013,2025-03-03 06:31:00,2025-03-08 07:13:00
+613566,2025-02-28,2025-03-03,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,8.0,count,E011,2025-03-03 07:19:00,2025-03-03 07:40:00
+613567,2025-03-02,2025-03-03,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,24.0,count,E012,2025-03-03 10:21:00,2025-03-03 10:57:00
+613568,2025-03-02,2025-03-03,203,Allegheny Bakery,1,Pittsburgh,15213,125,Bagels 6 ct,bakery,24.0,count,E011,2025-03-03 08:39:00,2025-03-03 08:46:00
+613569,2025-03-01,2025-03-03,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,10.0,kg,E012,2025-03-03 08:33:00,2025-03-03 09:29:00
+613570,2025-03-01,2025-03-03,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,20.0,kg,E011,2025-03-03 08:16:00,2025-03-03 08:18:00
+613571,2025-03-01,2025-03-03,204,Laurel Highlands Meats,1,Pittsburgh,15213,129,Pork Chops,meat,10.0,kg,E012,2025-03-03 11:37:00,2025-03-03 11:59:00
+613572,2025-02-28,2025-03-03,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,18.0,count,E012,2025-03-03 13:01:00,2025-03-03 13:12:00
+613573,2025-02-28,2025-03-03,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,16.0,count,E013,2025-03-03 11:28:00,2025-03-03 12:36:00
+613574,2025-02-28,2025-03-03,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,22.0,count,E011,2025-03-03 09:48:00,2025-03-03 09:52:00
+613575,2025-02-28,2025-03-03,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,23.0,count,E012,2025-03-03 08:29:00,2025-03-06 09:29:00
+613576,2025-02-28,2025-03-03,206,Three Rivers Beverages,1,Pittsburgh,15213,137,Iced Tea 1 gal,beverages,4.0,count,E012,2025-03-03 13:15:00,2025-03-03 13:30:00
+613577,2025-02-28,2025-03-03,207,Heartland Pantry,1,Pittsburgh,15213,138,Spaghetti 1 lb,pantry,20.0,count,E012,2025-03-03 07:24:00,2025-03-03 07:38:00
+613578,2025-02-28,2025-03-03,207,Heartland Pantry,1,Pittsburgh,15213,139,Marinara Sauce 24 oz,pantry,12.0,count,E013,2025-03-03 08:10:00,2025-03-03 08:40:00
+613579,2025-02-28,2025-03-03,207,Heartland Pantry,1,Pittsburgh,15213,140,Long Grain Rice 2 lb,pantry,24.0,count,E014,2025-03-03 08:34:00,2025-03-03 09:06:00
+613580,2025-02-28,2025-03-03,207,Heartland Pantry,1,Pittsburgh,15213,141,Long Grain Rice 5 lb,pantry,8.0,count,E011,2025-03-03 08:51:00,2025-03-03 09:17:00
+613581,2025-02-28,2025-03-03,207,Heartland Pantry,1,Pittsburgh,15213,142,Peanut Butter 16 oz,pantry,24.0,count,E012,2025-03-03 10:59:00,2025-03-03 11:00:00
+613582,2025-02-28,2025-03-03,207,Heartland Pantry,1,Pittsburgh,15213,143,Tomato Soup,pantry,24.0,count,E011,2025-03-03 10:20:00,2025-03-03 10:37:00
+613583,2025-02-28,2025-03-03,207,Heartland Pantry,1,Pittsburgh,15213,144,Corn Flakes 18 oz,pantry,12.0,count,E013,2025-03-03 12:53:00,2025-03-03 13:50:00
+613584,2025-02-28,2025-03-03,207,Heartland Pantry,1,Pittsburgh,15213,145,Olive Oil 1 L,pantry,12.0,count,E011,2025-03-03 10:31:00,2025-03-03 10:35:00
+613585,2025-02-28,2025-03-03,208,Sunrise Frozen Foods,1,Pittsburgh,15213,147,Frozen Pizza,frozen,10.0,count,E014,2025-03-03 12:58:00,2025-03-03 13:23:00
+613586,2025-02-28,2025-03-03,208,Sunrise Frozen Foods,1,Pittsburgh,15213,148,Frozen Peas 16 oz,frozen,12.0,count,E014,2025-03-03 08:14:00,2025-03-03 08:48:00
+613587,2025-02-28,2025-03-03,208,Sunrise Frozen Foods,1,Pittsburgh,15213,149,Ice Cubes 7 lb,frozen,6.0,count,E013,2025-03-03 11:33:00,2025-03-03 11:39:00
+613588,2025-02-28,2025-03-03,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,12.0,count,E014,2025-03-03 07:23:00,2025-03-03 07:42:00
+613589,2025-02-28,2025-03-03,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,12.0,count,E013,2025-03-03 07:34:00,2025-03-03 07:38:00
+613590,2025-02-28,2025-03-03,209,CleanHome Supplies,1,Pittsburgh,15213,152,Dish Soap 20 oz,household,12.0,count,E011,2025-03-03 06:01:00,2025-03-03 06:15:00
+613591,2025-02-28,2025-03-03,209,CleanHome Supplies,1,Pittsburgh,15213,153,Laundry Detergent 100 oz,household,4.0,count,E011,2025-03-03 06:34:00,2025-03-03 06:37:00
+613592,2025-03-01,2025-03-03,210,EcoRefill Co.,1,Pittsburgh,15213,154,Refill Laundry Detergent,refill,20.0,liter,E012,2025-03-03 07:21:00,2025-03-03 07:45:00
+613593,2025-03-01,2025-03-03,210,EcoRefill Co.,1,Pittsburgh,15213,155,Refill Dish Soap,refill,20.0,liter,E014,2025-03-03 09:21:00,2025-03-03 10:18:00
+613594,2025-03-02,2025-03-03,211,Ohio Valley Farms,1,Pittsburgh,15213,158,Fresh Basil,produce,12.0,count,E011,2025-03-03 12:38:00,2025-03-03 13:49:00
+613595,2025-03-01,2025-03-03,204,Laurel Highlands Meats,1,Pittsburgh,15213,159,Sliced Deli Turkey,meat,5.0,kg,E012,2025-03-03 06:39:00,2025-03-03 07:05:00
+613801,2025-03-03,2025-03-04,211,Ohio Valley Farms,1,Pittsburgh,15213,103,Cauliflower,produce,24.0,count,E012,2025-03-04 10:58:00,2025-03-04 11:12:00
+613802,2025-03-03,2025-03-04,211,Ohio Valley Farms,1,Pittsburgh,15213,105,Gala Apple,produce,36.0,kg,E012,2025-03-04 11:33:00,2025-03-04 12:17:00
+613803,2025-03-03,2025-03-04,201,Fresh Fields Produce,1,Pittsburgh,15213,112,Strawberries 1 lb,produce,32.0,count,E012,2025-03-04 09:31:00,2025-03-04 10:09:00
+613804,2025-03-03,2025-03-04,202,Keystone Dairy,1,Pittsburgh,15213,118,Large Eggs 12 ct,dairy,45.0,count,E011,2025-03-04 07:50:00,2025-03-04 08:43:00
+613805,2025-03-03,2025-03-04,202,Keystone Dairy,1,Pittsburgh,15213,121,Salted Butter 1 lb,dairy,18.0,count,E014,2025-03-04 12:08:00,2025-03-04 12:28:00
+613806,2025-03-01,2025-03-04,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,16.0,count,E013,2025-03-04 10:31:00,2025-03-04 10:41:00
+613807,2025-03-03,2025-03-04,203,Allegheny Bakery,1,Pittsburgh,15213,126,Croissant,bakery,24.0,count,E014,2025-03-04 08:52:00,2025-03-04 08:58:00
+613808,2025-03-02,2025-03-04,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,20.0,kg,E012,2025-03-04 11:59:00,2025-03-04 12:02:00
+613809,2025-03-02,2025-03-04,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,10.0,kg,E014,2025-03-04 10:02:00,2025-03-07 10:51:00
+613810,2025-03-02,2025-03-04,205,Great Lakes Seafood,1,Pittsburgh,15213,130,Atlantic Salmon,seafood,10.0,kg,E014,2025-03-04 13:11:00,2025-03-04 13:25:00
+613811,2025-03-02,2025-03-04,205,Great Lakes Seafood,1,Pittsburgh,15213,131,Frozen Shrimp 1 lb,frozen,12.0,count,E013,2025-03-04 10:25:00,2025-03-04 11:17:00
+613812,2025-03-01,2025-03-04,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,10.0,count,E013,2025-03-04 07:37:00,2025-03-04 08:31:00
+613813,2025-03-01,2025-03-04,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,20.0,count,E011,2025-03-04 11:21:00,2025-03-04 11:28:00
+613814,2025-03-01,2025-03-04,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,20.0,count,E013,2025-03-04 07:37:00,2025-03-04 07:46:00
+613815,2025-03-01,2025-03-04,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,5.0,count,E014,2025-03-04 11:29:00,2025-03-04 11:37:00
+613816,2025-03-01,2025-03-04,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,12.0,count,E011,2025-03-04 07:52:00,2025-03-04 08:01:00
+613817,2025-03-01,2025-03-04,206,Three Rivers Beverages,1,Pittsburgh,15213,137,Iced Tea 1 gal,beverages,12.0,count,E013,2025-03-04 11:25:00,2025-03-04 11:29:00
+613818,2025-03-01,2025-03-04,207,Heartland Pantry,1,Pittsburgh,15213,138,Spaghetti 1 lb,pantry,20.0,count,E011,2025-03-04 06:43:00,2025-03-04 07:41:00
+613819,2025-03-01,2025-03-04,207,Heartland Pantry,1,Pittsburgh,15213,139,Marinara Sauce 24 oz,pantry,12.0,count,E012,2025-03-04 08:39:00,2025-03-04 08:40:00
+613820,2025-03-01,2025-03-04,207,Heartland Pantry,1,Pittsburgh,15213,141,Long Grain Rice 5 lb,pantry,8.0,count,E013,2025-03-04 12:09:00,2025-03-04 13:48:00
+613821,2025-03-01,2025-03-04,207,Heartland Pantry,1,Pittsburgh,15213,143,Tomato Soup,pantry,24.0,count,E014,2025-03-04 09:20:00,2025-03-04 09:22:00
+613822,2025-03-01,2025-03-04,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,12.0,count,E014,2025-03-04 11:39:00,2025-03-04 12:16:00
+613823,2025-03-01,2025-03-04,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,12.0,count,E013,2025-03-04 10:43:00,2025-03-04 11:23:00
+613824,2025-03-01,2025-03-04,209,CleanHome Supplies,1,Pittsburgh,15213,153,Laundry Detergent 100 oz,household,8.0,count,E012,2025-03-04 08:52:00,2025-03-04 08:56:00
+613991,2025-03-04,2025-03-05,211,Ohio Valley Farms,1,Pittsburgh,15213,102,Cucumber,produce,72.0,count,E013,2025-03-05 13:35:00,2025-03-05 14:28:00
+613992,2025-03-04,2025-03-05,201,Fresh Fields Produce,1,Pittsburgh,15213,106,Tomato,produce,20.0,kg,E012,2025-03-05 13:02:00,2025-03-05 13:48:00
+613993,2025-03-04,2025-03-05,211,Ohio Valley Farms,1,Pittsburgh,15213,107,Iceberg Lettuce,produce,48.0,count,E014,2025-03-05 06:12:00,2025-03-05 06:27:00
+613994,2025-03-04,2025-03-05,201,Fresh Fields Produce,1,Pittsburgh,15213,108,Avocado,produce,48.0,count,E011,2025-03-05 12:42:00,2025-03-05 14:04:00
+613995,2025-03-04,2025-03-05,211,Ohio Valley Farms,1,Pittsburgh,15213,110,Potato,produce,60.0,kg,E013,2025-03-05 12:08:00,2025-03-05 12:25:00
+613996,2025-03-04,2025-03-05,201,Fresh Fields Produce,1,Pittsburgh,15213,115,Blueberries 6 oz,produce,24.0,count,E011,2025-03-05 06:33:00,2025-03-05 07:17:00
+613997,2025-03-04,2025-03-05,202,Keystone Dairy,1,Pittsburgh,15213,116,Whole Milk 1/2 gal,dairy,45.0,count,E014,2025-03-05 10:11:00,2025-03-05 11:08:00
+613998,2025-03-04,2025-03-05,202,Keystone Dairy,1,Pittsburgh,15213,117,Whole Milk 1 gal,dairy,52.0,count,E012,2025-03-05 09:05:00,2025-03-05 09:40:00
+613999,2025-03-04,2025-03-05,202,Keystone Dairy,1,Pittsburgh,15213,118,Large Eggs 12 ct,dairy,30.0,count,E014,2025-03-05 13:55:00,2025-03-05 14:31:00
+614000,2025-03-04,2025-03-05,202,Keystone Dairy,1,Pittsburgh,15213,120,Cheddar Cheese 8 oz,dairy,24.0,count,E013,2025-03-05 07:12:00,2025-03-05 07:27:00
+614001,2025-03-04,2025-03-05,203,Allegheny Bakery,1,Pittsburgh,15213,123,White Bread,bakery,36.0,count,E014,2025-03-05 06:26:00,2025-03-05 06:38:00
+614002,2025-03-04,2025-03-05,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,12.0,count,E012,2025-03-05 13:27:00,2025-03-05 13:56:00
+614003,2025-03-03,2025-03-05,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,10.0,kg,E011,2025-03-05 10:32:00,2025-03-05 10:58:00
+614004,2025-03-02,2025-03-05,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,4.0,count,E013,2025-03-05 12:08:00,2025-03-05 12:55:00
+614005,2025-03-02,2025-03-05,207,Heartland Pantry,1,Pittsburgh,15213,140,Long Grain Rice 2 lb,pantry,12.0,count,E013,2025-03-05 10:16:00,2025-03-05 10:28:00
+614006,2025-03-02,2025-03-05,208,Sunrise Frozen Foods,1,Pittsburgh,15213,147,Frozen Pizza,frozen,10.0,count,E014,2025-03-05 07:06:00,2025-03-05 09:37:00
+614007,2025-03-02,2025-03-05,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,8.0,count,E013,2025-03-05 06:59:00,2025-03-05 07:11:00
+614008,2025-03-02,2025-03-05,209,CleanHome Supplies,1,Pittsburgh,15213,152,Dish Soap 20 oz,household,12.0,count,E014,2025-03-05 07:27:00,2025-03-05 07:39:00
+614009,2025-03-02,2025-03-05,209,CleanHome Supplies,1,Pittsburgh,15213,153,Laundry Detergent 100 oz,household,4.0,count,E013,2025-03-05 11:46:00,2025-03-05 12:26:00
+614010,2025-03-03,2025-03-05,210,EcoRefill Co.,1,Pittsburgh,15213,154,Refill Laundry Detergent,refill,20.0,liter,E012,2025-03-05 10:45:00,2025-03-08 10:54:00
+614011,2025-03-03,2025-03-05,210,EcoRefill Co.,1,Pittsburgh,15213,157,Refill Oat Milk,refill,20.0,liter,E012,2025-03-05 11:55:00,2025-03-05 13:30:00
+614012,2025-03-03,2025-03-05,204,Laurel Highlands Meats,1,Pittsburgh,15213,159,Sliced Deli Turkey,meat,10.0,kg,E014,2025-03-05 13:09:00,2025-03-05 14:27:00
+614013,2025-03-03,2025-03-05,212,Blue Ridge Grocery Supply,1,Pittsburgh,15213,160,Hummus 10 oz,dairy,12.0,count,E013,2025-03-05 07:55:00,2025-03-05 08:23:00
+614168,2025-03-05,2025-03-06,201,Fresh Fields Produce,1,Pittsburgh,15213,101,Banana,produce,72.0,kg,E014,2025-03-06 08:57:00,2025-03-06 09:35:00
+614169,2025-03-05,2025-03-06,211,Ohio Valley Farms,1,Pittsburgh,15213,103,Cauliflower,produce,36.0,count,E014,2025-03-06 10:10:00,2025-03-06 10:12:00
+614170,2025-03-05,2025-03-06,211,Ohio Valley Farms,1,Pittsburgh,15213,111,Yellow Onion,produce,20.0,kg,E011,2025-03-06 10:49:00,2025-03-06 11:11:00
+614171,2025-03-05,2025-03-06,201,Fresh Fields Produce,1,Pittsburgh,15213,113,Lemon,produce,100.0,count,E014,2025-03-06 06:29:00,2025-03-06 07:41:00
+614172,2025-03-05,2025-03-06,202,Keystone Dairy,1,Pittsburgh,15213,119,Greek Yogurt 32 oz,dairy,18.0,count,E012,2025-03-06 08:56:00,2025-03-06 09:05:00
+614173,2025-03-03,2025-03-06,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,8.0,count,E014,2025-03-06 09:37:00,2025-03-06 10:04:00
+614174,2025-03-05,2025-03-06,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,24.0,count,E012,2025-03-06 10:16:00,2025-03-06 10:23:00
+614175,2025-03-05,2025-03-06,203,Allegheny Bakery,1,Pittsburgh,15213,126,Croissant,bakery,48.0,count,E013,2025-03-06 10:50:00,2025-03-06 10:59:00
+614176,2025-03-04,2025-03-06,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,20.0,kg,E014,2025-03-06 13:26:00,2025-03-06 14:12:00
+614177,2025-03-04,2025-03-06,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,10.0,kg,E013,2025-03-06 13:09:00,2025-03-06 13:09:00
+614178,2025-03-04,2025-03-06,204,Laurel Highlands Meats,1,Pittsburgh,15213,129,Pork Chops,meat,10.0,kg,E013,2025-03-06 07:10:00,2025-03-06 07:44:00
+614179,2025-03-04,2025-03-06,205,Great Lakes Seafood,1,Pittsburgh,15213,130,Atlantic Salmon,seafood,10.0,kg,E014,2025-03-06 13:50:00,2025-03-06 13:55:00
+614180,2025-03-04,2025-03-06,205,Great Lakes Seafood,1,Pittsburgh,15213,131,Frozen Shrimp 1 lb,frozen,12.0,count,E012,2025-03-06 11:13:00,2025-03-06 11:16:00
+614181,2025-03-03,2025-03-06,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,14.0,count,E012,2025-03-06 10:04:00,2025-03-06 11:09:00
+614182,2025-03-03,2025-03-06,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,4.0,count,E012,2025-03-06 09:18:00,2025-03-06 09:30:00
+614183,2025-03-03,2025-03-06,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,14.0,count,E013,2025-03-06 10:45:00,2025-03-06 11:04:00
+614184,2025-03-03,2025-03-06,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,21.0,count,E011,2025-03-06 13:40:00,2025-03-06 13:55:00
+614185,2025-03-03,2025-03-06,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,6.0,count,E013,2025-03-06 10:12:00,2025-03-06 10:50:00
+614186,2025-03-03,2025-03-06,207,Heartland Pantry,1,Pittsburgh,15213,138,Spaghetti 1 lb,pantry,20.0,count,E011,2025-03-06 10:53:00,2025-03-06 11:52:00
+614187,2025-03-03,2025-03-06,207,Heartland Pantry,1,Pittsburgh,15213,139,Marinara Sauce 24 oz,pantry,12.0,count,E012,2025-03-06 13:47:00,2025-03-06 14:28:00
+614188,2025-03-03,2025-03-06,207,Heartland Pantry,1,Pittsburgh,15213,140,Long Grain Rice 2 lb,pantry,12.0,count,E014,2025-03-06 08:25:00,2025-03-06 09:27:00
+614189,2025-03-03,2025-03-06,207,Heartland Pantry,1,Pittsburgh,15213,143,Tomato Soup,pantry,24.0,count,E014,2025-03-06 10:36:00,2025-03-06 11:04:00
+614190,2025-03-03,2025-03-06,207,Heartland Pantry,1,Pittsburgh,15213,144,Corn Flakes 18 oz,pantry,12.0,count,E013,2025-03-06 11:31:00,2025-03-06 11:46:00
+614191,2025-03-03,2025-03-06,208,Sunrise Frozen Foods,1,Pittsburgh,15213,148,Frozen Peas 16 oz,frozen,12.0,count,E011,2025-03-06 07:21:00,2025-03-06 07:37:00
+614192,2025-03-03,2025-03-06,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,4.0,count,E012,2025-03-06 10:26:00,2025-03-06 11:05:00
+614193,2025-03-05,2025-03-06,211,Ohio Valley Farms,1,Pittsburgh,15213,158,Fresh Basil,produce,12.0,count,E011,2025-03-06 06:47:00,2025-03-06 07:16:00
+614194,2025-03-04,2025-03-06,212,Blue Ridge Grocery Supply,1,Pittsburgh,15213,160,Hummus 10 oz,dairy,12.0,count,E014,2025-03-06 09:18:00,2025-03-06 10:37:00
+614387,2025-03-06,2025-03-07,211,Ohio Valley Farms,1,Pittsburgh,15213,103,Cauliflower,produce,12.0,count,E011,2025-03-07 06:34:00,2025-03-07 06:38:00
+614388,2025-03-06,2025-03-07,201,Fresh Fields Produce,1,Pittsburgh,15213,104,Organic Banana,produce,18.0,kg,E014,2025-03-07 08:25:00,2025-03-07 08:31:00
+614389,2025-03-06,2025-03-07,211,Ohio Valley Farms,1,Pittsburgh,15213,105,Gala Apple,produce,36.0,kg,E013,2025-03-07 12:00:00,2025-03-07 13:04:00
+614390,2025-03-06,2025-03-07,201,Fresh Fields Produce,1,Pittsburgh,15213,106,Tomato,produce,20.0,kg,E014,2025-03-07 07:23:00,2025-03-07 08:22:00
+614391,2025-03-06,2025-03-07,201,Fresh Fields Produce,1,Pittsburgh,15213,108,Avocado,produce,48.0,count,E014,2025-03-07 06:20:00,2025-03-07 07:35:00
+614392,2025-03-06,2025-03-07,211,Ohio Valley Farms,1,Pittsburgh,15213,109,Carrots 2 lb Bag,produce,20.0,count,E011,2025-03-07 07:27:00,2025-03-07 07:41:00
+614393,2025-03-06,2025-03-07,201,Fresh Fields Produce,1,Pittsburgh,15213,112,Strawberries 1 lb,produce,32.0,count,E013,2025-03-07 12:00:00,2025-03-07 12:09:00
+614394,2025-03-06,2025-03-07,201,Fresh Fields Produce,1,Pittsburgh,15213,115,Blueberries 6 oz,produce,24.0,count,E011,2025-03-07 10:17:00,2025-03-07 13:20:00
+614395,2025-03-06,2025-03-07,202,Keystone Dairy,1,Pittsburgh,15213,116,Whole Milk 1/2 gal,dairy,45.0,count,E011,2025-03-07 13:07:00,2025-03-07 14:04:00
+614396,2025-03-06,2025-03-07,202,Keystone Dairy,1,Pittsburgh,15213,117,Whole Milk 1 gal,dairy,40.0,count,E013,2025-03-07 12:15:00,2025-03-07 13:01:00
+614397,2025-03-06,2025-03-07,202,Keystone Dairy,1,Pittsburgh,15213,118,Large Eggs 12 ct,dairy,45.0,count,E014,2025-03-07 09:00:00,2025-03-07 09:37:00
+614398,2025-03-06,2025-03-07,202,Keystone Dairy,1,Pittsburgh,15213,119,Greek Yogurt 32 oz,dairy,12.0,count,E012,2025-03-07 06:55:00,2025-03-07 06:58:00
+614399,2025-03-06,2025-03-07,202,Keystone Dairy,1,Pittsburgh,15213,120,Cheddar Cheese 8 oz,dairy,24.0,count,E014,2025-03-07 06:12:00,2025-03-07 06:19:00
+614400,2025-03-06,2025-03-07,202,Keystone Dairy,1,Pittsburgh,15213,121,Salted Butter 1 lb,dairy,36.0,count,E014,2025-03-07 09:31:00,2025-03-07 09:34:00
+614401,2025-03-04,2025-03-07,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,8.0,count,E012,2025-03-07 13:46:00,2025-03-07 13:58:00
+614402,2025-03-06,2025-03-07,203,Allegheny Bakery,1,Pittsburgh,15213,123,White Bread,bakery,48.0,count,E011,2025-03-07 08:39:00,2025-03-07 09:24:00
+614403,2025-03-06,2025-03-07,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,12.0,count,E014,2025-03-07 09:22:00,2025-03-07 09:53:00
+614404,2025-03-06,2025-03-07,203,Allegheny Bakery,1,Pittsburgh,15213,125,Bagels 6 ct,bakery,36.0,count,E012,2025-03-07 11:18:00,2025-03-12 11:27:00
+614405,2025-03-06,2025-03-07,203,Allegheny Bakery,1,Pittsburgh,15213,126,Croissant,bakery,24.0,count,E014,2025-03-07 09:00:00,2025-03-07 09:01:00
+614406,2025-03-05,2025-03-07,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,20.0,kg,E012,2025-03-07 11:11:00,2025-03-07 12:14:00
+614407,2025-03-05,2025-03-07,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,10.0,kg,E012,2025-03-07 09:20:00,2025-03-07 09:34:00
+614408,2025-03-05,2025-03-07,204,Laurel Highlands Meats,1,Pittsburgh,15213,129,Pork Chops,meat,10.0,kg,E012,2025-03-07 12:54:00,2025-03-07 13:03:00
+614409,2025-03-04,2025-03-07,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,20.0,count,E014,2025-03-07 12:05:00,2025-03-07 12:16:00
+614410,2025-03-04,2025-03-07,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,22.0,count,E012,2025-03-07 11:48:00,2025-03-07 11:58:00
+614411,2025-03-04,2025-03-07,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,13.0,count,E014,2025-03-07 10:49:00,2025-03-07 10:58:00
+614412,2025-03-04,2025-03-07,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,6.0,count,E014,2025-03-07 11:46:00,2025-03-07 11:47:00
+614413,2025-03-04,2025-03-07,207,Heartland Pantry,1,Pittsburgh,15213,138,Spaghetti 1 lb,pantry,20.0,count,E011,2025-03-07 08:02:00,2025-03-07 08:47:00
+614414,2025-03-04,2025-03-07,207,Heartland Pantry,1,Pittsburgh,15213,140,Long Grain Rice 2 lb,pantry,12.0,count,E011,2025-03-07 11:27:00,2025-03-07 11:59:00
+614415,2025-03-04,2025-03-07,207,Heartland Pantry,1,Pittsburgh,15213,141,Long Grain Rice 5 lb,pantry,8.0,count,E011,2025-03-07 06:40:00,2025-03-07 07:10:00
+614416,2025-03-04,2025-03-07,207,Heartland Pantry,1,Pittsburgh,15213,142,Peanut Butter 16 oz,pantry,12.0,count,E014,2025-03-07 11:41:00,2025-03-07 14:10:00
+614417,2025-03-04,2025-03-07,207,Heartland Pantry,1,Pittsburgh,15213,145,Olive Oil 1 L,pantry,12.0,count,E014,2025-03-07 08:06:00,2025-03-07 08:36:00
+614418,2025-03-04,2025-03-07,208,Sunrise Frozen Foods,1,Pittsburgh,15213,146,Vanilla Ice Cream 1.5 qt,frozen,24.0,count,E011,2025-03-07 06:52:00,2025-03-07 07:43:00
+614419,2025-03-04,2025-03-07,208,Sunrise Frozen Foods,1,Pittsburgh,15213,147,Frozen Pizza,frozen,10.0,count,E014,2025-03-07 09:30:00,2025-03-07 10:38:00
+614420,2025-03-04,2025-03-07,208,Sunrise Frozen Foods,1,Pittsburgh,15213,148,Frozen Peas 16 oz,frozen,12.0,count,E013,2025-03-07 09:06:00,2025-03-10 11:22:00
+614421,2025-03-04,2025-03-07,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,4.0,count,E014,2025-03-07 06:34:00,2025-03-07 07:21:00
+614422,2025-03-04,2025-03-07,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,12.0,count,E013,2025-03-07 13:58:00,2025-03-07 14:04:00
+614423,2025-03-04,2025-03-07,209,CleanHome Supplies,1,Pittsburgh,15213,153,Laundry Detergent 100 oz,household,8.0,count,E014,2025-03-07 07:05:00,2025-03-07 07:14:00
+614424,2025-03-05,2025-03-07,210,EcoRefill Co.,1,Pittsburgh,15213,154,Refill Laundry Detergent,refill,20.0,liter,E013,2025-03-07 07:40:00,2025-03-07 07:42:00
+614425,2025-03-05,2025-03-07,204,Laurel Highlands Meats,1,Pittsburgh,15213,159,Sliced Deli Turkey,meat,10.0,kg,E014,2025-03-07 11:44:00,2025-03-07 12:28:00
+614426,2025-03-05,2025-03-07,212,Blue Ridge Grocery Supply,1,Pittsburgh,15213,160,Hummus 10 oz,dairy,12.0,count,E013,2025-03-07 10:55:00,2025-03-07 10:58:00
+614653,2025-03-07,2025-03-08,201,Fresh Fields Produce,1,Pittsburgh,15213,101,Banana,produce,72.0,kg,E014,2025-03-08 09:29:00,2025-03-08 09:41:00
+614654,2025-03-07,2025-03-08,211,Ohio Valley Farms,1,Pittsburgh,15213,102,Cucumber,produce,72.0,count,E014,2025-03-08 09:59:00,2025-03-08 10:14:00
+614655,2025-03-07,2025-03-08,211,Ohio Valley Farms,1,Pittsburgh,15213,103,Cauliflower,produce,24.0,count,E012,2025-03-08 07:45:00,2025-03-08 08:10:00
+614656,2025-03-07,2025-03-08,211,Ohio Valley Farms,1,Pittsburgh,15213,105,Gala Apple,produce,18.0,kg,E012,2025-03-08 08:32:00,2025-03-08 08:45:00
+614657,2025-03-07,2025-03-08,211,Ohio Valley Farms,1,Pittsburgh,15213,107,Iceberg Lettuce,produce,48.0,count,E014,2025-03-08 13:21:00,2025-03-08 13:41:00
+614658,2025-03-07,2025-03-08,201,Fresh Fields Produce,1,Pittsburgh,15213,108,Avocado,produce,48.0,count,E011,2025-03-08 06:31:00,2025-03-08 07:05:00
+614659,2025-03-07,2025-03-08,211,Ohio Valley Farms,1,Pittsburgh,15213,109,Carrots 2 lb Bag,produce,20.0,count,E012,2025-03-08 09:23:00,2025-03-08 09:27:00
+614660,2025-03-07,2025-03-08,211,Ohio Valley Farms,1,Pittsburgh,15213,110,Potato,produce,60.0,kg,E014,2025-03-08 07:39:00,2025-03-08 08:33:00
+614661,2025-03-07,2025-03-08,211,Ohio Valley Farms,1,Pittsburgh,15213,111,Yellow Onion,produce,20.0,kg,E013,2025-03-08 12:33:00,2025-03-08 13:02:00
+614662,2025-03-07,2025-03-08,201,Fresh Fields Produce,1,Pittsburgh,15213,112,Strawberries 1 lb,produce,16.0,count,E014,2025-03-08 12:31:00,2025-03-08 12:32:00
+614663,2025-03-07,2025-03-08,202,Keystone Dairy,1,Pittsburgh,15213,116,Whole Milk 1/2 gal,dairy,27.0,count,E013,2025-03-08 08:13:00,2025-03-08 08:52:00
+614664,2025-03-07,2025-03-08,202,Keystone Dairy,1,Pittsburgh,15213,117,Whole Milk 1 gal,dairy,20.0,count,E011,2025-03-08 09:14:00,2025-03-08 09:16:00
+614665,2025-03-07,2025-03-08,202,Keystone Dairy,1,Pittsburgh,15213,118,Large Eggs 12 ct,dairy,30.0,count,E014,2025-03-08 11:39:00,2025-03-08 11:41:00
+614666,2025-03-07,2025-03-08,202,Keystone Dairy,1,Pittsburgh,15213,119,Greek Yogurt 32 oz,dairy,12.0,count,E011,2025-03-08 12:48:00,2025-03-08 12:55:00
+614667,2025-03-05,2025-03-08,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,16.0,count,E012,2025-03-08 08:49:00,2025-03-08 09:10:00
+614668,2025-03-07,2025-03-08,203,Allegheny Bakery,1,Pittsburgh,15213,123,White Bread,bakery,24.0,count,E014,2025-03-08 06:24:00,2025-03-08 07:28:00
+614669,2025-03-07,2025-03-08,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,24.0,count,E013,2025-03-08 12:43:00,2025-03-08 12:45:00
+614670,2025-03-07,2025-03-08,203,Allegheny Bakery,1,Pittsburgh,15213,126,Croissant,bakery,24.0,count,E011,2025-03-08 12:37:00,2025-03-08 13:01:00
+614671,2025-03-06,2025-03-08,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,20.0,kg,E012,2025-03-08 10:07:00,2025-03-08 10:14:00
+614672,2025-03-06,2025-03-08,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,20.0,kg,E014,2025-03-08 08:49:00,2025-03-08 08:50:00
+614673,2025-03-06,2025-03-08,204,Laurel Highlands Meats,1,Pittsburgh,15213,129,Pork Chops,meat,10.0,kg,E011,2025-03-08 07:09:00,2025-03-08 07:34:00
+614674,2025-03-06,2025-03-08,205,Great Lakes Seafood,1,Pittsburgh,15213,130,Atlantic Salmon,seafood,10.0,kg,E014,2025-03-08 09:06:00,2025-03-08 10:06:00
+614675,2025-03-06,2025-03-08,205,Great Lakes Seafood,1,Pittsburgh,15213,131,Frozen Shrimp 1 lb,frozen,12.0,count,E012,2025-03-08 12:49:00,2025-03-08 12:51:00
+614676,2025-03-05,2025-03-08,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,8.0,count,E013,2025-03-08 08:46:00,2025-03-08 09:08:00
+614677,2025-03-05,2025-03-08,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,8.0,count,E011,2025-03-08 13:50:00,2025-03-08 15:03:00
+614678,2025-03-05,2025-03-08,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,14.0,count,E012,2025-03-08 12:27:00,2025-03-08 13:15:00
+614679,2025-03-05,2025-03-08,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,11.0,count,E012,2025-03-08 10:14:00,2025-03-08 10:20:00
+614680,2025-03-05,2025-03-08,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,6.0,count,E011,2025-03-08 09:39:00,2025-03-08 10:13:00
+614681,2025-03-05,2025-03-08,207,Heartland Pantry,1,Pittsburgh,15213,139,Marinara Sauce 24 oz,pantry,12.0,count,E014,2025-03-08 06:46:00,2025-03-08 06:53:00
+614682,2025-03-05,2025-03-08,207,Heartland Pantry,1,Pittsburgh,15213,141,Long Grain Rice 5 lb,pantry,8.0,count,E014,2025-03-08 12:17:00,2025-03-08 13:26:00
+614683,2025-03-05,2025-03-08,207,Heartland Pantry,1,Pittsburgh,15213,142,Peanut Butter 16 oz,pantry,12.0,count,E011,2025-03-08 10:12:00,2025-03-08 10:25:00
+614684,2025-03-05,2025-03-08,207,Heartland Pantry,1,Pittsburgh,15213,143,Tomato Soup,pantry,24.0,count,E014,2025-03-08 07:17:00,2025-03-08 08:48:00
+614685,2025-03-05,2025-03-08,207,Heartland Pantry,1,Pittsburgh,15213,144,Corn Flakes 18 oz,pantry,12.0,count,E013,2025-03-08 12:09:00,2025-03-08 13:17:00
+614686,2025-03-05,2025-03-08,208,Sunrise Frozen Foods,1,Pittsburgh,15213,147,Frozen Pizza,frozen,20.0,count,E012,2025-03-08 08:49:00,2025-03-08 08:51:00
+614687,2025-03-05,2025-03-08,208,Sunrise Frozen Foods,1,Pittsburgh,15213,148,Frozen Peas 16 oz,frozen,12.0,count,E012,2025-03-08 08:12:00,2025-03-08 08:18:00
+614688,2025-03-05,2025-03-08,208,Sunrise Frozen Foods,1,Pittsburgh,15213,149,Ice Cubes 7 lb,frozen,6.0,count,E014,2025-03-08 13:19:00,2025-03-08 14:32:00
+614689,2025-03-05,2025-03-08,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,8.0,count,E014,2025-03-08 09:03:00,2025-03-08 09:14:00
+614690,2025-03-05,2025-03-08,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,8.0,count,E011,2025-03-08 12:33:00,2025-03-08 12:47:00
+614691,2025-03-05,2025-03-08,209,CleanHome Supplies,1,Pittsburgh,15213,152,Dish Soap 20 oz,household,12.0,count,E013,2025-03-08 12:55:00,2025-03-08 13:26:00
+614692,2025-03-05,2025-03-08,209,CleanHome Supplies,1,Pittsburgh,15213,153,Laundry Detergent 100 oz,household,4.0,count,E013,2025-03-08 13:56:00,2025-03-08 14:46:00
+614693,2025-03-07,2025-03-08,211,Ohio Valley Farms,1,Pittsburgh,15213,158,Fresh Basil,produce,12.0,count,E014,2025-03-08 11:34:00,2025-03-08 11:40:00
+614979,2025-03-08,2025-03-09,201,Fresh Fields Produce,1,Pittsburgh,15213,104,Organic Banana,produce,18.0,kg,E011,2025-03-09 10:18:00,2025-03-09 10:19:00
+614980,2025-03-08,2025-03-09,201,Fresh Fields Produce,1,Pittsburgh,15213,106,Tomato,produce,30.0,kg,E014,2025-03-09 07:31:00,2025-03-14 07:48:00
+614981,2025-03-08,2025-03-09,202,Keystone Dairy,1,Pittsburgh,15213,117,Whole Milk 1 gal,dairy,32.0,count,E013,2025-03-09 06:15:00,2025-03-09 06:26:00
+614982,2025-03-08,2025-03-09,202,Keystone Dairy,1,Pittsburgh,15213,118,Large Eggs 12 ct,dairy,30.0,count,E012,2025-03-09 09:32:00,2025-03-09 10:01:00
+614983,2025-03-08,2025-03-09,202,Keystone Dairy,1,Pittsburgh,15213,120,Cheddar Cheese 8 oz,dairy,24.0,count,E014,2025-03-09 06:32:00,2025-03-09 07:17:00
+614984,2025-03-06,2025-03-09,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,16.0,count,E014,2025-03-09 09:03:00,2025-03-09 09:09:00
+614985,2025-03-08,2025-03-09,203,Allegheny Bakery,1,Pittsburgh,15213,123,White Bread,bakery,36.0,count,E012,2025-03-09 12:48:00,2025-03-09 13:04:00
+614986,2025-03-08,2025-03-09,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,24.0,count,E013,2025-03-09 06:42:00,2025-03-09 07:38:00
+614987,2025-03-08,2025-03-09,203,Allegheny Bakery,1,Pittsburgh,15213,126,Croissant,bakery,24.0,count,E011,2025-03-09 06:34:00,2025-03-09 06:44:00
+614988,2025-03-07,2025-03-09,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,40.0,kg,E011,2025-03-09 09:33:00,2025-03-09 10:38:00
+614989,2025-03-07,2025-03-09,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,10.0,kg,E014,2025-03-09 06:08:00,2025-03-09 06:43:00
+614990,2025-03-07,2025-03-09,205,Great Lakes Seafood,1,Pittsburgh,15213,130,Atlantic Salmon,seafood,5.0,kg,E011,2025-03-09 09:40:00,2025-03-09 09:47:00
+614991,2025-03-06,2025-03-09,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,18.0,count,E014,2025-03-09 11:23:00,2025-03-09 12:36:00
+614992,2025-03-06,2025-03-09,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,16.0,count,E011,2025-03-09 07:54:00,2025-03-09 08:01:00
+614993,2025-03-06,2025-03-09,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,12.0,count,E013,2025-03-09 09:02:00,2025-03-09 09:04:00
+614994,2025-03-06,2025-03-09,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,17.0,count,E014,2025-03-09 10:48:00,2025-03-09 12:02:00
+614995,2025-03-06,2025-03-09,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,12.0,count,E013,2025-03-09 06:46:00,2025-03-09 07:16:00
+614996,2025-03-06,2025-03-09,206,Three Rivers Beverages,1,Pittsburgh,15213,137,Iced Tea 1 gal,beverages,12.0,count,E011,2025-03-09 13:41:00,2025-03-09 13:55:00
+614997,2025-03-06,2025-03-09,207,Heartland Pantry,1,Pittsburgh,15213,138,Spaghetti 1 lb,pantry,20.0,count,E013,2025-03-09 06:25:00,2025-03-09 07:28:00
+614998,2025-03-06,2025-03-09,207,Heartland Pantry,1,Pittsburgh,15213,139,Marinara Sauce 24 oz,pantry,12.0,count,E011,2025-03-09 07:54:00,2025-03-09 07:56:00
+614999,2025-03-06,2025-03-09,207,Heartland Pantry,1,Pittsburgh,15213,140,Long Grain Rice 2 lb,pantry,12.0,count,E011,2025-03-09 10:40:00,2025-03-09 12:10:00
+615000,2025-03-06,2025-03-09,207,Heartland Pantry,1,Pittsburgh,15213,142,Peanut Butter 16 oz,pantry,12.0,count,E012,2025-03-09 12:19:00,2025-03-09 12:41:00
+615001,2025-03-06,2025-03-09,207,Heartland Pantry,1,Pittsburgh,15213,144,Corn Flakes 18 oz,pantry,12.0,count,E011,2025-03-09 08:55:00,2025-03-09 08:56:00
+615002,2025-03-06,2025-03-09,207,Heartland Pantry,1,Pittsburgh,15213,145,Olive Oil 1 L,pantry,12.0,count,E012,2025-03-09 08:06:00,2025-03-09 09:06:00
+615003,2025-03-06,2025-03-09,208,Sunrise Frozen Foods,1,Pittsburgh,15213,147,Frozen Pizza,frozen,20.0,count,E012,2025-03-09 07:35:00,2025-03-09 07:50:00
+615004,2025-03-06,2025-03-09,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,4.0,count,E012,2025-03-09 12:01:00,2025-03-09 12:57:00
+615005,2025-03-06,2025-03-09,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,20.0,count,E014,2025-03-09 09:28:00,2025-03-09 09:39:00
+615006,2025-03-06,2025-03-09,209,CleanHome Supplies,1,Pittsburgh,15213,153,Laundry Detergent 100 oz,household,4.0,count,E011,2025-03-09 12:47:00,2025-03-09 13:33:00
+615007,2025-03-07,2025-03-09,210,EcoRefill Co.,1,Pittsburgh,15213,155,Refill Dish Soap,refill,20.0,liter,E012,2025-03-09 11:32:00,2025-03-09 11:39:00
+615008,2025-03-07,2025-03-09,210,EcoRefill Co.,1,Pittsburgh,15213,156,Refill Olive Oil,refill,20.0,liter,E014,2025-03-09 06:50:00,2025-03-09 07:13:00
+615009,2025-03-07,2025-03-09,210,EcoRefill Co.,1,Pittsburgh,15213,157,Refill Oat Milk,refill,20.0,liter,E013,2025-03-09 10:53:00,2025-03-09 11:22:00
+615010,2025-03-08,2025-03-09,211,Ohio Valley Farms,1,Pittsburgh,15213,158,Fresh Basil,produce,12.0,count,E013,2025-03-09 07:56:00,2025-03-09 09:03:00
+615011,2025-03-07,2025-03-09,204,Laurel Highlands Meats,1,Pittsburgh,15213,159,Sliced Deli Turkey,meat,10.0,kg,E014,2025-03-09 11:06:00,2025-03-09 11:09:00
+615012,2025-03-07,2025-03-09,212,Blue Ridge Grocery Supply,1,Pittsburgh,15213,160,Hummus 10 oz,dairy,12.0,count,E014,2025-03-09 09:48:00,2025-03-09 10:10:00
+615267,2025-03-09,2025-03-10,201,Fresh Fields Produce,1,Pittsburgh,15213,101,Banana,produce,54.0,kg,E011,2025-03-10 11:25:00,2025-03-10 12:24:00
+615268,2025-03-09,2025-03-10,211,Ohio Valley Farms,1,Pittsburgh,15213,102,Cucumber,produce,72.0,count,E013,2025-03-10 08:54:00,2025-03-10 09:00:00
+615269,2025-03-09,2025-03-10,211,Ohio Valley Farms,1,Pittsburgh,15213,103,Cauliflower,produce,36.0,count,E014,2025-03-10 07:12:00,2025-03-10 07:15:00
+615270,2025-03-09,2025-03-10,211,Ohio Valley Farms,1,Pittsburgh,15213,111,Yellow Onion,produce,40.0,kg,E014,2025-03-10 11:59:00,2025-03-10 12:07:00
+615271,2025-03-09,2025-03-10,201,Fresh Fields Produce,1,Pittsburgh,15213,112,Strawberries 1 lb,produce,32.0,count,E011,2025-03-10 10:03:00,2025-03-10 10:09:00
+615272,2025-03-09,2025-03-10,201,Fresh Fields Produce,1,Pittsburgh,15213,115,Blueberries 6 oz,produce,36.0,count,E011,2025-03-10 09:03:00,2025-03-10 09:28:00
+615273,2025-03-09,2025-03-10,202,Keystone Dairy,1,Pittsburgh,15213,116,Whole Milk 1/2 gal,dairy,45.0,count,E011,2025-03-10 10:43:00,2025-03-10 12:03:00
+615274,2025-03-09,2025-03-10,202,Keystone Dairy,1,Pittsburgh,15213,118,Large Eggs 12 ct,dairy,30.0,count,E011,2025-03-10 09:18:00,2025-03-10 09:41:00
+615275,2025-03-09,2025-03-10,202,Keystone Dairy,1,Pittsburgh,15213,119,Greek Yogurt 32 oz,dairy,24.0,count,E011,2025-03-10 08:21:00,2025-03-10 08:51:00
+615276,2025-03-09,2025-03-10,202,Keystone Dairy,1,Pittsburgh,15213,121,Salted Butter 1 lb,dairy,36.0,count,E012,2025-03-10 09:53:00,2025-03-10 10:17:00
+615277,2025-03-09,2025-03-10,203,Allegheny Bakery,1,Pittsburgh,15213,125,Bagels 6 ct,bakery,24.0,count,E011,2025-03-10 11:45:00,2025-03-10 12:03:00
+615278,2025-03-09,2025-03-10,203,Allegheny Bakery,1,Pittsburgh,15213,126,Croissant,bakery,24.0,count,E014,2025-03-10 11:11:00,2025-03-10 11:15:00
+615279,2025-03-08,2025-03-10,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,20.0,kg,E012,2025-03-10 13:30:00,2025-03-10 13:40:00
+615280,2025-03-08,2025-03-10,204,Laurel Highlands Meats,1,Pittsburgh,15213,129,Pork Chops,meat,10.0,kg,E012,2025-03-10 13:15:00,2025-03-13 13:21:00
+615281,2025-03-07,2025-03-10,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,18.0,count,E013,2025-03-10 10:43:00,2025-03-10 11:23:00
+615282,2025-03-07,2025-03-10,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,24.0,count,E014,2025-03-10 11:33:00,2025-03-10 12:56:00
+615283,2025-03-07,2025-03-10,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,10.0,count,E012,2025-03-10 13:32:00,2025-03-10 13:53:00
+615284,2025-03-07,2025-03-10,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,23.0,count,E012,2025-03-10 10:41:00,2025-03-10 10:44:00
+615285,2025-03-07,2025-03-10,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,12.0,count,E014,2025-03-10 09:32:00,2025-03-10 09:37:00
+615286,2025-03-07,2025-03-10,206,Three Rivers Beverages,1,Pittsburgh,15213,137,Iced Tea 1 gal,beverages,4.0,count,E013,2025-03-10 06:31:00,2025-03-10 07:08:00
+615287,2025-03-07,2025-03-10,207,Heartland Pantry,1,Pittsburgh,15213,138,Spaghetti 1 lb,pantry,20.0,count,E011,2025-03-10 12:56:00,2025-03-14 13:34:00
+615288,2025-03-07,2025-03-10,207,Heartland Pantry,1,Pittsburgh,15213,140,Long Grain Rice 2 lb,pantry,24.0,count,E011,2025-03-10 13:47:00,2025-03-10 14:36:00
+615289,2025-03-07,2025-03-10,207,Heartland Pantry,1,Pittsburgh,15213,142,Peanut Butter 16 oz,pantry,12.0,count,E011,2025-03-10 11:54:00,2025-03-10 12:10:00
+615290,2025-03-07,2025-03-10,207,Heartland Pantry,1,Pittsburgh,15213,143,Tomato Soup,pantry,24.0,count,E013,2025-03-10 12:01:00,2025-03-10 12:06:00
+615291,2025-03-07,2025-03-10,207,Heartland Pantry,1,Pittsburgh,15213,144,Corn Flakes 18 oz,pantry,12.0,count,E014,2025-03-10 13:02:00,2025-03-10 13:31:00
+615292,2025-03-07,2025-03-10,208,Sunrise Frozen Foods,1,Pittsburgh,15213,148,Frozen Peas 16 oz,frozen,24.0,count,E012,2025-03-10 08:29:00,2025-03-10 08:43:00
+615293,2025-03-07,2025-03-10,208,Sunrise Frozen Foods,1,Pittsburgh,15213,149,Ice Cubes 7 lb,frozen,6.0,count,E011,2025-03-10 06:56:00,2025-03-10 07:43:00
+615294,2025-03-07,2025-03-10,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,8.0,count,E012,2025-03-10 07:34:00,2025-03-10 07:40:00
+615295,2025-03-07,2025-03-10,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,8.0,count,E012,2025-03-10 07:52:00,2025-03-10 08:56:00
+615296,2025-03-07,2025-03-10,209,CleanHome Supplies,1,Pittsburgh,15213,152,Dish Soap 20 oz,household,24.0,count,E013,2025-03-10 06:35:00,2025-03-10 06:45:00
+615297,2025-03-07,2025-03-10,209,CleanHome Supplies,1,Pittsburgh,15213,153,Laundry Detergent 100 oz,household,4.0,count,E014,2025-03-10 09:11:00,2025-03-10 09:33:00
+615298,2025-03-08,2025-03-10,210,EcoRefill Co.,1,Pittsburgh,15213,154,Refill Laundry Detergent,refill,20.0,liter,E012,2025-03-10 10:58:00,2025-03-10 11:09:00
+615299,2025-03-08,2025-03-10,212,Blue Ridge Grocery Supply,1,Pittsburgh,15213,160,Hummus 10 oz,dairy,12.0,count,E014,2025-03-10 11:58:00,2025-03-10 12:26:00
+615528,2025-03-10,2025-03-11,201,Fresh Fields Produce,1,Pittsburgh,15213,101,Banana,produce,36.0,kg,E014,2025-03-11 09:52:00,2025-03-11 10:13:00
+615529,2025-03-10,2025-03-11,211,Ohio Valley Farms,1,Pittsburgh,15213,105,Gala Apple,produce,36.0,kg,E012,2025-03-11 11:43:00,2025-03-11 12:02:00
+615530,2025-03-10,2025-03-11,201,Fresh Fields Produce,1,Pittsburgh,15213,108,Avocado,produce,48.0,count,E011,2025-03-11 08:59:00,2025-03-11 09:29:00
+615531,2025-03-10,2025-03-11,211,Ohio Valley Farms,1,Pittsburgh,15213,109,Carrots 2 lb Bag,produce,40.0,count,E013,2025-03-11 06:22:00,2025-03-11 06:50:00
+615532,2025-03-10,2025-03-11,211,Ohio Valley Farms,1,Pittsburgh,15213,110,Potato,produce,60.0,kg,E011,2025-03-11 12:09:00,2025-03-11 12:36:00
+615533,2025-03-10,2025-03-11,201,Fresh Fields Produce,1,Pittsburgh,15213,112,Strawberries 1 lb,produce,16.0,count,E014,2025-03-11 11:04:00,2025-03-11 11:11:00
+615534,2025-03-10,2025-03-11,202,Keystone Dairy,1,Pittsburgh,15213,117,Whole Milk 1 gal,dairy,64.0,count,E011,2025-03-11 06:04:00,2025-03-11 06:37:00
+615535,2025-03-10,2025-03-11,202,Keystone Dairy,1,Pittsburgh,15213,120,Cheddar Cheese 8 oz,dairy,24.0,count,E014,2025-03-11 13:09:00,2025-03-11 13:13:00
+615536,2025-03-08,2025-03-11,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,8.0,count,E014,2025-03-11 09:04:00,2025-03-11 09:12:00
+615537,2025-03-10,2025-03-11,203,Allegheny Bakery,1,Pittsburgh,15213,123,White Bread,bakery,36.0,count,E011,2025-03-11 06:55:00,2025-03-11 07:26:00
+615538,2025-03-10,2025-03-11,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,24.0,count,E013,2025-03-11 13:52:00,2025-03-11 13:57:00
+615539,2025-03-10,2025-03-11,203,Allegheny Bakery,1,Pittsburgh,15213,126,Croissant,bakery,24.0,count,E013,2025-03-11 11:35:00,2025-03-11 11:39:00
+615540,2025-03-09,2025-03-11,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,20.0,kg,E011,2025-03-11 08:47:00,2025-03-11 09:06:00
+615541,2025-03-09,2025-03-11,205,Great Lakes Seafood,1,Pittsburgh,15213,131,Frozen Shrimp 1 lb,frozen,12.0,count,E012,2025-03-11 06:34:00,2025-03-11 06:36:00
+615542,2025-03-08,2025-03-11,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,12.0,count,E014,2025-03-11 12:39:00,2025-03-11 14:28:00
+615543,2025-03-08,2025-03-11,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,10.0,count,E014,2025-03-11 10:33:00,2025-03-11 11:33:00
+615544,2025-03-08,2025-03-11,207,Heartland Pantry,1,Pittsburgh,15213,138,Spaghetti 1 lb,pantry,20.0,count,E014,2025-03-11 09:45:00,2025-03-11 10:51:00
+615545,2025-03-08,2025-03-11,207,Heartland Pantry,1,Pittsburgh,15213,139,Marinara Sauce 24 oz,pantry,12.0,count,E011,2025-03-11 08:20:00,2025-03-11 08:25:00
+615546,2025-03-08,2025-03-11,207,Heartland Pantry,1,Pittsburgh,15213,140,Long Grain Rice 2 lb,pantry,12.0,count,E012,2025-03-11 10:04:00,2025-03-11 10:42:00
+615547,2025-03-08,2025-03-11,207,Heartland Pantry,1,Pittsburgh,15213,141,Long Grain Rice 5 lb,pantry,16.0,count,E012,2025-03-11 13:41:00,2025-03-11 14:06:00
+615548,2025-03-08,2025-03-11,207,Heartland Pantry,1,Pittsburgh,15213,142,Peanut Butter 16 oz,pantry,12.0,count,E012,2025-03-11 09:38:00,2025-03-11 10:11:00
+615549,2025-03-08,2025-03-11,207,Heartland Pantry,1,Pittsburgh,15213,143,Tomato Soup,pantry,24.0,count,E012,2025-03-11 06:39:00,2025-03-11 07:13:00
+615550,2025-03-08,2025-03-11,207,Heartland Pantry,1,Pittsburgh,15213,144,Corn Flakes 18 oz,pantry,12.0,count,E014,2025-03-11 09:12:00,2025-03-11 09:43:00
+615551,2025-03-08,2025-03-11,208,Sunrise Frozen Foods,1,Pittsburgh,15213,147,Frozen Pizza,frozen,10.0,count,E014,2025-03-11 13:36:00,2025-03-11 14:49:00
+615552,2025-03-08,2025-03-11,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,4.0,count,E012,2025-03-11 09:00:00,2025-03-11 10:07:00
+615553,2025-03-08,2025-03-11,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,12.0,count,E014,2025-03-11 06:42:00,2025-03-11 06:53:00
+615554,2025-03-08,2025-03-11,209,CleanHome Supplies,1,Pittsburgh,15213,153,Laundry Detergent 100 oz,household,12.0,count,E011,2025-03-11 08:27:00,2025-03-11 11:19:00
+615555,2025-03-10,2025-03-11,211,Ohio Valley Farms,1,Pittsburgh,15213,158,Fresh Basil,produce,12.0,count,E011,2025-03-11 11:10:00,2025-03-11 11:23:00
+615722,2025-03-11,2025-03-12,201,Fresh Fields Produce,1,Pittsburgh,15213,101,Banana,produce,54.0,kg,E012,2025-03-12 13:58:00,2025-03-12 14:07:00
+615723,2025-03-11,2025-03-12,211,Ohio Valley Farms,1,Pittsburgh,15213,102,Cucumber,produce,72.0,count,E013,2025-03-12 11:09:00,2025-03-12 11:19:00
+615724,2025-03-11,2025-03-12,211,Ohio Valley Farms,1,Pittsburgh,15213,103,Cauliflower,produce,24.0,count,E012,2025-03-12 13:49:00,2025-03-12 13:53:00
+615725,2025-03-11,2025-03-12,201,Fresh Fields Produce,1,Pittsburgh,15213,104,Organic Banana,produce,36.0,kg,E013,2025-03-12 13:10:00,2025-03-12 13:56:00
+615726,2025-03-11,2025-03-12,201,Fresh Fields Produce,1,Pittsburgh,15213,106,Tomato,produce,20.0,kg,E013,2025-03-12 08:01:00,2025-03-12 08:15:00
+615727,2025-03-11,2025-03-12,211,Ohio Valley Farms,1,Pittsburgh,15213,107,Iceberg Lettuce,produce,72.0,count,E014,2025-03-12 12:26:00,2025-03-12 13:05:00
+615728,2025-03-11,2025-03-12,202,Keystone Dairy,1,Pittsburgh,15213,118,Large Eggs 12 ct,dairy,30.0,count,E014,2025-03-12 07:38:00,2025-03-12 08:31:00
+615729,2025-03-11,2025-03-12,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,12.0,count,E013,2025-03-12 12:05:00,2025-03-12 12:41:00
+615730,2025-03-11,2025-03-12,203,Allegheny Bakery,1,Pittsburgh,15213,125,Bagels 6 ct,bakery,24.0,count,E011,2025-03-12 07:15:00,2025-03-12 07:24:00
+615731,2025-03-11,2025-03-12,203,Allegheny Bakery,1,Pittsburgh,15213,126,Croissant,bakery,24.0,count,E013,2025-03-12 07:18:00,2025-03-12 07:23:00
+615732,2025-03-10,2025-03-12,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,20.0,kg,E012,2025-03-12 12:20:00,2025-03-12 13:19:00
+615733,2025-03-10,2025-03-12,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,20.0,kg,E011,2025-03-12 13:00:00,2025-03-12 13:08:00
+615734,2025-03-10,2025-03-12,205,Great Lakes Seafood,1,Pittsburgh,15213,130,Atlantic Salmon,seafood,10.0,kg,E012,2025-03-12 13:46:00,2025-03-12 13:59:00
+615735,2025-03-10,2025-03-12,205,Great Lakes Seafood,1,Pittsburgh,15213,131,Frozen Shrimp 1 lb,frozen,12.0,count,E012,2025-03-12 12:11:00,2025-03-12 12:38:00
+615736,2025-03-09,2025-03-12,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,4.0,count,E013,2025-03-12 12:02:00,2025-03-12 12:12:00
+615737,2025-03-09,2025-03-12,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,4.0,count,E014,2025-03-12 08:01:00,2025-03-12 08:06:00
+615738,2025-03-09,2025-03-12,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,6.0,count,E013,2025-03-12 08:20:00,2025-03-12 08:59:00
+615739,2025-03-09,2025-03-12,207,Heartland Pantry,1,Pittsburgh,15213,138,Spaghetti 1 lb,pantry,20.0,count,E013,2025-03-12 13:52:00,2025-03-12 13:55:00
+615740,2025-03-09,2025-03-12,207,Heartland Pantry,1,Pittsburgh,15213,139,Marinara Sauce 24 oz,pantry,12.0,count,E013,2025-03-12 08:43:00,2025-03-12 08:46:00
+615741,2025-03-09,2025-03-12,207,Heartland Pantry,1,Pittsburgh,15213,145,Olive Oil 1 L,pantry,12.0,count,E012,2025-03-12 06:54:00,2025-03-13 07:17:00
+615742,2025-03-09,2025-03-12,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,8.0,count,E011,2025-03-12 07:58:00,2025-03-12 08:21:00
+615743,2025-03-09,2025-03-12,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,4.0,count,E011,2025-03-12 12:05:00,2025-03-12 12:07:00
+615744,2025-03-10,2025-03-12,204,Laurel Highlands Meats,1,Pittsburgh,15213,159,Sliced Deli Turkey,meat,10.0,kg,E012,2025-03-12 06:28:00,2025-03-12 06:34:00
+615892,2025-03-12,2025-03-13,201,Fresh Fields Produce,1,Pittsburgh,15213,101,Banana,produce,18.0,kg,E011,2025-03-13 08:16:00,2025-03-13 08:46:00
+615893,2025-03-12,2025-03-13,211,Ohio Valley Farms,1,Pittsburgh,15213,103,Cauliflower,produce,24.0,count,E013,2025-03-13 10:29:00,2025-03-13 10:36:00
+615894,2025-03-12,2025-03-13,211,Ohio Valley Farms,1,Pittsburgh,15213,105,Gala Apple,produce,18.0,kg,E011,2025-03-13 13:05:00,2025-03-13 13:28:00
+615895,2025-03-12,2025-03-13,201,Fresh Fields Produce,1,Pittsburgh,15213,108,Avocado,produce,48.0,count,E014,2025-03-13 07:44:00,2025-03-13 07:50:00
+615896,2025-03-12,2025-03-13,211,Ohio Valley Farms,1,Pittsburgh,15213,110,Potato,produce,40.0,kg,E012,2025-03-13 13:19:00,2025-03-13 14:26:00
+615897,2025-03-12,2025-03-13,201,Fresh Fields Produce,1,Pittsburgh,15213,112,Strawberries 1 lb,produce,40.0,count,E012,2025-03-13 08:16:00,2025-03-13 09:08:00
+615898,2025-03-12,2025-03-13,201,Fresh Fields Produce,1,Pittsburgh,15213,115,Blueberries 6 oz,produce,24.0,count,E013,2025-03-13 12:43:00,2025-03-13 13:26:00
+615899,2025-03-12,2025-03-13,202,Keystone Dairy,1,Pittsburgh,15213,116,Whole Milk 1/2 gal,dairy,63.0,count,E012,2025-03-13 09:51:00,2025-03-13 10:06:00
+615900,2025-03-12,2025-03-13,202,Keystone Dairy,1,Pittsburgh,15213,117,Whole Milk 1 gal,dairy,48.0,count,E012,2025-03-13 08:33:00,2025-03-13 08:42:00
+615901,2025-03-12,2025-03-13,202,Keystone Dairy,1,Pittsburgh,15213,119,Greek Yogurt 32 oz,dairy,18.0,count,E013,2025-03-13 06:48:00,2025-03-13 07:01:00
+615902,2025-03-10,2025-03-13,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,8.0,count,E013,2025-03-13 07:08:00,2025-03-13 07:09:00
+615903,2025-03-12,2025-03-13,203,Allegheny Bakery,1,Pittsburgh,15213,123,White Bread,bakery,48.0,count,E011,2025-03-13 12:26:00,2025-03-13 13:33:00
+615904,2025-03-12,2025-03-13,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,12.0,count,E014,2025-03-13 12:31:00,2025-03-13 14:47:00
+615905,2025-03-12,2025-03-13,203,Allegheny Bakery,1,Pittsburgh,15213,125,Bagels 6 ct,bakery,24.0,count,E012,2025-03-13 12:13:00,2025-03-13 12:39:00
+615906,2025-03-12,2025-03-13,203,Allegheny Bakery,1,Pittsburgh,15213,126,Croissant,bakery,24.0,count,E012,2025-03-13 07:31:00,2025-03-13 08:08:00
+615907,2025-03-11,2025-03-13,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,30.0,kg,E012,2025-03-13 07:40:00,2025-03-13 07:53:00
+615908,2025-03-11,2025-03-13,204,Laurel Highlands Meats,1,Pittsburgh,15213,129,Pork Chops,meat,10.0,kg,E012,2025-03-13 08:49:00,2025-03-13 09:30:00
+615909,2025-03-11,2025-03-13,205,Great Lakes Seafood,1,Pittsburgh,15213,131,Frozen Shrimp 1 lb,frozen,12.0,count,E013,2025-03-13 10:01:00,2025-03-13 10:08:00
+615910,2025-03-10,2025-03-13,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,10.0,count,E013,2025-03-13 12:18:00,2025-03-13 14:06:00
+615911,2025-03-10,2025-03-13,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,8.0,count,E014,2025-03-13 09:48:00,2025-03-13 09:54:00
+615912,2025-03-10,2025-03-13,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,14.0,count,E013,2025-03-13 12:47:00,2025-03-13 12:51:00
+615913,2025-03-10,2025-03-13,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,23.0,count,E014,2025-03-13 07:39:00,2025-03-13 08:30:00
+615914,2025-03-10,2025-03-13,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,6.0,count,E011,2025-03-13 07:28:00,2025-03-13 08:01:00
+615915,2025-03-10,2025-03-13,206,Three Rivers Beverages,1,Pittsburgh,15213,137,Iced Tea 1 gal,beverages,8.0,count,E012,2025-03-13 06:49:00,2025-03-13 07:25:00
+615916,2025-03-10,2025-03-13,207,Heartland Pantry,1,Pittsburgh,15213,142,Peanut Butter 16 oz,pantry,12.0,count,E013,2025-03-13 06:15:00,2025-03-13 06:38:00
+615917,2025-03-10,2025-03-13,207,Heartland Pantry,1,Pittsburgh,15213,143,Tomato Soup,pantry,24.0,count,E014,2025-03-13 07:40:00,2025-03-13 08:09:00
+615918,2025-03-10,2025-03-13,208,Sunrise Frozen Foods,1,Pittsburgh,15213,146,Vanilla Ice Cream 1.5 qt,frozen,18.0,count,E011,2025-03-13 10:28:00,2025-03-13 10:37:00
+615919,2025-03-10,2025-03-13,208,Sunrise Frozen Foods,1,Pittsburgh,15213,147,Frozen Pizza,frozen,10.0,count,E011,2025-03-13 11:24:00,2025-03-13 11:29:00
+615920,2025-03-10,2025-03-13,208,Sunrise Frozen Foods,1,Pittsburgh,15213,149,Ice Cubes 7 lb,frozen,6.0,count,E013,2025-03-13 12:48:00,2025-03-13 13:31:00
+615921,2025-03-10,2025-03-13,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,8.0,count,E014,2025-03-13 09:54:00,2025-03-13 11:22:00
+615922,2025-03-10,2025-03-13,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,8.0,count,E014,2025-03-13 13:32:00,2025-03-13 13:32:00
+615923,2025-03-10,2025-03-13,209,CleanHome Supplies,1,Pittsburgh,15213,153,Laundry Detergent 100 oz,household,4.0,count,E011,2025-03-13 10:19:00,2025-03-13 11:36:00
+615924,2025-03-11,2025-03-13,210,EcoRefill Co.,1,Pittsburgh,15213,154,Refill Laundry Detergent,refill,20.0,liter,E011,2025-03-13 13:16:00,2025-03-13 13:50:00
+615925,2025-03-12,2025-03-13,211,Ohio Valley Farms,1,Pittsburgh,15213,158,Fresh Basil,produce,12.0,count,E013,2025-03-13 08:36:00,2025-03-13 09:02:00
+616133,2025-03-13,2025-03-14,201,Fresh Fields Produce,1,Pittsburgh,15213,101,Banana,produce,54.0,kg,E013,2025-03-14 12:53:00,2025-03-14 13:20:00
+616134,2025-03-13,2025-03-14,211,Ohio Valley Farms,1,Pittsburgh,15213,102,Cucumber,produce,72.0,count,E011,2025-03-14 11:21:00,2025-03-14 11:38:00
+616135,2025-03-13,2025-03-14,211,Ohio Valley Farms,1,Pittsburgh,15213,105,Gala Apple,produce,18.0,kg,E014,2025-03-14 13:26:00,2025-03-14 13:27:00
+616136,2025-03-13,2025-03-14,201,Fresh Fields Produce,1,Pittsburgh,15213,106,Tomato,produce,20.0,kg,E013,2025-03-14 08:00:00,2025-03-14 08:07:00
+616137,2025-03-13,2025-03-14,211,Ohio Valley Farms,1,Pittsburgh,15213,109,Carrots 2 lb Bag,produce,20.0,count,E012,2025-03-14 07:21:00,2025-03-14 07:37:00
+616138,2025-03-13,2025-03-14,211,Ohio Valley Farms,1,Pittsburgh,15213,111,Yellow Onion,produce,20.0,kg,E011,2025-03-14 13:25:00,2025-03-14 13:35:00
+616139,2025-03-13,2025-03-14,201,Fresh Fields Produce,1,Pittsburgh,15213,112,Strawberries 1 lb,produce,24.0,count,E013,2025-03-14 06:44:00,2025-03-14 06:58:00
+616140,2025-03-13,2025-03-14,201,Fresh Fields Produce,1,Pittsburgh,15213,113,Lemon,produce,100.0,count,E014,2025-03-14 12:03:00,2025-03-14 13:01:00
+616141,2025-03-13,2025-03-14,202,Keystone Dairy,1,Pittsburgh,15213,116,Whole Milk 1/2 gal,dairy,18.0,count,E012,2025-03-14 12:21:00,2025-03-14 12:29:00
+616142,2025-03-13,2025-03-14,202,Keystone Dairy,1,Pittsburgh,15213,117,Whole Milk 1 gal,dairy,36.0,count,E013,2025-03-14 06:39:00,2025-03-14 07:46:00
+616143,2025-03-13,2025-03-14,202,Keystone Dairy,1,Pittsburgh,15213,118,Large Eggs 12 ct,dairy,45.0,count,E012,2025-03-14 06:01:00,2025-03-14 06:49:00
+616144,2025-03-13,2025-03-14,202,Keystone Dairy,1,Pittsburgh,15213,120,Cheddar Cheese 8 oz,dairy,24.0,count,E013,2025-03-14 11:33:00,2025-03-14 11:49:00
+616145,2025-03-13,2025-03-14,202,Keystone Dairy,1,Pittsburgh,15213,121,Salted Butter 1 lb,dairy,18.0,count,E012,2025-03-14 09:32:00,2025-03-14 09:38:00
+616146,2025-03-11,2025-03-14,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,16.0,count,E011,2025-03-14 06:33:00,2025-03-14 06:35:00
+616147,2025-03-13,2025-03-14,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,12.0,count,E012,2025-03-14 08:52:00,2025-03-14 09:25:00
+616148,2025-03-13,2025-03-14,203,Allegheny Bakery,1,Pittsburgh,15213,125,Bagels 6 ct,bakery,24.0,count,E013,2025-03-14 12:59:00,2025-03-14 13:52:00
+616149,2025-03-13,2025-03-14,203,Allegheny Bakery,1,Pittsburgh,15213,126,Croissant,bakery,24.0,count,E013,2025-03-14 10:00:00,2025-03-14 10:28:00
+616150,2025-03-12,2025-03-14,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,20.0,kg,E012,2025-03-14 12:24:00,2025-03-14 12:54:00
+616151,2025-03-12,2025-03-14,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,10.0,kg,E014,2025-03-14 06:04:00,2025-03-14 07:04:00
+616152,2025-03-12,2025-03-14,204,Laurel Highlands Meats,1,Pittsburgh,15213,129,Pork Chops,meat,10.0,kg,E013,2025-03-14 06:25:00,2025-03-14 06:43:00
+616153,2025-03-12,2025-03-14,205,Great Lakes Seafood,1,Pittsburgh,15213,130,Atlantic Salmon,seafood,10.0,kg,E013,2025-03-14 10:05:00,2025-03-14 10:25:00
+616154,2025-03-12,2025-03-14,205,Great Lakes Seafood,1,Pittsburgh,15213,131,Frozen Shrimp 1 lb,frozen,12.0,count,E011,2025-03-14 09:30:00,2025-03-14 09:33:00
+616155,2025-03-11,2025-03-14,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,6.0,count,E012,2025-03-14 12:23:00,2025-03-14 12:32:00
+616156,2025-03-11,2025-03-14,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,12.0,count,E011,2025-03-14 08:13:00,2025-03-14 09:31:00
+616157,2025-03-11,2025-03-14,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,8.0,count,E014,2025-03-14 08:21:00,2025-03-14 08:56:00
+616158,2025-03-11,2025-03-14,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,6.0,count,E011,2025-03-14 08:02:00,2025-03-14 08:09:00
+616159,2025-03-11,2025-03-14,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,6.0,count,E014,2025-03-14 09:40:00,2025-03-14 09:42:00
+616160,2025-03-11,2025-03-14,206,Three Rivers Beverages,1,Pittsburgh,15213,137,Iced Tea 1 gal,beverages,8.0,count,E013,2025-03-14 10:10:00,2025-03-14 11:17:00
+616161,2025-03-11,2025-03-14,207,Heartland Pantry,1,Pittsburgh,15213,138,Spaghetti 1 lb,pantry,20.0,count,E014,2025-03-14 08:33:00,2025-03-14 10:15:00
+616162,2025-03-11,2025-03-14,207,Heartland Pantry,1,Pittsburgh,15213,139,Marinara Sauce 24 oz,pantry,12.0,count,E012,2025-03-14 10:49:00,2025-03-14 12:03:00
+616163,2025-03-11,2025-03-14,207,Heartland Pantry,1,Pittsburgh,15213,140,Long Grain Rice 2 lb,pantry,12.0,count,E014,2025-03-14 07:07:00,2025-03-14 07:31:00
+616164,2025-03-11,2025-03-14,207,Heartland Pantry,1,Pittsburgh,15213,141,Long Grain Rice 5 lb,pantry,8.0,count,E012,2025-03-14 13:18:00,2025-03-14 13:30:00
+616165,2025-03-11,2025-03-14,207,Heartland Pantry,1,Pittsburgh,15213,142,Peanut Butter 16 oz,pantry,12.0,count,E011,2025-03-14 12:11:00,2025-03-14 12:21:00
+616166,2025-03-11,2025-03-14,207,Heartland Pantry,1,Pittsburgh,15213,143,Tomato Soup,pantry,24.0,count,E014,2025-03-14 12:26:00,2025-03-14 12:44:00
+616167,2025-03-11,2025-03-14,207,Heartland Pantry,1,Pittsburgh,15213,144,Corn Flakes 18 oz,pantry,12.0,count,E011,2025-03-14 08:40:00,2025-03-14 09:51:00
+616168,2025-03-11,2025-03-14,208,Sunrise Frozen Foods,1,Pittsburgh,15213,147,Frozen Pizza,frozen,10.0,count,E013,2025-03-14 11:43:00,2025-03-14 11:58:00
+616169,2025-03-11,2025-03-14,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,8.0,count,E013,2025-03-14 12:00:00,2025-03-14 12:03:00
+616170,2025-03-11,2025-03-14,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,8.0,count,E011,2025-03-14 08:34:00,2025-03-14 08:53:00
+616171,2025-03-11,2025-03-14,209,CleanHome Supplies,1,Pittsburgh,15213,153,Laundry Detergent 100 oz,household,4.0,count,E014,2025-03-14 13:41:00,2025-03-14 13:53:00
+616172,2025-03-12,2025-03-14,210,EcoRefill Co.,1,Pittsburgh,15213,157,Refill Oat Milk,refill,20.0,liter,E013,2025-03-14 10:51:00,2025-03-14 10:55:00
+616173,2025-03-12,2025-03-14,204,Laurel Highlands Meats,1,Pittsburgh,15213,159,Sliced Deli Turkey,meat,10.0,kg,E012,2025-03-14 13:54:00,2025-03-14 15:14:00
+616174,2025-03-12,2025-03-14,212,Blue Ridge Grocery Supply,1,Pittsburgh,15213,160,Hummus 10 oz,dairy,12.0,count,E012,2025-03-14 13:51:00,2025-03-14 13:53:00
+616438,2025-03-14,2025-03-15,201,Fresh Fields Produce,1,Pittsburgh,15213,101,Banana,produce,72.0,kg,E011,2025-03-15 13:27:00,2025-03-15 13:48:00
+616439,2025-03-14,2025-03-15,211,Ohio Valley Farms,1,Pittsburgh,15213,102,Cucumber,produce,48.0,count,E014,2025-03-15 12:30:00,2025-03-15 12:49:00
+616440,2025-03-14,2025-03-15,211,Ohio Valley Farms,1,Pittsburgh,15213,103,Cauliflower,produce,24.0,count,E013,2025-03-15 09:09:00,2025-03-15 09:39:00
+616441,2025-03-14,2025-03-15,201,Fresh Fields Produce,1,Pittsburgh,15213,104,Organic Banana,produce,18.0,kg,E012,2025-03-15 10:23:00,2025-03-15 10:43:00
+616442,2025-03-14,2025-03-15,211,Ohio Valley Farms,1,Pittsburgh,15213,105,Gala Apple,produce,18.0,kg,E013,2025-03-15 13:02:00,2025-03-15 13:15:00
+616443,2025-03-14,2025-03-15,201,Fresh Fields Produce,1,Pittsburgh,15213,106,Tomato,produce,10.0,kg,E012,2025-03-15 09:23:00,2025-03-15 10:54:00
+616444,2025-03-14,2025-03-15,211,Ohio Valley Farms,1,Pittsburgh,15213,107,Iceberg Lettuce,produce,48.0,count,E014,2025-03-15 08:52:00,2025-03-15 09:27:00
+616445,2025-03-14,2025-03-15,201,Fresh Fields Produce,1,Pittsburgh,15213,108,Avocado,produce,48.0,count,E013,2025-03-15 08:08:00,2025-03-15 10:21:00
+616446,2025-03-14,2025-03-15,211,Ohio Valley Farms,1,Pittsburgh,15213,109,Carrots 2 lb Bag,produce,20.0,count,E014,2025-03-15 06:38:00,2025-03-15 07:51:00
+616447,2025-03-14,2025-03-15,211,Ohio Valley Farms,1,Pittsburgh,15213,110,Potato,produce,60.0,kg,E013,2025-03-15 10:16:00,2025-03-15 10:48:00
+616448,2025-03-14,2025-03-15,201,Fresh Fields Produce,1,Pittsburgh,15213,112,Strawberries 1 lb,produce,40.0,count,E014,2025-03-15 11:36:00,2025-03-15 11:50:00
+616449,2025-03-14,2025-03-15,201,Fresh Fields Produce,1,Pittsburgh,15213,114,Watermelon,produce,16.0,count,E011,2025-03-15 12:03:00,2025-03-15 12:09:00
+616450,2025-03-14,2025-03-15,201,Fresh Fields Produce,1,Pittsburgh,15213,115,Blueberries 6 oz,produce,24.0,count,E014,2025-03-15 07:34:00,2025-03-15 07:39:00
+616451,2025-03-14,2025-03-15,202,Keystone Dairy,1,Pittsburgh,15213,116,Whole Milk 1/2 gal,dairy,36.0,count,E011,2025-03-15 06:16:00,2025-03-15 06:36:00
+616452,2025-03-14,2025-03-15,202,Keystone Dairy,1,Pittsburgh,15213,117,Whole Milk 1 gal,dairy,32.0,count,E011,2025-03-15 06:46:00,2025-03-15 07:24:00
+616453,2025-03-14,2025-03-15,202,Keystone Dairy,1,Pittsburgh,15213,118,Large Eggs 12 ct,dairy,30.0,count,E011,2025-03-15 08:03:00,2025-03-15 08:59:00
+616454,2025-03-14,2025-03-15,202,Keystone Dairy,1,Pittsburgh,15213,119,Greek Yogurt 32 oz,dairy,30.0,count,E011,2025-03-15 09:39:00,2025-03-15 09:59:00
+616455,2025-03-14,2025-03-15,202,Keystone Dairy,1,Pittsburgh,15213,120,Cheddar Cheese 8 oz,dairy,12.0,count,E013,2025-03-15 13:22:00,2025-03-15 13:24:00
+616456,2025-03-14,2025-03-15,202,Keystone Dairy,1,Pittsburgh,15213,121,Salted Butter 1 lb,dairy,18.0,count,E011,2025-03-15 06:58:00,2025-03-15 07:12:00
+616457,2025-03-12,2025-03-15,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,8.0,count,E011,2025-03-15 09:52:00,2025-03-15 10:07:00
+616458,2025-03-14,2025-03-15,203,Allegheny Bakery,1,Pittsburgh,15213,123,White Bread,bakery,48.0,count,E011,2025-03-15 07:52:00,2025-03-15 07:53:00
+616459,2025-03-14,2025-03-15,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,12.0,count,E013,2025-03-15 08:24:00,2025-03-15 08:24:00
+616460,2025-03-14,2025-03-15,203,Allegheny Bakery,1,Pittsburgh,15213,125,Bagels 6 ct,bakery,24.0,count,E013,2025-03-15 10:42:00,2025-03-15 10:47:00
+616461,2025-03-14,2025-03-15,203,Allegheny Bakery,1,Pittsburgh,15213,126,Croissant,bakery,24.0,count,E011,2025-03-15 11:40:00,2025-03-15 12:39:00
+616462,2025-03-13,2025-03-15,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,30.0,kg,E012,2025-03-15 09:46:00,2025-03-15 11:39:00
+616463,2025-03-13,2025-03-15,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,20.0,kg,E011,2025-03-15 09:41:00,2025-03-15 10:00:00
+616464,2025-03-13,2025-03-15,204,Laurel Highlands Meats,1,Pittsburgh,15213,129,Pork Chops,meat,10.0,kg,E012,2025-03-15 09:10:00,2025-03-15 09:11:00
+616465,2025-03-13,2025-03-15,205,Great Lakes Seafood,1,Pittsburgh,15213,131,Frozen Shrimp 1 lb,frozen,12.0,count,E011,2025-03-15 08:20:00,2025-03-15 08:33:00
+616466,2025-03-12,2025-03-15,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,8.0,count,E014,2025-03-15 07:32:00,2025-03-15 07:34:00
+616467,2025-03-12,2025-03-15,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,20.0,count,E013,2025-03-15 12:39:00,2025-03-15 12:54:00
+616468,2025-03-12,2025-03-15,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,8.0,count,E014,2025-03-15 09:56:00,2025-03-15 11:27:00
+616469,2025-03-12,2025-03-15,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,11.0,count,E012,2025-03-15 07:17:00,2025-03-15 07:18:00
+616470,2025-03-12,2025-03-15,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,6.0,count,E013,2025-03-15 06:37:00,2025-03-15 07:20:00
+616471,2025-03-12,2025-03-15,207,Heartland Pantry,1,Pittsburgh,15213,140,Long Grain Rice 2 lb,pantry,12.0,count,E012,2025-03-15 12:34:00,2025-03-15 13:12:00
+616472,2025-03-12,2025-03-15,207,Heartland Pantry,1,Pittsburgh,15213,145,Olive Oil 1 L,pantry,12.0,count,E013,2025-03-15 11:00:00,2025-03-15 11:26:00
+616473,2025-03-12,2025-03-15,208,Sunrise Frozen Foods,1,Pittsburgh,15213,148,Frozen Peas 16 oz,frozen,12.0,count,E014,2025-03-15 09:02:00,2025-03-15 10:32:00
+616474,2025-03-12,2025-03-15,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,8.0,count,E013,2025-03-15 10:53:00,2025-03-15 11:21:00
+616475,2025-03-12,2025-03-15,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,8.0,count,E013,2025-03-15 10:06:00,2025-03-15 10:09:00
+616476,2025-03-12,2025-03-15,209,CleanHome Supplies,1,Pittsburgh,15213,152,Dish Soap 20 oz,household,12.0,count,E014,2025-03-15 06:25:00,2025-03-15 06:34:00
+616477,2025-03-14,2025-03-15,211,Ohio Valley Farms,1,Pittsburgh,15213,158,Fresh Basil,produce,12.0,count,E011,2025-03-15 12:12:00,2025-03-15 12:32:00
+616478,2025-03-13,2025-03-15,212,Blue Ridge Grocery Supply,1,Pittsburgh,15213,160,Hummus 10 oz,dairy,12.0,count,E011,2025-03-15 09:06:00,2025-03-15 09:13:00
+616767,2025-03-15,2025-03-16,211,Ohio Valley Farms,1,Pittsburgh,15213,103,Cauliflower,produce,12.0,count,E011,2025-03-16 10:50:00,2025-03-16 11:09:00
+616768,2025-03-15,2025-03-16,201,Fresh Fields Produce,1,Pittsburgh,15213,106,Tomato,produce,20.0,kg,E014,2025-03-16 10:43:00,2025-03-16 11:03:00
+616769,2025-03-15,2025-03-16,211,Ohio Valley Farms,1,Pittsburgh,15213,111,Yellow Onion,produce,40.0,kg,E013,2025-03-16 09:29:00,2025-03-16 10:17:00
+616770,2025-03-15,2025-03-16,201,Fresh Fields Produce,1,Pittsburgh,15213,112,Strawberries 1 lb,produce,16.0,count,E013,2025-03-16 07:29:00,2025-03-16 09:10:00
+616771,2025-03-15,2025-03-16,201,Fresh Fields Produce,1,Pittsburgh,15213,115,Blueberries 6 oz,produce,24.0,count,E013,2025-03-16 06:37:00,2025-03-16 06:49:00
+616772,2025-03-15,2025-03-16,202,Keystone Dairy,1,Pittsburgh,15213,116,Whole Milk 1/2 gal,dairy,27.0,count,E014,2025-03-16 11:00:00,2025-03-16 11:14:00
+616773,2025-03-15,2025-03-16,202,Keystone Dairy,1,Pittsburgh,15213,117,Whole Milk 1 gal,dairy,48.0,count,E013,2025-03-16 11:22:00,2025-03-16 11:38:00
+616774,2025-03-15,2025-03-16,202,Keystone Dairy,1,Pittsburgh,15213,118,Large Eggs 12 ct,dairy,15.0,count,E013,2025-03-16 08:23:00,2025-03-16 08:40:00
+616775,2025-03-13,2025-03-16,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,16.0,count,E014,2025-03-16 13:37:00,2025-03-16 13:48:00
+616776,2025-03-15,2025-03-16,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,24.0,count,E014,2025-03-16 09:26:00,2025-03-16 09:59:00
+616777,2025-03-15,2025-03-16,203,Allegheny Bakery,1,Pittsburgh,15213,125,Bagels 6 ct,bakery,12.0,count,E011,2025-03-16 11:09:00,2025-03-16 11:21:00
+616778,2025-03-14,2025-03-16,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,30.0,kg,E014,2025-03-16 09:38:00,2025-03-16 10:06:00
+616779,2025-03-14,2025-03-16,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,10.0,kg,E013,2025-03-16 10:13:00,2025-03-16 10:38:00
+616780,2025-03-14,2025-03-16,205,Great Lakes Seafood,1,Pittsburgh,15213,130,Atlantic Salmon,seafood,10.0,kg,E011,2025-03-16 09:37:00,2025-03-16 10:11:00
+616781,2025-03-14,2025-03-16,205,Great Lakes Seafood,1,Pittsburgh,15213,131,Frozen Shrimp 1 lb,frozen,12.0,count,E012,2025-03-16 07:24:00,2025-03-16 08:29:00
+616782,2025-03-13,2025-03-16,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,20.0,count,E013,2025-03-16 11:51:00,2025-03-16 12:39:00
+616783,2025-03-13,2025-03-16,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,20.0,count,E011,2025-03-16 12:54:00,2025-03-16 12:55:00
+616784,2025-03-13,2025-03-16,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,20.0,count,E013,2025-03-16 08:31:00,2025-03-16 09:53:00
+616785,2025-03-13,2025-03-16,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,9.0,count,E014,2025-03-16 09:24:00,2025-03-16 09:29:00
+616786,2025-03-13,2025-03-16,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,18.0,count,E013,2025-03-16 13:52:00,2025-03-16 14:10:00
+616787,2025-03-13,2025-03-16,206,Three Rivers Beverages,1,Pittsburgh,15213,137,Iced Tea 1 gal,beverages,4.0,count,E013,2025-03-16 13:18:00,2025-03-16 17:18:00
+616788,2025-03-13,2025-03-16,207,Heartland Pantry,1,Pittsburgh,15213,138,Spaghetti 1 lb,pantry,20.0,count,E014,2025-03-16 06:25:00,2025-03-16 06:26:00
+616789,2025-03-13,2025-03-16,207,Heartland Pantry,1,Pittsburgh,15213,139,Marinara Sauce 24 oz,pantry,24.0,count,E012,2025-03-16 08:13:00,2025-03-16 08:56:00
+616790,2025-03-13,2025-03-16,207,Heartland Pantry,1,Pittsburgh,15213,140,Long Grain Rice 2 lb,pantry,12.0,count,E014,2025-03-16 07:05:00,2025-03-16 07:34:00
+616791,2025-03-13,2025-03-16,207,Heartland Pantry,1,Pittsburgh,15213,142,Peanut Butter 16 oz,pantry,12.0,count,E012,2025-03-16 06:10:00,2025-03-16 06:40:00
+616792,2025-03-13,2025-03-16,207,Heartland Pantry,1,Pittsburgh,15213,143,Tomato Soup,pantry,24.0,count,E011,2025-03-16 09:01:00,2025-03-16 09:05:00
+616793,2025-03-13,2025-03-16,207,Heartland Pantry,1,Pittsburgh,15213,144,Corn Flakes 18 oz,pantry,12.0,count,E011,2025-03-16 13:56:00,2025-03-16 14:35:00
+616794,2025-03-13,2025-03-16,207,Heartland Pantry,1,Pittsburgh,15213,145,Olive Oil 1 L,pantry,12.0,count,E014,2025-03-16 09:29:00,2025-03-16 09:34:00
+616795,2025-03-13,2025-03-16,208,Sunrise Frozen Foods,1,Pittsburgh,15213,147,Frozen Pizza,frozen,20.0,count,E012,2025-03-16 11:03:00,2025-03-16 11:39:00
+616796,2025-03-13,2025-03-16,208,Sunrise Frozen Foods,1,Pittsburgh,15213,148,Frozen Peas 16 oz,frozen,12.0,count,E012,2025-03-16 11:38:00,2025-03-16 11:44:00
+616797,2025-03-13,2025-03-16,208,Sunrise Frozen Foods,1,Pittsburgh,15213,149,Ice Cubes 7 lb,frozen,6.0,count,E012,2025-03-16 12:24:00,2025-03-16 13:28:00
+616798,2025-03-13,2025-03-16,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,8.0,count,E012,2025-03-16 13:10:00,2025-03-16 13:31:00
+616799,2025-03-13,2025-03-16,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,20.0,count,E014,2025-03-16 08:03:00,2025-03-16 08:28:00
+616800,2025-03-13,2025-03-16,209,CleanHome Supplies,1,Pittsburgh,15213,152,Dish Soap 20 oz,household,12.0,count,E013,2025-03-16 10:50:00,2025-03-16 11:14:00
+616801,2025-03-13,2025-03-16,209,CleanHome Supplies,1,Pittsburgh,15213,153,Laundry Detergent 100 oz,household,4.0,count,E011,2025-03-16 07:24:00,2025-03-16 07:48:00
+616802,2025-03-14,2025-03-16,210,EcoRefill Co.,1,Pittsburgh,15213,154,Refill Laundry Detergent,refill,20.0,liter,E013,2025-03-16 12:32:00,2025-03-16 13:11:00
+616803,2025-03-14,2025-03-16,210,EcoRefill Co.,1,Pittsburgh,15213,155,Refill Dish Soap,refill,20.0,liter,E011,2025-03-16 11:56:00,2025-03-16 12:40:00
+616804,2025-03-14,2025-03-16,210,EcoRefill Co.,1,Pittsburgh,15213,157,Refill Oat Milk,refill,20.0,liter,E014,2025-03-16 11:35:00,2025-03-16 12:05:00
+616805,2025-03-14,2025-03-16,204,Laurel Highlands Meats,1,Pittsburgh,15213,159,Sliced Deli Turkey,meat,5.0,kg,E014,2025-03-16 13:56:00,2025-03-16 14:35:00
+617081,2025-03-16,2025-03-17,211,Ohio Valley Farms,1,Pittsburgh,15213,102,Cucumber,produce,72.0,count,E012,2025-03-17 13:46:00,2025-03-17 13:50:00
+617082,2025-03-16,2025-03-17,201,Fresh Fields Produce,1,Pittsburgh,15213,104,Organic Banana,produce,36.0,kg,E013,2025-03-17 12:41:00,2025-03-17 12:45:00
+617083,2025-03-16,2025-03-17,211,Ohio Valley Farms,1,Pittsburgh,15213,105,Gala Apple,produce,36.0,kg,E014,2025-03-17 06:07:00,2025-03-17 06:08:00
+617084,2025-03-16,2025-03-17,201,Fresh Fields Produce,1,Pittsburgh,15213,108,Avocado,produce,48.0,count,E013,2025-03-17 06:13:00,2025-03-17 06:35:00
+617085,2025-03-16,2025-03-17,211,Ohio Valley Farms,1,Pittsburgh,15213,109,Carrots 2 lb Bag,produce,40.0,count,E014,2025-03-17 06:32:00,2025-03-17 07:28:00
+617086,2025-03-16,2025-03-17,211,Ohio Valley Farms,1,Pittsburgh,15213,110,Potato,produce,20.0,kg,E014,2025-03-17 13:39:00,2025-03-17 14:28:00
+617087,2025-03-16,2025-03-17,201,Fresh Fields Produce,1,Pittsburgh,15213,112,Strawberries 1 lb,produce,24.0,count,E012,2025-03-17 09:07:00,2025-03-17 09:17:00
+617088,2025-03-16,2025-03-17,202,Keystone Dairy,1,Pittsburgh,15213,117,Whole Milk 1 gal,dairy,44.0,count,E014,2025-03-17 07:38:00,2025-03-17 08:27:00
+617089,2025-03-14,2025-03-17,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,8.0,count,E011,2025-03-17 06:35:00,2025-03-17 06:58:00
+617090,2025-03-16,2025-03-17,203,Allegheny Bakery,1,Pittsburgh,15213,126,Croissant,bakery,48.0,count,E012,2025-03-17 08:51:00,2025-03-17 09:21:00
+617091,2025-03-15,2025-03-17,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,20.0,kg,E012,2025-03-17 07:48:00,2025-03-17 08:59:00
+617092,2025-03-15,2025-03-17,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,10.0,kg,E014,2025-03-17 09:04:00,2025-03-17 10:08:00
+617093,2025-03-15,2025-03-17,204,Laurel Highlands Meats,1,Pittsburgh,15213,129,Pork Chops,meat,10.0,kg,E013,2025-03-17 13:54:00,2025-03-17 14:27:00
+617094,2025-03-15,2025-03-17,205,Great Lakes Seafood,1,Pittsburgh,15213,130,Atlantic Salmon,seafood,10.0,kg,E011,2025-03-17 13:09:00,2025-03-17 13:51:00
+617095,2025-03-15,2025-03-17,205,Great Lakes Seafood,1,Pittsburgh,15213,131,Frozen Shrimp 1 lb,frozen,12.0,count,E011,2025-03-17 09:30:00,2025-03-21 11:12:00
+617096,2025-03-14,2025-03-17,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,20.0,count,E012,2025-03-17 12:58:00,2025-03-17 13:19:00
+617097,2025-03-14,2025-03-17,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,28.0,count,E011,2025-03-17 09:09:00,2025-03-17 09:44:00
+617098,2025-03-14,2025-03-17,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,10.0,count,E014,2025-03-17 07:03:00,2025-03-17 07:09:00
+617099,2025-03-14,2025-03-17,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,24.0,count,E013,2025-03-17 06:24:00,2025-03-17 06:27:00
+617100,2025-03-14,2025-03-17,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,6.0,count,E013,2025-03-17 13:00:00,2025-03-17 13:00:00
+617101,2025-03-14,2025-03-17,206,Three Rivers Beverages,1,Pittsburgh,15213,137,Iced Tea 1 gal,beverages,4.0,count,E013,2025-03-17 10:37:00,2025-03-17 10:39:00
+617102,2025-03-14,2025-03-17,207,Heartland Pantry,1,Pittsburgh,15213,138,Spaghetti 1 lb,pantry,20.0,count,E014,2025-03-17 11:18:00,2025-03-17 12:12:00
+617103,2025-03-14,2025-03-17,207,Heartland Pantry,1,Pittsburgh,15213,139,Marinara Sauce 24 oz,pantry,12.0,count,E013,2025-03-17 13:00:00,2025-03-17 14:00:00
+617104,2025-03-14,2025-03-17,207,Heartland Pantry,1,Pittsburgh,15213,140,Long Grain Rice 2 lb,pantry,24.0,count,E011,2025-03-17 12:27:00,2025-03-17 13:01:00
+617105,2025-03-14,2025-03-17,207,Heartland Pantry,1,Pittsburgh,15213,141,Long Grain Rice 5 lb,pantry,16.0,count,E014,2025-03-17 08:45:00,2025-03-17 08:45:00
+617106,2025-03-14,2025-03-17,207,Heartland Pantry,1,Pittsburgh,15213,142,Peanut Butter 16 oz,pantry,12.0,count,E013,2025-03-17 09:52:00,2025-03-17 09:57:00
+617107,2025-03-14,2025-03-17,207,Heartland Pantry,1,Pittsburgh,15213,143,Tomato Soup,pantry,24.0,count,E012,2025-03-17 11:37:00,2025-03-17 12:43:00
+617108,2025-03-14,2025-03-17,207,Heartland Pantry,1,Pittsburgh,15213,144,Corn Flakes 18 oz,pantry,24.0,count,E014,2025-03-17 08:31:00,2025-03-21 09:30:00
+617109,2025-03-14,2025-03-17,207,Heartland Pantry,1,Pittsburgh,15213,145,Olive Oil 1 L,pantry,12.0,count,E013,2025-03-17 09:11:00,2025-03-17 09:45:00
+617110,2025-03-14,2025-03-17,208,Sunrise Frozen Foods,1,Pittsburgh,15213,146,Vanilla Ice Cream 1.5 qt,frozen,18.0,count,E011,2025-03-17 08:08:00,2025-03-17 09:09:00
+617111,2025-03-14,2025-03-17,208,Sunrise Frozen Foods,1,Pittsburgh,15213,147,Frozen Pizza,frozen,10.0,count,E014,2025-03-17 13:42:00,2025-03-17 14:07:00
+617112,2025-03-14,2025-03-17,208,Sunrise Frozen Foods,1,Pittsburgh,15213,148,Frozen Peas 16 oz,frozen,12.0,count,E014,2025-03-17 13:18:00,2025-03-17 13:40:00
+617113,2025-03-14,2025-03-17,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,12.0,count,E013,2025-03-17 06:12:00,2025-03-17 06:13:00
+617114,2025-03-14,2025-03-17,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,16.0,count,E011,2025-03-17 07:16:00,2025-03-17 07:40:00
+617115,2025-03-14,2025-03-17,209,CleanHome Supplies,1,Pittsburgh,15213,153,Laundry Detergent 100 oz,household,4.0,count,E014,2025-03-17 07:39:00,2025-03-17 07:51:00
+617116,2025-03-15,2025-03-17,212,Blue Ridge Grocery Supply,1,Pittsburgh,15213,160,Hummus 10 oz,dairy,12.0,count,E011,2025-03-17 09:24:00,2025-03-17 09:25:00
+617359,2025-03-17,2025-03-18,211,Ohio Valley Farms,1,Pittsburgh,15213,105,Gala Apple,produce,36.0,kg,E014,2025-03-18 13:03:00,2025-03-18 13:53:00
+617360,2025-03-17,2025-03-18,211,Ohio Valley Farms,1,Pittsburgh,15213,107,Iceberg Lettuce,produce,72.0,count,E011,2025-03-18 11:18:00,2025-03-18 11:46:00
+617361,2025-03-17,2025-03-18,201,Fresh Fields Produce,1,Pittsburgh,15213,108,Avocado,produce,48.0,count,E013,2025-03-18 11:40:00,2025-03-18 12:25:00
+617362,2025-03-17,2025-03-18,211,Ohio Valley Farms,1,Pittsburgh,15213,110,Potato,produce,60.0,kg,E014,2025-03-18 13:10:00,2025-03-18 13:26:00
+617363,2025-03-17,2025-03-18,201,Fresh Fields Produce,1,Pittsburgh,15213,112,Strawberries 1 lb,produce,16.0,count,E014,2025-03-18 12:41:00,2025-03-18 12:48:00
+617364,2025-03-17,2025-03-18,201,Fresh Fields Produce,1,Pittsburgh,15213,115,Blueberries 6 oz,produce,24.0,count,E013,2025-03-18 07:45:00,2025-03-18 08:09:00
+617365,2025-03-17,2025-03-18,202,Keystone Dairy,1,Pittsburgh,15213,116,Whole Milk 1/2 gal,dairy,45.0,count,E012,2025-03-18 08:06:00,2025-03-18 08:59:00
+617366,2025-03-17,2025-03-18,202,Keystone Dairy,1,Pittsburgh,15213,118,Large Eggs 12 ct,dairy,45.0,count,E013,2025-03-18 13:22:00,2025-03-18 13:56:00
+617367,2025-03-17,2025-03-18,202,Keystone Dairy,1,Pittsburgh,15213,119,Greek Yogurt 32 oz,dairy,18.0,count,E012,2025-03-18 13:50:00,2025-03-18 14:15:00
+617368,2025-03-17,2025-03-18,202,Keystone Dairy,1,Pittsburgh,15213,120,Cheddar Cheese 8 oz,dairy,24.0,count,E013,2025-03-18 06:00:00,2025-03-18 06:06:00
+617369,2025-03-15,2025-03-18,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,16.0,count,E012,2025-03-18 10:29:00,2025-03-18 10:32:00
+617370,2025-03-17,2025-03-18,203,Allegheny Bakery,1,Pittsburgh,15213,123,White Bread,bakery,48.0,count,E012,2025-03-18 13:56:00,2025-03-18 13:56:00
+617371,2025-03-17,2025-03-18,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,24.0,count,E011,2025-03-18 12:34:00,2025-03-18 12:44:00
+617372,2025-03-15,2025-03-18,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,20.0,count,E013,2025-03-18 09:11:00,2025-03-18 09:26:00
+617373,2025-03-15,2025-03-18,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,10.0,count,E012,2025-03-18 10:47:00,2025-03-18 10:59:00
+617374,2025-03-15,2025-03-18,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,1.0,count,E013,2025-03-18 09:18:00,2025-03-18 09:31:00
+617375,2025-03-15,2025-03-18,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,6.0,count,E012,2025-03-18 06:22:00,2025-03-18 06:46:00
+617376,2025-03-15,2025-03-18,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,16.0,count,E013,2025-03-18 10:49:00,2025-03-18 12:04:00
+617377,2025-03-15,2025-03-18,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,8.0,count,E013,2025-03-18 08:16:00,2025-03-18 08:36:00
+617378,2025-03-15,2025-03-18,209,CleanHome Supplies,1,Pittsburgh,15213,153,Laundry Detergent 100 oz,household,4.0,count,E012,2025-03-18 08:14:00,2025-03-18 08:17:00
+617379,2025-03-16,2025-03-18,210,EcoRefill Co.,1,Pittsburgh,15213,156,Refill Olive Oil,refill,20.0,liter,E013,2025-03-18 08:16:00,2025-03-18 08:26:00
+617380,2025-03-16,2025-03-18,204,Laurel Highlands Meats,1,Pittsburgh,15213,159,Sliced Deli Turkey,meat,10.0,kg,E013,2025-03-18 13:03:00,2025-03-18 13:04:00
+617552,2025-03-18,2025-03-19,201,Fresh Fields Produce,1,Pittsburgh,15213,101,Banana,produce,72.0,kg,E012,2025-03-19 09:30:00,2025-03-19 09:32:00
+617553,2025-03-18,2025-03-19,211,Ohio Valley Farms,1,Pittsburgh,15213,102,Cucumber,produce,72.0,count,E012,2025-03-19 11:54:00,2025-03-19 12:05:00
+617554,2025-03-18,2025-03-19,211,Ohio Valley Farms,1,Pittsburgh,15213,103,Cauliflower,produce,24.0,count,E014,2025-03-19 13:21:00,2025-03-19 14:18:00
+617555,2025-03-18,2025-03-19,211,Ohio Valley Farms,1,Pittsburgh,15213,105,Gala Apple,produce,36.0,kg,E013,2025-03-19 07:37:00,2025-03-19 07:50:00
+617556,2025-03-18,2025-03-19,201,Fresh Fields Produce,1,Pittsburgh,15213,106,Tomato,produce,20.0,kg,E013,2025-03-19 11:21:00,2025-03-19 11:40:00
+617557,2025-03-18,2025-03-19,201,Fresh Fields Produce,1,Pittsburgh,15213,108,Avocado,produce,48.0,count,E011,2025-03-19 12:58:00,2025-03-19 13:23:00
+617558,2025-03-18,2025-03-19,211,Ohio Valley Farms,1,Pittsburgh,15213,110,Potato,produce,40.0,kg,E011,2025-03-19 08:04:00,2025-03-19 08:19:00
+617559,2025-03-18,2025-03-19,211,Ohio Valley Farms,1,Pittsburgh,15213,111,Yellow Onion,produce,20.0,kg,E013,2025-03-19 11:54:00,2025-03-19 11:58:00
+617560,2025-03-18,2025-03-19,201,Fresh Fields Produce,1,Pittsburgh,15213,112,Strawberries 1 lb,produce,16.0,count,E012,2025-03-19 12:09:00,2025-03-23 12:32:00
+617561,2025-03-18,2025-03-19,202,Keystone Dairy,1,Pittsburgh,15213,117,Whole Milk 1 gal,dairy,40.0,count,E013,2025-03-19 09:04:00,2025-03-19 09:34:00
+617562,2025-03-18,2025-03-19,202,Keystone Dairy,1,Pittsburgh,15213,121,Salted Butter 1 lb,dairy,36.0,count,E012,2025-03-19 06:28:00,2025-03-19 07:31:00
+617563,2025-03-18,2025-03-19,203,Allegheny Bakery,1,Pittsburgh,15213,125,Bagels 6 ct,bakery,24.0,count,E012,2025-03-19 10:52:00,2025-03-19 10:54:00
+617564,2025-03-17,2025-03-19,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,10.0,kg,E012,2025-03-19 06:35:00,2025-03-19 06:42:00
+617565,2025-03-17,2025-03-19,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,10.0,kg,E013,2025-03-19 12:00:00,2025-03-19 12:09:00
+617566,2025-03-17,2025-03-19,205,Great Lakes Seafood,1,Pittsburgh,15213,130,Atlantic Salmon,seafood,10.0,kg,E012,2025-03-19 12:48:00,2025-03-19 14:06:00
+617567,2025-03-16,2025-03-19,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,10.0,count,E013,2025-03-19 08:29:00,2025-03-19 09:40:00
+617568,2025-03-16,2025-03-19,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,4.0,count,E014,2025-03-19 07:49:00,2025-03-19 07:59:00
+617569,2025-03-16,2025-03-19,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,4.0,count,E012,2025-03-19 13:20:00,2025-03-19 13:53:00
+617570,2025-03-16,2025-03-19,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,22.0,count,E011,2025-03-19 12:17:00,2025-03-19 12:19:00
+617571,2025-03-16,2025-03-19,206,Three Rivers Beverages,1,Pittsburgh,15213,137,Iced Tea 1 gal,beverages,8.0,count,E012,2025-03-19 12:58:00,2025-03-19 13:10:00
+617572,2025-03-16,2025-03-19,207,Heartland Pantry,1,Pittsburgh,15213,138,Spaghetti 1 lb,pantry,20.0,count,E014,2025-03-19 12:48:00,2025-03-19 13:01:00
+617573,2025-03-16,2025-03-19,207,Heartland Pantry,1,Pittsburgh,15213,139,Marinara Sauce 24 oz,pantry,12.0,count,E012,2025-03-19 06:58:00,2025-03-24 07:00:00
+617574,2025-03-16,2025-03-19,207,Heartland Pantry,1,Pittsburgh,15213,143,Tomato Soup,pantry,24.0,count,E014,2025-03-19 11:21:00,2025-03-19 11:28:00
+617575,2025-03-16,2025-03-19,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,4.0,count,E014,2025-03-19 10:06:00,2025-03-19 10:07:00
+617576,2025-03-16,2025-03-19,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,12.0,count,E011,2025-03-19 10:45:00,2025-03-19 12:20:00
+617577,2025-03-16,2025-03-19,209,CleanHome Supplies,1,Pittsburgh,15213,152,Dish Soap 20 oz,household,12.0,count,E011,2025-03-19 06:42:00,2025-03-19 06:58:00
+617578,2025-03-16,2025-03-19,209,CleanHome Supplies,1,Pittsburgh,15213,153,Laundry Detergent 100 oz,household,8.0,count,E012,2025-03-19 13:17:00,2025-03-23 13:19:00
+617579,2025-03-18,2025-03-19,211,Ohio Valley Farms,1,Pittsburgh,15213,158,Fresh Basil,produce,12.0,count,E014,2025-03-19 08:22:00,2025-03-19 08:50:00
+617580,2025-03-17,2025-03-19,212,Blue Ridge Grocery Supply,1,Pittsburgh,15213,160,Hummus 10 oz,dairy,12.0,count,E013,2025-03-19 06:13:00,2025-03-21 06:48:00
+617737,2025-03-19,2025-03-20,211,Ohio Valley Farms,1,Pittsburgh,15213,105,Gala Apple,produce,18.0,kg,E011,2025-03-20 10:59:00,2025-03-20 11:30:00
+617738,2025-03-19,2025-03-20,201,Fresh Fields Produce,1,Pittsburgh,15213,108,Avocado,produce,48.0,count,E014,2025-03-20 07:22:00,2025-03-20 07:50:00
+617739,2025-03-19,2025-03-20,211,Ohio Valley Farms,1,Pittsburgh,15213,110,Potato,produce,40.0,kg,E013,2025-03-20 10:35:00,2025-03-20 10:41:00
+617740,2025-03-19,2025-03-20,201,Fresh Fields Produce,1,Pittsburgh,15213,112,Strawberries 1 lb,produce,24.0,count,E013,2025-03-20 10:40:00,2025-03-20 10:52:00
+617741,2025-03-19,2025-03-20,201,Fresh Fields Produce,1,Pittsburgh,15213,115,Blueberries 6 oz,produce,12.0,count,E011,2025-03-20 07:59:00,2025-03-20 08:00:00
+617742,2025-03-19,2025-03-20,202,Keystone Dairy,1,Pittsburgh,15213,116,Whole Milk 1/2 gal,dairy,36.0,count,E011,2025-03-20 11:51:00,2025-03-20 12:47:00
+617743,2025-03-19,2025-03-20,202,Keystone Dairy,1,Pittsburgh,15213,118,Large Eggs 12 ct,dairy,45.0,count,E013,2025-03-20 08:39:00,2025-03-20 08:40:00
+617744,2025-03-19,2025-03-20,202,Keystone Dairy,1,Pittsburgh,15213,119,Greek Yogurt 32 oz,dairy,24.0,count,E011,2025-03-20 07:33:00,2025-03-20 07:49:00
+617745,2025-03-19,2025-03-20,202,Keystone Dairy,1,Pittsburgh,15213,120,Cheddar Cheese 8 oz,dairy,12.0,count,E012,2025-03-20 07:24:00,2025-03-20 08:08:00
+617746,2025-03-17,2025-03-20,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,8.0,count,E014,2025-03-20 09:40:00,2025-03-20 10:03:00
+617747,2025-03-19,2025-03-20,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,24.0,count,E012,2025-03-20 07:22:00,2025-03-20 07:34:00
+617748,2025-03-19,2025-03-20,203,Allegheny Bakery,1,Pittsburgh,15213,125,Bagels 6 ct,bakery,24.0,count,E011,2025-03-20 10:31:00,2025-03-20 10:33:00
+617749,2025-03-19,2025-03-20,203,Allegheny Bakery,1,Pittsburgh,15213,126,Croissant,bakery,24.0,count,E014,2025-03-20 10:27:00,2025-03-20 12:00:00
+617750,2025-03-18,2025-03-20,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,20.0,kg,E012,2025-03-20 12:12:00,2025-03-20 12:22:00
+617751,2025-03-18,2025-03-20,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,20.0,kg,E013,2025-03-20 10:43:00,2025-03-20 11:45:00
+617752,2025-03-18,2025-03-20,204,Laurel Highlands Meats,1,Pittsburgh,15213,129,Pork Chops,meat,10.0,kg,E014,2025-03-20 10:57:00,2025-03-20 12:16:00
+617753,2025-03-17,2025-03-20,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,8.0,count,E014,2025-03-20 13:15:00,2025-03-20 14:23:00
+617754,2025-03-17,2025-03-20,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,24.0,count,E011,2025-03-20 11:41:00,2025-03-20 11:41:00
+617755,2025-03-17,2025-03-20,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,8.0,count,E011,2025-03-20 13:16:00,2025-03-20 13:16:00
+617756,2025-03-17,2025-03-20,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,12.0,count,E012,2025-03-20 10:13:00,2025-03-20 11:59:00
+617757,2025-03-17,2025-03-20,207,Heartland Pantry,1,Pittsburgh,15213,138,Spaghetti 1 lb,pantry,20.0,count,E012,2025-03-20 12:36:00,2025-03-20 13:02:00
+617758,2025-03-17,2025-03-20,207,Heartland Pantry,1,Pittsburgh,15213,139,Marinara Sauce 24 oz,pantry,12.0,count,E014,2025-03-20 09:48:00,2025-03-20 09:48:00
+617759,2025-03-17,2025-03-20,207,Heartland Pantry,1,Pittsburgh,15213,141,Long Grain Rice 5 lb,pantry,8.0,count,E013,2025-03-20 06:04:00,2025-03-20 07:27:00
+617760,2025-03-17,2025-03-20,207,Heartland Pantry,1,Pittsburgh,15213,142,Peanut Butter 16 oz,pantry,12.0,count,E014,2025-03-20 07:05:00,2025-03-20 07:34:00
+617761,2025-03-17,2025-03-20,208,Sunrise Frozen Foods,1,Pittsburgh,15213,147,Frozen Pizza,frozen,10.0,count,E014,2025-03-20 06:54:00,2025-03-20 06:58:00
+617762,2025-03-17,2025-03-20,208,Sunrise Frozen Foods,1,Pittsburgh,15213,149,Ice Cubes 7 lb,frozen,6.0,count,E014,2025-03-20 08:36:00,2025-03-20 10:02:00
+617763,2025-03-17,2025-03-20,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,8.0,count,E012,2025-03-20 13:45:00,2025-03-20 15:27:00
+617764,2025-03-17,2025-03-20,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,8.0,count,E011,2025-03-20 06:48:00,2025-03-20 07:07:00
+617765,2025-03-18,2025-03-20,210,EcoRefill Co.,1,Pittsburgh,15213,154,Refill Laundry Detergent,refill,20.0,liter,E011,2025-03-20 06:27:00,2025-03-20 07:22:00
+617766,2025-03-18,2025-03-20,212,Blue Ridge Grocery Supply,1,Pittsburgh,15213,160,Hummus 10 oz,dairy,12.0,count,E012,2025-03-20 06:36:00,2025-03-20 06:44:00
+617971,2025-03-20,2025-03-21,211,Ohio Valley Farms,1,Pittsburgh,15213,102,Cucumber,produce,48.0,count,E014,2025-03-21 06:44:00,2025-03-22 07:53:00
+617972,2025-03-20,2025-03-21,211,Ohio Valley Farms,1,Pittsburgh,15213,103,Cauliflower,produce,24.0,count,E011,2025-03-21 06:29:00,2025-03-21 06:32:00
+617973,2025-03-20,2025-03-21,201,Fresh Fields Produce,1,Pittsburgh,15213,104,Organic Banana,produce,36.0,kg,E013,2025-03-21 06:19:00,2025-03-21 06:44:00
+617974,2025-03-20,2025-03-21,211,Ohio Valley Farms,1,Pittsburgh,15213,105,Gala Apple,produce,54.0,kg,E011,2025-03-21 09:23:00,2025-03-21 09:34:00
+617975,2025-03-20,2025-03-21,201,Fresh Fields Produce,1,Pittsburgh,15213,106,Tomato,produce,20.0,kg,E014,2025-03-21 10:16:00,2025-03-21 10:55:00
+617976,2025-03-20,2025-03-21,201,Fresh Fields Produce,1,Pittsburgh,15213,108,Avocado,produce,48.0,count,E011,2025-03-21 12:41:00,2025-03-21 12:53:00
+617977,2025-03-20,2025-03-21,211,Ohio Valley Farms,1,Pittsburgh,15213,109,Carrots 2 lb Bag,produce,40.0,count,E012,2025-03-21 12:06:00,2025-03-21 12:09:00
+617978,2025-03-20,2025-03-21,211,Ohio Valley Farms,1,Pittsburgh,15213,110,Potato,produce,40.0,kg,E014,2025-03-21 10:13:00,2025-03-21 10:16:00
+617979,2025-03-20,2025-03-21,211,Ohio Valley Farms,1,Pittsburgh,15213,111,Yellow Onion,produce,20.0,kg,E012,2025-03-21 12:33:00,2025-03-21 12:53:00
+617980,2025-03-20,2025-03-21,201,Fresh Fields Produce,1,Pittsburgh,15213,112,Strawberries 1 lb,produce,40.0,count,E012,2025-03-21 06:59:00,2025-03-21 08:04:00
+617981,2025-03-20,2025-03-21,201,Fresh Fields Produce,1,Pittsburgh,15213,114,Watermelon,produce,16.0,count,E013,2025-03-21 08:15:00,2025-03-21 08:27:00
+617982,2025-03-20,2025-03-21,201,Fresh Fields Produce,1,Pittsburgh,15213,115,Blueberries 6 oz,produce,12.0,count,E013,2025-03-21 07:56:00,2025-03-21 07:59:00
+617983,2025-03-20,2025-03-21,202,Keystone Dairy,1,Pittsburgh,15213,116,Whole Milk 1/2 gal,dairy,18.0,count,E014,2025-03-21 09:25:00,2025-03-21 10:03:00
+617984,2025-03-20,2025-03-21,202,Keystone Dairy,1,Pittsburgh,15213,117,Whole Milk 1 gal,dairy,48.0,count,E012,2025-03-21 09:46:00,2025-03-21 11:02:00
+617985,2025-03-20,2025-03-21,202,Keystone Dairy,1,Pittsburgh,15213,118,Large Eggs 12 ct,dairy,15.0,count,E013,2025-03-21 12:40:00,2025-03-21 13:10:00
+617986,2025-03-20,2025-03-21,202,Keystone Dairy,1,Pittsburgh,15213,120,Cheddar Cheese 8 oz,dairy,12.0,count,E011,2025-03-21 10:08:00,2025-03-21 11:35:00
+617987,2025-03-18,2025-03-21,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,8.0,count,E014,2025-03-21 11:46:00,2025-03-21 11:59:00
+617988,2025-03-20,2025-03-21,203,Allegheny Bakery,1,Pittsburgh,15213,123,White Bread,bakery,48.0,count,E012,2025-03-21 11:33:00,2025-03-21 11:39:00
+617989,2025-03-20,2025-03-21,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,12.0,count,E013,2025-03-21 08:41:00,2025-03-21 09:20:00
+617990,2025-03-20,2025-03-21,203,Allegheny Bakery,1,Pittsburgh,15213,126,Croissant,bakery,24.0,count,E012,2025-03-21 10:41:00,2025-03-21 11:10:00
+617991,2025-03-19,2025-03-21,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,10.0,kg,E012,2025-03-21 08:13:00,2025-03-21 08:30:00
+617992,2025-03-19,2025-03-21,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,10.0,kg,E013,2025-03-21 09:40:00,2025-03-21 09:45:00
+617993,2025-03-19,2025-03-21,204,Laurel Highlands Meats,1,Pittsburgh,15213,129,Pork Chops,meat,10.0,kg,E011,2025-03-21 08:28:00,2025-03-21 09:11:00
+617994,2025-03-19,2025-03-21,205,Great Lakes Seafood,1,Pittsburgh,15213,130,Atlantic Salmon,seafood,5.0,kg,E011,2025-03-21 10:06:00,2025-03-21 10:17:00
+617995,2025-03-19,2025-03-21,205,Great Lakes Seafood,1,Pittsburgh,15213,131,Frozen Shrimp 1 lb,frozen,12.0,count,E012,2025-03-21 08:31:00,2025-03-21 09:22:00
+617996,2025-03-18,2025-03-21,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,6.0,count,E014,2025-03-21 08:50:00,2025-03-21 08:50:00
+617997,2025-03-18,2025-03-21,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,16.0,count,E012,2025-03-21 07:13:00,2025-03-21 07:18:00
+617998,2025-03-18,2025-03-21,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,10.0,count,E013,2025-03-21 12:34:00,2025-03-21 12:37:00
+617999,2025-03-18,2025-03-21,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,18.0,count,E013,2025-03-21 08:01:00,2025-03-21 08:11:00
+618000,2025-03-18,2025-03-21,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,12.0,count,E013,2025-03-21 08:56:00,2025-03-21 09:23:00
+618001,2025-03-18,2025-03-21,206,Three Rivers Beverages,1,Pittsburgh,15213,137,Iced Tea 1 gal,beverages,8.0,count,E013,2025-03-21 12:21:00,2025-03-21 12:22:00
+618002,2025-03-18,2025-03-21,207,Heartland Pantry,1,Pittsburgh,15213,139,Marinara Sauce 24 oz,pantry,12.0,count,E013,2025-03-21 07:47:00,2025-03-21 09:03:00
+618003,2025-03-18,2025-03-21,207,Heartland Pantry,1,Pittsburgh,15213,140,Long Grain Rice 2 lb,pantry,12.0,count,E012,2025-03-21 11:06:00,2025-03-22 11:18:00
+618004,2025-03-18,2025-03-21,207,Heartland Pantry,1,Pittsburgh,15213,141,Long Grain Rice 5 lb,pantry,8.0,count,E013,2025-03-21 06:01:00,2025-03-26 06:10:00
+618005,2025-03-18,2025-03-21,208,Sunrise Frozen Foods,1,Pittsburgh,15213,146,Vanilla Ice Cream 1.5 qt,frozen,18.0,count,E013,2025-03-21 07:25:00,2025-03-21 07:36:00
+618006,2025-03-18,2025-03-21,208,Sunrise Frozen Foods,1,Pittsburgh,15213,147,Frozen Pizza,frozen,10.0,count,E011,2025-03-21 10:24:00,2025-03-21 10:30:00
+618007,2025-03-18,2025-03-21,208,Sunrise Frozen Foods,1,Pittsburgh,15213,148,Frozen Peas 16 oz,frozen,12.0,count,E011,2025-03-21 08:48:00,2025-03-21 09:45:00
+618008,2025-03-18,2025-03-21,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,8.0,count,E013,2025-03-21 11:12:00,2025-03-21 11:28:00
+618009,2025-03-18,2025-03-21,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,12.0,count,E012,2025-03-21 08:26:00,2025-03-21 08:36:00
+618010,2025-03-18,2025-03-21,209,CleanHome Supplies,1,Pittsburgh,15213,152,Dish Soap 20 oz,household,12.0,count,E013,2025-03-21 13:40:00,2025-03-21 14:01:00
+618011,2025-03-19,2025-03-21,210,EcoRefill Co.,1,Pittsburgh,15213,157,Refill Oat Milk,refill,20.0,liter,E011,2025-03-21 09:09:00,2025-03-21 09:52:00
+618012,2025-03-20,2025-03-21,211,Ohio Valley Farms,1,Pittsburgh,15213,158,Fresh Basil,produce,12.0,count,E013,2025-03-21 13:22:00,2025-03-21 16:57:00
+618013,2025-03-19,2025-03-21,204,Laurel Highlands Meats,1,Pittsburgh,15213,159,Sliced Deli Turkey,meat,10.0,kg,E011,2025-03-21 09:51:00,2025-03-21 09:55:00
+618271,2025-03-21,2025-03-22,201,Fresh Fields Produce,1,Pittsburgh,15213,101,Banana,produce,54.0,kg,E012,2025-03-22 11:03:00,2025-03-27 12:29:00
+618272,2025-03-21,2025-03-22,211,Ohio Valley Farms,1,Pittsburgh,15213,102,Cucumber,produce,48.0,count,E011,2025-03-22 10:04:00,2025-03-22 10:53:00
+618273,2025-03-21,2025-03-22,211,Ohio Valley Farms,1,Pittsburgh,15213,103,Cauliflower,produce,24.0,count,E011,2025-03-22 07:32:00,2025-03-22 08:01:00
+618274,2025-03-21,2025-03-22,211,Ohio Valley Farms,1,Pittsburgh,15213,105,Gala Apple,produce,18.0,kg,E012,2025-03-22 11:46:00,2025-03-22 12:10:00
+618275,2025-03-21,2025-03-22,201,Fresh Fields Produce,1,Pittsburgh,15213,106,Tomato,produce,10.0,kg,E012,2025-03-22 12:14:00,2025-03-22 13:03:00
+618276,2025-03-21,2025-03-22,211,Ohio Valley Farms,1,Pittsburgh,15213,107,Iceberg Lettuce,produce,48.0,count,E012,2025-03-22 07:54:00,2025-03-22 08:02:00
+618277,2025-03-21,2025-03-22,201,Fresh Fields Produce,1,Pittsburgh,15213,108,Avocado,produce,48.0,count,E011,2025-03-22 08:59:00,2025-03-22 09:21:00
+618278,2025-03-21,2025-03-22,211,Ohio Valley Farms,1,Pittsburgh,15213,110,Potato,produce,60.0,kg,E011,2025-03-22 06:14:00,2025-03-22 06:16:00
+618279,2025-03-21,2025-03-22,211,Ohio Valley Farms,1,Pittsburgh,15213,111,Yellow Onion,produce,20.0,kg,E011,2025-03-22 07:09:00,2025-03-22 07:25:00
+618280,2025-03-21,2025-03-22,201,Fresh Fields Produce,1,Pittsburgh,15213,112,Strawberries 1 lb,produce,32.0,count,E012,2025-03-22 08:18:00,2025-03-22 08:54:00
+618281,2025-03-21,2025-03-22,201,Fresh Fields Produce,1,Pittsburgh,15213,113,Lemon,produce,100.0,count,E012,2025-03-22 12:42:00,2025-03-22 13:04:00
+618282,2025-03-21,2025-03-22,201,Fresh Fields Produce,1,Pittsburgh,15213,115,Blueberries 6 oz,produce,12.0,count,E011,2025-03-22 06:39:00,2025-03-22 07:20:00
+618283,2025-03-21,2025-03-22,202,Keystone Dairy,1,Pittsburgh,15213,116,Whole Milk 1/2 gal,dairy,27.0,count,E013,2025-03-22 13:33:00,2025-03-22 13:46:00
+618284,2025-03-21,2025-03-22,202,Keystone Dairy,1,Pittsburgh,15213,117,Whole Milk 1 gal,dairy,40.0,count,E011,2025-03-22 10:28:00,2025-03-22 11:24:00
+618285,2025-03-21,2025-03-22,202,Keystone Dairy,1,Pittsburgh,15213,118,Large Eggs 12 ct,dairy,30.0,count,E012,2025-03-22 08:35:00,2025-03-22 08:41:00
+618286,2025-03-21,2025-03-22,202,Keystone Dairy,1,Pittsburgh,15213,119,Greek Yogurt 32 oz,dairy,18.0,count,E013,2025-03-22 11:41:00,2025-03-22 11:56:00
+618287,2025-03-21,2025-03-22,202,Keystone Dairy,1,Pittsburgh,15213,120,Cheddar Cheese 8 oz,dairy,24.0,count,E014,2025-03-22 09:44:00,2025-03-22 11:07:00
+618288,2025-03-21,2025-03-22,202,Keystone Dairy,1,Pittsburgh,15213,121,Salted Butter 1 lb,dairy,18.0,count,E012,2025-03-22 08:07:00,2025-03-22 09:51:00
+618289,2025-03-19,2025-03-22,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,24.0,count,E014,2025-03-22 13:19:00,2025-03-22 13:25:00
+618290,2025-03-21,2025-03-22,203,Allegheny Bakery,1,Pittsburgh,15213,123,White Bread,bakery,24.0,count,E014,2025-03-22 06:35:00,2025-03-22 06:48:00
+618291,2025-03-21,2025-03-22,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,24.0,count,E013,2025-03-22 11:39:00,2025-03-27 12:12:00
+618292,2025-03-21,2025-03-22,203,Allegheny Bakery,1,Pittsburgh,15213,125,Bagels 6 ct,bakery,24.0,count,E014,2025-03-22 10:05:00,2025-03-22 10:18:00
+618293,2025-03-21,2025-03-22,203,Allegheny Bakery,1,Pittsburgh,15213,126,Croissant,bakery,24.0,count,E014,2025-03-22 06:37:00,2025-03-22 06:47:00
+618294,2025-03-20,2025-03-22,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,20.0,kg,E013,2025-03-22 09:26:00,2025-03-22 09:44:00
+618295,2025-03-20,2025-03-22,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,20.0,kg,E014,2025-03-22 07:24:00,2025-03-22 07:53:00
+618296,2025-03-20,2025-03-22,205,Great Lakes Seafood,1,Pittsburgh,15213,130,Atlantic Salmon,seafood,10.0,kg,E013,2025-03-22 12:54:00,2025-03-22 14:45:00
+618297,2025-03-19,2025-03-22,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,6.0,count,E011,2025-03-22 09:48:00,2025-03-22 09:54:00
+618298,2025-03-19,2025-03-22,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,16.0,count,E013,2025-03-22 12:56:00,2025-03-23 14:10:00
+618299,2025-03-19,2025-03-22,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,10.0,count,E014,2025-03-22 08:09:00,2025-03-22 09:10:00
+618300,2025-03-19,2025-03-22,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,8.0,count,E014,2025-03-22 07:11:00,2025-03-22 07:41:00
+618301,2025-03-19,2025-03-22,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,6.0,count,E012,2025-03-22 11:10:00,2025-03-22 11:49:00
+618302,2025-03-19,2025-03-22,206,Three Rivers Beverages,1,Pittsburgh,15213,137,Iced Tea 1 gal,beverages,8.0,count,E011,2025-03-22 08:34:00,2025-03-22 08:36:00
+618303,2025-03-19,2025-03-22,207,Heartland Pantry,1,Pittsburgh,15213,138,Spaghetti 1 lb,pantry,20.0,count,E012,2025-03-22 06:31:00,2025-03-22 06:53:00
+618304,2025-03-19,2025-03-22,207,Heartland Pantry,1,Pittsburgh,15213,140,Long Grain Rice 2 lb,pantry,12.0,count,E011,2025-03-22 08:41:00,2025-03-22 08:47:00
+618305,2025-03-19,2025-03-22,207,Heartland Pantry,1,Pittsburgh,15213,142,Peanut Butter 16 oz,pantry,12.0,count,E012,2025-03-22 13:31:00,2025-03-22 13:40:00
+618306,2025-03-19,2025-03-22,207,Heartland Pantry,1,Pittsburgh,15213,143,Tomato Soup,pantry,24.0,count,E012,2025-03-22 10:29:00,2025-03-22 11:04:00
+618307,2025-03-19,2025-03-22,207,Heartland Pantry,1,Pittsburgh,15213,144,Corn Flakes 18 oz,pantry,24.0,count,E011,2025-03-22 13:19:00,2025-03-22 13:48:00
+618308,2025-03-19,2025-03-22,207,Heartland Pantry,1,Pittsburgh,15213,145,Olive Oil 1 L,pantry,12.0,count,E014,2025-03-22 06:01:00,2025-03-22 06:10:00
+618309,2025-03-19,2025-03-22,208,Sunrise Frozen Foods,1,Pittsburgh,15213,147,Frozen Pizza,frozen,10.0,count,E014,2025-03-22 06:20:00,2025-03-22 06:46:00
+618310,2025-03-19,2025-03-22,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,8.0,count,E012,2025-03-22 06:16:00,2025-03-22 06:23:00
+618311,2025-03-19,2025-03-22,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,20.0,count,E012,2025-03-22 11:07:00,2025-03-22 11:35:00
+618312,2025-03-19,2025-03-22,209,CleanHome Supplies,1,Pittsburgh,15213,153,Laundry Detergent 100 oz,household,4.0,count,E012,2025-03-22 08:42:00,2025-03-22 08:46:00
+618313,2025-03-20,2025-03-22,210,EcoRefill Co.,1,Pittsburgh,15213,155,Refill Dish Soap,refill,20.0,liter,E013,2025-03-22 13:33:00,2025-03-23 13:53:00
+618314,2025-03-21,2025-03-22,211,Ohio Valley Farms,1,Pittsburgh,15213,158,Fresh Basil,produce,12.0,count,E014,2025-03-22 09:50:00,2025-03-22 10:10:00
+618315,2025-03-20,2025-03-22,212,Blue Ridge Grocery Supply,1,Pittsburgh,15213,160,Hummus 10 oz,dairy,12.0,count,E012,2025-03-22 12:39:00,2025-03-22 12:55:00
+618607,2025-03-22,2025-03-23,201,Fresh Fields Produce,1,Pittsburgh,15213,101,Banana,produce,54.0,kg,E013,2025-03-23 06:36:00,2025-03-23 06:38:00
+618608,2025-03-22,2025-03-23,211,Ohio Valley Farms,1,Pittsburgh,15213,103,Cauliflower,produce,12.0,count,E012,2025-03-23 12:29:00,2025-03-23 13:27:00
+618609,2025-03-22,2025-03-23,211,Ohio Valley Farms,1,Pittsburgh,15213,105,Gala Apple,produce,18.0,kg,E013,2025-03-23 07:17:00,2025-03-23 07:26:00
+618610,2025-03-22,2025-03-23,201,Fresh Fields Produce,1,Pittsburgh,15213,106,Tomato,produce,20.0,kg,E012,2025-03-23 10:55:00,2025-03-23 11:37:00
+618611,2025-03-22,2025-03-23,201,Fresh Fields Produce,1,Pittsburgh,15213,108,Avocado,produce,48.0,count,E013,2025-03-23 07:59:00,2025-03-23 08:12:00
+618612,2025-03-22,2025-03-23,211,Ohio Valley Farms,1,Pittsburgh,15213,109,Carrots 2 lb Bag,produce,20.0,count,E014,2025-03-23 10:38:00,2025-03-23 11:08:00
+618613,2025-03-22,2025-03-23,211,Ohio Valley Farms,1,Pittsburgh,15213,110,Potato,produce,20.0,kg,E012,2025-03-23 09:17:00,2025-03-23 09:28:00
+618614,2025-03-22,2025-03-23,201,Fresh Fields Produce,1,Pittsburgh,15213,112,Strawberries 1 lb,produce,16.0,count,E013,2025-03-23 08:34:00,2025-03-23 10:09:00
+618615,2025-03-22,2025-03-23,202,Keystone Dairy,1,Pittsburgh,15213,116,Whole Milk 1/2 gal,dairy,27.0,count,E014,2025-03-23 09:27:00,2025-03-23 10:10:00
+618616,2025-03-22,2025-03-23,202,Keystone Dairy,1,Pittsburgh,15213,117,Whole Milk 1 gal,dairy,28.0,count,E012,2025-03-23 09:56:00,2025-03-23 10:17:00
+618617,2025-03-22,2025-03-23,202,Keystone Dairy,1,Pittsburgh,15213,118,Large Eggs 12 ct,dairy,15.0,count,E013,2025-03-23 11:04:00,2025-03-23 11:24:00
+618618,2025-03-22,2025-03-23,202,Keystone Dairy,1,Pittsburgh,15213,119,Greek Yogurt 32 oz,dairy,18.0,count,E014,2025-03-23 12:50:00,2025-03-23 12:52:00
+618619,2025-03-20,2025-03-23,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,16.0,count,E014,2025-03-23 13:13:00,2025-03-23 13:23:00
+618620,2025-03-22,2025-03-23,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,12.0,count,E013,2025-03-23 09:24:00,2025-03-23 09:44:00
+618621,2025-03-22,2025-03-23,203,Allegheny Bakery,1,Pittsburgh,15213,126,Croissant,bakery,24.0,count,E013,2025-03-23 06:51:00,2025-03-23 06:56:00
+618622,2025-03-21,2025-03-23,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,20.0,kg,E012,2025-03-23 09:10:00,2025-03-23 09:35:00
+618623,2025-03-21,2025-03-23,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,20.0,kg,E013,2025-03-23 08:15:00,2025-03-23 08:25:00
+618624,2025-03-21,2025-03-23,204,Laurel Highlands Meats,1,Pittsburgh,15213,129,Pork Chops,meat,10.0,kg,E014,2025-03-23 08:05:00,2025-03-23 08:38:00
+618625,2025-03-21,2025-03-23,205,Great Lakes Seafood,1,Pittsburgh,15213,130,Atlantic Salmon,seafood,10.0,kg,E014,2025-03-23 10:07:00,2025-03-23 10:20:00
+618626,2025-03-21,2025-03-23,205,Great Lakes Seafood,1,Pittsburgh,15213,131,Frozen Shrimp 1 lb,frozen,24.0,count,E011,2025-03-23 07:04:00,2025-03-23 07:37:00
+618627,2025-03-20,2025-03-23,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,16.0,count,E011,2025-03-23 06:35:00,2025-03-23 06:53:00
+618628,2025-03-20,2025-03-23,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,32.0,count,E012,2025-03-23 09:11:00,2025-03-23 09:21:00
+618629,2025-03-20,2025-03-23,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,16.0,count,E014,2025-03-23 13:05:00,2025-03-23 15:04:00
+618630,2025-03-20,2025-03-23,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,13.0,count,E011,2025-03-23 12:15:00,2025-03-23 12:18:00
+618631,2025-03-20,2025-03-23,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,18.0,count,E012,2025-03-23 13:14:00,2025-03-23 13:19:00
+618632,2025-03-20,2025-03-23,206,Three Rivers Beverages,1,Pittsburgh,15213,137,Iced Tea 1 gal,beverages,4.0,count,E011,2025-03-23 13:26:00,2025-03-23 13:50:00
+618633,2025-03-20,2025-03-23,207,Heartland Pantry,1,Pittsburgh,15213,139,Marinara Sauce 24 oz,pantry,12.0,count,E013,2025-03-23 10:37:00,2025-03-23 10:52:00
+618634,2025-03-20,2025-03-23,207,Heartland Pantry,1,Pittsburgh,15213,140,Long Grain Rice 2 lb,pantry,12.0,count,E011,2025-03-23 08:20:00,2025-03-23 08:37:00
+618635,2025-03-20,2025-03-23,207,Heartland Pantry,1,Pittsburgh,15213,141,Long Grain Rice 5 lb,pantry,8.0,count,E013,2025-03-23 09:36:00,2025-03-23 09:53:00
+618636,2025-03-20,2025-03-23,207,Heartland Pantry,1,Pittsburgh,15213,142,Peanut Butter 16 oz,pantry,24.0,count,E012,2025-03-23 13:14:00,2025-03-23 13:37:00
+618637,2025-03-20,2025-03-23,207,Heartland Pantry,1,Pittsburgh,15213,143,Tomato Soup,pantry,24.0,count,E014,2025-03-23 11:23:00,2025-03-23 11:36:00
+618638,2025-03-20,2025-03-23,207,Heartland Pantry,1,Pittsburgh,15213,144,Corn Flakes 18 oz,pantry,12.0,count,E011,2025-03-23 08:52:00,2025-03-23 09:09:00
+618639,2025-03-20,2025-03-23,208,Sunrise Frozen Foods,1,Pittsburgh,15213,146,Vanilla Ice Cream 1.5 qt,frozen,12.0,count,E013,2025-03-23 11:28:00,2025-03-23 11:52:00
+618640,2025-03-20,2025-03-23,208,Sunrise Frozen Foods,1,Pittsburgh,15213,147,Frozen Pizza,frozen,20.0,count,E013,2025-03-23 13:03:00,2025-03-23 13:07:00
+618641,2025-03-20,2025-03-23,208,Sunrise Frozen Foods,1,Pittsburgh,15213,148,Frozen Peas 16 oz,frozen,12.0,count,E014,2025-03-23 11:00:00,2025-03-23 11:12:00
+618642,2025-03-20,2025-03-23,208,Sunrise Frozen Foods,1,Pittsburgh,15213,149,Ice Cubes 7 lb,frozen,6.0,count,E014,2025-03-23 09:47:00,2025-03-23 10:59:00
+618643,2025-03-20,2025-03-23,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,8.0,count,E012,2025-03-23 08:39:00,2025-03-23 08:46:00
+618644,2025-03-20,2025-03-23,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,16.0,count,E011,2025-03-23 07:00:00,2025-03-23 07:30:00
+618645,2025-03-20,2025-03-23,209,CleanHome Supplies,1,Pittsburgh,15213,152,Dish Soap 20 oz,household,24.0,count,E014,2025-03-23 08:55:00,2025-03-23 09:06:00
+618646,2025-03-20,2025-03-23,209,CleanHome Supplies,1,Pittsburgh,15213,153,Laundry Detergent 100 oz,household,4.0,count,E011,2025-03-23 13:23:00,2025-03-23 13:26:00
+618647,2025-03-21,2025-03-23,210,EcoRefill Co.,1,Pittsburgh,15213,154,Refill Laundry Detergent,refill,20.0,liter,E011,2025-03-23 10:03:00,2025-03-23 10:24:00
+618648,2025-03-21,2025-03-23,210,EcoRefill Co.,1,Pittsburgh,15213,157,Refill Oat Milk,refill,20.0,liter,E014,2025-03-23 06:23:00,2025-03-23 07:53:00
+618649,2025-03-21,2025-03-23,204,Laurel Highlands Meats,1,Pittsburgh,15213,159,Sliced Deli Turkey,meat,10.0,kg,E013,2025-03-23 06:48:00,2025-03-23 07:33:00
+618650,2025-03-21,2025-03-23,212,Blue Ridge Grocery Supply,1,Pittsburgh,15213,160,Hummus 10 oz,dairy,12.0,count,E011,2025-03-23 12:03:00,2025-03-23 12:09:00
+618917,2025-03-23,2025-03-24,201,Fresh Fields Produce,1,Pittsburgh,15213,106,Tomato,produce,20.0,kg,E014,2025-03-24 12:15:00,2025-03-24 13:38:00
+618918,2025-03-23,2025-03-24,211,Ohio Valley Farms,1,Pittsburgh,15213,111,Yellow Onion,produce,20.0,kg,E013,2025-03-24 10:49:00,2025-03-24 10:51:00
+618919,2025-03-23,2025-03-24,202,Keystone Dairy,1,Pittsburgh,15213,118,Large Eggs 12 ct,dairy,30.0,count,E012,2025-03-24 08:47:00,2025-03-24 09:02:00
+618920,2025-03-23,2025-03-24,202,Keystone Dairy,1,Pittsburgh,15213,120,Cheddar Cheese 8 oz,dairy,24.0,count,E014,2025-03-24 09:58:00,2025-03-24 10:56:00
+618921,2025-03-23,2025-03-24,202,Keystone Dairy,1,Pittsburgh,15213,121,Salted Butter 1 lb,dairy,36.0,count,E013,2025-03-24 08:17:00,2025-03-24 08:21:00
+618922,2025-03-21,2025-03-24,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,8.0,count,E011,2025-03-24 10:06:00,2025-03-24 10:11:00
+618923,2025-03-23,2025-03-24,203,Allegheny Bakery,1,Pittsburgh,15213,123,White Bread,bakery,48.0,count,E011,2025-03-24 06:14:00,2025-03-24 07:17:00
+618924,2025-03-23,2025-03-24,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,36.0,count,E012,2025-03-24 07:42:00,2025-03-24 07:55:00
+618925,2025-03-23,2025-03-24,203,Allegheny Bakery,1,Pittsburgh,15213,125,Bagels 6 ct,bakery,24.0,count,E012,2025-03-24 11:13:00,2025-03-24 11:51:00
+618926,2025-03-22,2025-03-24,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,10.0,kg,E013,2025-03-24 09:52:00,2025-03-24 10:09:00
+618927,2025-03-22,2025-03-24,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,10.0,kg,E013,2025-03-24 13:49:00,2025-03-24 15:27:00
+618928,2025-03-22,2025-03-24,204,Laurel Highlands Meats,1,Pittsburgh,15213,129,Pork Chops,meat,10.0,kg,E011,2025-03-24 07:06:00,2025-03-24 07:27:00
+618929,2025-03-21,2025-03-24,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,24.0,count,E013,2025-03-24 07:58:00,2025-03-24 09:17:00
+618930,2025-03-21,2025-03-24,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,16.0,count,E012,2025-03-24 07:52:00,2025-03-24 08:22:00
+618931,2025-03-21,2025-03-24,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,10.0,count,E014,2025-03-24 07:27:00,2025-03-24 07:39:00
+618932,2025-03-21,2025-03-24,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,20.0,count,E012,2025-03-24 09:01:00,2025-03-24 09:13:00
+618933,2025-03-21,2025-03-24,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,6.0,count,E012,2025-03-24 12:04:00,2025-03-24 12:29:00
+618934,2025-03-21,2025-03-24,206,Three Rivers Beverages,1,Pittsburgh,15213,137,Iced Tea 1 gal,beverages,12.0,count,E012,2025-03-24 10:28:00,2025-03-24 10:30:00
+618935,2025-03-21,2025-03-24,207,Heartland Pantry,1,Pittsburgh,15213,138,Spaghetti 1 lb,pantry,20.0,count,E011,2025-03-24 11:44:00,2025-03-24 11:56:00
+618936,2025-03-21,2025-03-24,207,Heartland Pantry,1,Pittsburgh,15213,139,Marinara Sauce 24 oz,pantry,12.0,count,E014,2025-03-24 12:52:00,2025-03-24 13:03:00
+618937,2025-03-21,2025-03-24,207,Heartland Pantry,1,Pittsburgh,15213,140,Long Grain Rice 2 lb,pantry,12.0,count,E013,2025-03-24 10:36:00,2025-03-24 11:28:00
+618938,2025-03-21,2025-03-24,207,Heartland Pantry,1,Pittsburgh,15213,142,Peanut Butter 16 oz,pantry,12.0,count,E011,2025-03-24 07:11:00,2025-03-24 07:14:00
+618939,2025-03-21,2025-03-24,207,Heartland Pantry,1,Pittsburgh,15213,144,Corn Flakes 18 oz,pantry,24.0,count,E013,2025-03-24 12:57:00,2025-03-24 13:11:00
+618940,2025-03-21,2025-03-24,207,Heartland Pantry,1,Pittsburgh,15213,145,Olive Oil 1 L,pantry,12.0,count,E014,2025-03-24 13:53:00,2025-03-24 14:05:00
+618941,2025-03-21,2025-03-24,208,Sunrise Frozen Foods,1,Pittsburgh,15213,146,Vanilla Ice Cream 1.5 qt,frozen,12.0,count,E011,2025-03-24 11:21:00,2025-03-24 11:48:00
+618942,2025-03-21,2025-03-24,208,Sunrise Frozen Foods,1,Pittsburgh,15213,147,Frozen Pizza,frozen,10.0,count,E011,2025-03-24 07:15:00,2025-03-24 07:20:00
+618943,2025-03-21,2025-03-24,208,Sunrise Frozen Foods,1,Pittsburgh,15213,148,Frozen Peas 16 oz,frozen,12.0,count,E012,2025-03-24 07:26:00,2025-03-24 07:47:00
+618944,2025-03-21,2025-03-24,208,Sunrise Frozen Foods,1,Pittsburgh,15213,149,Ice Cubes 7 lb,frozen,6.0,count,E012,2025-03-24 10:09:00,2025-03-24 10:17:00
+618945,2025-03-21,2025-03-24,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,12.0,count,E013,2025-03-24 10:28:00,2025-03-28 11:37:00
+618946,2025-03-21,2025-03-24,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,20.0,count,E012,2025-03-24 10:22:00,2025-03-24 11:10:00
+618947,2025-03-21,2025-03-24,209,CleanHome Supplies,1,Pittsburgh,15213,152,Dish Soap 20 oz,household,12.0,count,E011,2025-03-24 12:42:00,2025-03-24 14:06:00
+618948,2025-03-21,2025-03-24,209,CleanHome Supplies,1,Pittsburgh,15213,153,Laundry Detergent 100 oz,household,8.0,count,E013,2025-03-24 12:53:00,2025-03-24 15:26:00
+618949,2025-03-22,2025-03-24,212,Blue Ridge Grocery Supply,1,Pittsburgh,15213,160,Hummus 10 oz,dairy,12.0,count,E014,2025-03-24 06:55:00,2025-03-24 07:00:00
+619167,2025-03-24,2025-03-25,211,Ohio Valley Farms,1,Pittsburgh,15213,102,Cucumber,produce,96.0,count,E012,2025-03-25 13:47:00,2025-03-25 13:48:00
+619168,2025-03-24,2025-03-25,211,Ohio Valley Farms,1,Pittsburgh,15213,103,Cauliflower,produce,36.0,count,E013,2025-03-25 12:52:00,2025-03-25 13:41:00
+619169,2025-03-24,2025-03-25,201,Fresh Fields Produce,1,Pittsburgh,15213,104,Organic Banana,produce,36.0,kg,E014,2025-03-25 12:27:00,2025-03-25 14:07:00
+619170,2025-03-24,2025-03-25,211,Ohio Valley Farms,1,Pittsburgh,15213,105,Gala Apple,produce,36.0,kg,E014,2025-03-25 11:07:00,2025-03-25 11:42:00
+619171,2025-03-24,2025-03-25,211,Ohio Valley Farms,1,Pittsburgh,15213,109,Carrots 2 lb Bag,produce,20.0,count,E014,2025-03-25 08:28:00,2025-03-25 08:48:00
+619172,2025-03-24,2025-03-25,211,Ohio Valley Farms,1,Pittsburgh,15213,110,Potato,produce,60.0,kg,E013,2025-03-25 06:49:00,2025-03-25 07:25:00
+619173,2025-03-24,2025-03-25,201,Fresh Fields Produce,1,Pittsburgh,15213,112,Strawberries 1 lb,produce,32.0,count,E012,2025-03-25 08:13:00,2025-03-25 08:19:00
+619174,2025-03-24,2025-03-25,201,Fresh Fields Produce,1,Pittsburgh,15213,115,Blueberries 6 oz,produce,24.0,count,E011,2025-03-25 08:41:00,2025-03-25 09:28:00
+619175,2025-03-24,2025-03-25,202,Keystone Dairy,1,Pittsburgh,15213,116,Whole Milk 1/2 gal,dairy,27.0,count,E014,2025-03-25 10:12:00,2025-03-25 10:36:00
+619176,2025-03-24,2025-03-25,202,Keystone Dairy,1,Pittsburgh,15213,117,Whole Milk 1 gal,dairy,52.0,count,E014,2025-03-25 08:10:00,2025-03-25 08:20:00
+619177,2025-03-24,2025-03-25,202,Keystone Dairy,1,Pittsburgh,15213,119,Greek Yogurt 32 oz,dairy,24.0,count,E013,2025-03-25 12:35:00,2025-03-25 12:39:00
+619178,2025-03-24,2025-03-25,202,Keystone Dairy,1,Pittsburgh,15213,120,Cheddar Cheese 8 oz,dairy,12.0,count,E012,2025-03-25 07:19:00,2025-03-25 07:55:00
+619179,2025-03-22,2025-03-25,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,16.0,count,E014,2025-03-25 07:15:00,2025-03-27 07:53:00
+619180,2025-03-24,2025-03-25,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,12.0,count,E013,2025-03-25 06:28:00,2025-03-25 07:02:00
+619181,2025-03-24,2025-03-25,203,Allegheny Bakery,1,Pittsburgh,15213,126,Croissant,bakery,24.0,count,E012,2025-03-25 07:23:00,2025-03-25 07:34:00
+619182,2025-03-22,2025-03-25,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,4.0,count,E012,2025-03-25 06:45:00,2025-03-25 07:44:00
+619183,2025-03-22,2025-03-25,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,24.0,count,E014,2025-03-25 12:27:00,2025-03-25 12:55:00
+619184,2025-03-22,2025-03-25,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,16.0,count,E014,2025-03-25 09:34:00,2025-03-25 09:36:00
+619185,2025-03-22,2025-03-25,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,12.0,count,E014,2025-03-25 09:23:00,2025-03-25 09:46:00
+619186,2025-03-22,2025-03-25,207,Heartland Pantry,1,Pittsburgh,15213,139,Marinara Sauce 24 oz,pantry,12.0,count,E013,2025-03-25 10:24:00,2025-03-25 10:34:00
+619187,2025-03-22,2025-03-25,207,Heartland Pantry,1,Pittsburgh,15213,140,Long Grain Rice 2 lb,pantry,12.0,count,E013,2025-03-25 09:12:00,2025-03-25 09:18:00
+619188,2025-03-22,2025-03-25,207,Heartland Pantry,1,Pittsburgh,15213,141,Long Grain Rice 5 lb,pantry,8.0,count,E012,2025-03-25 12:53:00,2025-03-25 14:17:00
+619189,2025-03-22,2025-03-25,207,Heartland Pantry,1,Pittsburgh,15213,143,Tomato Soup,pantry,24.0,count,E013,2025-03-25 10:52:00,2025-03-25 11:03:00
+619190,2025-03-22,2025-03-25,208,Sunrise Frozen Foods,1,Pittsburgh,15213,147,Frozen Pizza,frozen,10.0,count,E012,2025-03-25 12:23:00,2025-03-25 13:23:00
+619191,2025-03-22,2025-03-25,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,16.0,count,E013,2025-03-25 10:27:00,2025-03-25 10:43:00
+619192,2025-03-22,2025-03-25,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,12.0,count,E013,2025-03-25 06:07:00,2025-03-25 06:36:00
+619193,2025-03-22,2025-03-25,209,CleanHome Supplies,1,Pittsburgh,15213,153,Laundry Detergent 100 oz,household,4.0,count,E013,2025-03-25 06:03:00,2025-03-25 06:32:00
+619376,2025-03-25,2025-03-26,201,Fresh Fields Produce,1,Pittsburgh,15213,101,Banana,produce,72.0,kg,E013,2025-03-26 10:12:00,2025-03-26 10:30:00
+619377,2025-03-25,2025-03-26,201,Fresh Fields Produce,1,Pittsburgh,15213,106,Tomato,produce,20.0,kg,E014,2025-03-26 12:29:00,2025-03-26 12:37:00
+619378,2025-03-25,2025-03-26,201,Fresh Fields Produce,1,Pittsburgh,15213,108,Avocado,produce,48.0,count,E012,2025-03-26 12:22:00,2025-03-26 12:40:00
+619379,2025-03-25,2025-03-26,211,Ohio Valley Farms,1,Pittsburgh,15213,111,Yellow Onion,produce,20.0,kg,E012,2025-03-26 07:05:00,2025-03-26 08:16:00
+619380,2025-03-25,2025-03-26,202,Keystone Dairy,1,Pittsburgh,15213,116,Whole Milk 1/2 gal,dairy,36.0,count,E014,2025-03-26 13:44:00,2025-03-26 14:14:00
+619381,2025-03-25,2025-03-26,202,Keystone Dairy,1,Pittsburgh,15213,118,Large Eggs 12 ct,dairy,45.0,count,E014,2025-03-26 06:55:00,2025-03-26 07:12:00
+619382,2025-03-25,2025-03-26,202,Keystone Dairy,1,Pittsburgh,15213,120,Cheddar Cheese 8 oz,dairy,24.0,count,E014,2025-03-26 08:21:00,2025-03-26 08:57:00
+619383,2025-03-25,2025-03-26,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,24.0,count,E013,2025-03-26 08:40:00,2025-03-26 09:12:00
+619384,2025-03-25,2025-03-26,203,Allegheny Bakery,1,Pittsburgh,15213,126,Croissant,bakery,24.0,count,E012,2025-03-26 10:15:00,2025-03-26 10:44:00
+619385,2025-03-24,2025-03-26,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,20.0,kg,E012,2025-03-26 13:38:00,2025-03-26 13:38:00
+619386,2025-03-24,2025-03-26,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,20.0,kg,E013,2025-03-26 08:11:00,2025-03-26 08:20:00
+619387,2025-03-24,2025-03-26,204,Laurel Highlands Meats,1,Pittsburgh,15213,129,Pork Chops,meat,10.0,kg,E011,2025-03-26 07:26:00,2025-03-26 07:35:00
+619388,2025-03-24,2025-03-26,205,Great Lakes Seafood,1,Pittsburgh,15213,130,Atlantic Salmon,seafood,15.0,kg,E012,2025-03-26 13:20:00,2025-03-26 14:43:00
+619389,2025-03-24,2025-03-26,205,Great Lakes Seafood,1,Pittsburgh,15213,131,Frozen Shrimp 1 lb,frozen,12.0,count,E011,2025-03-26 09:53:00,2025-03-26 10:13:00
+619390,2025-03-23,2025-03-26,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,2.0,count,E012,2025-03-26 08:39:00,2025-03-26 09:14:00
+619391,2025-03-23,2025-03-26,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,6.0,count,E012,2025-03-26 08:09:00,2025-03-26 08:16:00
+619392,2025-03-23,2025-03-26,207,Heartland Pantry,1,Pittsburgh,15213,138,Spaghetti 1 lb,pantry,40.0,count,E011,2025-03-26 10:42:00,2025-03-26 10:44:00
+619393,2025-03-23,2025-03-26,207,Heartland Pantry,1,Pittsburgh,15213,139,Marinara Sauce 24 oz,pantry,12.0,count,E014,2025-03-26 11:59:00,2025-03-26 12:34:00
+619394,2025-03-23,2025-03-26,207,Heartland Pantry,1,Pittsburgh,15213,141,Long Grain Rice 5 lb,pantry,8.0,count,E012,2025-03-26 10:32:00,2025-03-26 11:10:00
+619395,2025-03-23,2025-03-26,207,Heartland Pantry,1,Pittsburgh,15213,143,Tomato Soup,pantry,24.0,count,E012,2025-03-26 10:17:00,2025-03-26 11:26:00
+619396,2025-03-23,2025-03-26,208,Sunrise Frozen Foods,1,Pittsburgh,15213,149,Ice Cubes 7 lb,frozen,6.0,count,E014,2025-03-26 11:51:00,2025-03-26 13:16:00
+619397,2025-03-23,2025-03-26,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,8.0,count,E014,2025-03-26 11:34:00,2025-03-26 11:55:00
+619398,2025-03-23,2025-03-26,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,12.0,count,E011,2025-03-26 11:28:00,2025-03-26 12:41:00
+619399,2025-03-23,2025-03-26,209,CleanHome Supplies,1,Pittsburgh,15213,153,Laundry Detergent 100 oz,household,4.0,count,E011,2025-03-26 09:55:00,2025-03-26 09:59:00
+619400,2025-03-25,2025-03-26,211,Ohio Valley Farms,1,Pittsburgh,15213,158,Fresh Basil,produce,12.0,count,E012,2025-03-26 06:37:00,2025-03-26 06:38:00
+619401,2025-03-24,2025-03-26,204,Laurel Highlands Meats,1,Pittsburgh,15213,159,Sliced Deli Turkey,meat,10.0,kg,E013,2025-03-26 08:36:00,2025-03-26 10:27:00
+619543,2025-03-26,2025-03-27,211,Ohio Valley Farms,1,Pittsburgh,15213,103,Cauliflower,produce,36.0,count,E013,2025-03-27 07:25:00,2025-03-27 08:09:00
+619544,2025-03-26,2025-03-27,211,Ohio Valley Farms,1,Pittsburgh,15213,105,Gala Apple,produce,18.0,kg,E012,2025-03-27 08:05:00,2025-03-27 08:33:00
+619545,2025-03-26,2025-03-27,211,Ohio Valley Farms,1,Pittsburgh,15213,107,Iceberg Lettuce,produce,48.0,count,E013,2025-03-27 06:05:00,2025-03-27 07:17:00
+619546,2025-03-26,2025-03-27,201,Fresh Fields Produce,1,Pittsburgh,15213,108,Avocado,produce,48.0,count,E014,2025-03-27 07:27:00,2025-03-27 08:13:00
+619547,2025-03-26,2025-03-27,211,Ohio Valley Farms,1,Pittsburgh,15213,109,Carrots 2 lb Bag,produce,40.0,count,E011,2025-03-27 10:17:00,2025-03-27 11:19:00
+619548,2025-03-26,2025-03-27,201,Fresh Fields Produce,1,Pittsburgh,15213,112,Strawberries 1 lb,produce,32.0,count,E014,2025-03-27 13:08:00,2025-03-27 13:16:00
+619549,2025-03-26,2025-03-27,201,Fresh Fields Produce,1,Pittsburgh,15213,114,Watermelon,produce,12.0,count,E012,2025-03-27 09:19:00,2025-03-27 10:46:00
+619550,2025-03-26,2025-03-27,201,Fresh Fields Produce,1,Pittsburgh,15213,115,Blueberries 6 oz,produce,12.0,count,E013,2025-03-27 09:34:00,2025-03-27 09:58:00
+619551,2025-03-26,2025-03-27,202,Keystone Dairy,1,Pittsburgh,15213,116,Whole Milk 1/2 gal,dairy,27.0,count,E014,2025-03-27 11:16:00,2025-03-31 12:34:00
+619552,2025-03-26,2025-03-27,202,Keystone Dairy,1,Pittsburgh,15213,117,Whole Milk 1 gal,dairy,52.0,count,E013,2025-03-27 12:15:00,2025-03-27 13:08:00
+619553,2025-03-26,2025-03-27,202,Keystone Dairy,1,Pittsburgh,15213,119,Greek Yogurt 32 oz,dairy,18.0,count,E014,2025-03-27 12:59:00,2025-03-27 13:20:00
+619554,2025-03-26,2025-03-27,202,Keystone Dairy,1,Pittsburgh,15213,120,Cheddar Cheese 8 oz,dairy,24.0,count,E013,2025-03-27 08:16:00,2025-03-27 09:25:00
+619555,2025-03-26,2025-03-27,203,Allegheny Bakery,1,Pittsburgh,15213,123,White Bread,bakery,48.0,count,E011,2025-03-27 08:41:00,2025-03-27 09:07:00
+619556,2025-03-26,2025-03-27,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,24.0,count,E012,2025-03-27 06:36:00,2025-03-27 06:39:00
+619557,2025-03-26,2025-03-27,203,Allegheny Bakery,1,Pittsburgh,15213,125,Bagels 6 ct,bakery,24.0,count,E013,2025-03-27 11:42:00,2025-03-27 11:45:00
+619558,2025-03-25,2025-03-27,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,20.0,kg,E011,2025-03-27 12:03:00,2025-03-27 12:06:00
+619559,2025-03-25,2025-03-27,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,20.0,kg,E011,2025-03-27 12:28:00,2025-03-27 13:08:00
+619560,2025-03-24,2025-03-27,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,10.0,count,E012,2025-03-27 08:54:00,2025-03-27 09:31:00
+619561,2025-03-24,2025-03-27,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,12.0,count,E011,2025-03-27 08:54:00,2025-03-27 09:04:00
+619562,2025-03-24,2025-03-27,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,8.0,count,E013,2025-03-27 13:29:00,2025-03-27 13:31:00
+619563,2025-03-24,2025-03-27,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,9.0,count,E013,2025-03-27 11:53:00,2025-03-27 12:11:00
+619564,2025-03-24,2025-03-27,207,Heartland Pantry,1,Pittsburgh,15213,142,Peanut Butter 16 oz,pantry,12.0,count,E012,2025-03-27 13:07:00,2025-03-27 13:16:00
+619565,2025-03-24,2025-03-27,207,Heartland Pantry,1,Pittsburgh,15213,145,Olive Oil 1 L,pantry,12.0,count,E014,2025-03-27 06:37:00,2025-03-27 06:45:00
+619566,2025-03-24,2025-03-27,208,Sunrise Frozen Foods,1,Pittsburgh,15213,146,Vanilla Ice Cream 1.5 qt,frozen,18.0,count,E014,2025-03-27 09:17:00,2025-03-27 09:21:00
+619567,2025-03-24,2025-03-27,208,Sunrise Frozen Foods,1,Pittsburgh,15213,147,Frozen Pizza,frozen,20.0,count,E012,2025-03-27 07:43:00,2025-03-27 08:48:00
+619568,2025-03-24,2025-03-27,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,4.0,count,E012,2025-03-27 08:43:00,2025-03-27 08:54:00
+619569,2025-03-24,2025-03-27,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,8.0,count,E011,2025-03-27 07:18:00,2025-03-27 09:23:00
+619570,2025-03-24,2025-03-27,209,CleanHome Supplies,1,Pittsburgh,15213,153,Laundry Detergent 100 oz,household,4.0,count,E014,2025-03-27 11:15:00,2025-03-27 11:24:00
+619571,2025-03-25,2025-03-27,210,EcoRefill Co.,1,Pittsburgh,15213,154,Refill Laundry Detergent,refill,20.0,liter,E012,2025-03-27 12:41:00,2025-03-27 13:03:00
+619572,2025-03-25,2025-03-27,210,EcoRefill Co.,1,Pittsburgh,15213,156,Refill Olive Oil,refill,20.0,liter,E011,2025-03-27 13:03:00,2025-03-27 13:23:00
+619775,2025-03-27,2025-03-28,201,Fresh Fields Produce,1,Pittsburgh,15213,101,Banana,produce,72.0,kg,E014,2025-03-28 06:06:00,2025-03-28 06:12:00
+619776,2025-03-27,2025-03-28,211,Ohio Valley Farms,1,Pittsburgh,15213,102,Cucumber,produce,96.0,count,E011,2025-03-28 12:04:00,2025-03-28 12:10:00
+619777,2025-03-27,2025-03-28,211,Ohio Valley Farms,1,Pittsburgh,15213,103,Cauliflower,produce,24.0,count,E014,2025-03-28 13:53:00,2025-03-28 15:00:00
+619778,2025-03-27,2025-03-28,201,Fresh Fields Produce,1,Pittsburgh,15213,104,Organic Banana,produce,18.0,kg,E012,2025-03-28 06:59:00,2025-03-28 07:11:00
+619779,2025-03-27,2025-03-28,211,Ohio Valley Farms,1,Pittsburgh,15213,105,Gala Apple,produce,18.0,kg,E012,2025-03-28 12:06:00,2025-03-28 12:47:00
+619780,2025-03-27,2025-03-28,201,Fresh Fields Produce,1,Pittsburgh,15213,106,Tomato,produce,20.0,kg,E012,2025-03-28 11:29:00,2025-03-28 12:23:00
+619781,2025-03-27,2025-03-28,201,Fresh Fields Produce,1,Pittsburgh,15213,108,Avocado,produce,48.0,count,E013,2025-03-28 13:21:00,2025-03-28 13:26:00
+619782,2025-03-27,2025-03-28,211,Ohio Valley Farms,1,Pittsburgh,15213,110,Potato,produce,40.0,kg,E013,2025-03-28 06:02:00,2025-04-02 06:07:00
+619783,2025-03-27,2025-03-28,211,Ohio Valley Farms,1,Pittsburgh,15213,111,Yellow Onion,produce,20.0,kg,E011,2025-03-28 13:17:00,2025-03-28 13:29:00
+619784,2025-03-27,2025-03-28,201,Fresh Fields Produce,1,Pittsburgh,15213,115,Blueberries 6 oz,produce,12.0,count,E012,2025-03-28 12:38:00,2025-03-28 12:42:00
+619785,2025-03-27,2025-03-28,202,Keystone Dairy,1,Pittsburgh,15213,116,Whole Milk 1/2 gal,dairy,18.0,count,E011,2025-03-28 12:09:00,2025-03-28 12:15:00
+619786,2025-03-27,2025-03-28,202,Keystone Dairy,1,Pittsburgh,15213,118,Large Eggs 12 ct,dairy,45.0,count,E013,2025-03-28 08:39:00,2025-03-28 09:06:00
+619787,2025-03-27,2025-03-28,202,Keystone Dairy,1,Pittsburgh,15213,119,Greek Yogurt 32 oz,dairy,18.0,count,E011,2025-03-28 11:49:00,2025-03-28 12:35:00
+619788,2025-03-27,2025-03-28,202,Keystone Dairy,1,Pittsburgh,15213,120,Cheddar Cheese 8 oz,dairy,36.0,count,E012,2025-03-28 08:23:00,2025-03-28 08:46:00
+619789,2025-03-27,2025-03-28,202,Keystone Dairy,1,Pittsburgh,15213,121,Salted Butter 1 lb,dairy,18.0,count,E012,2025-03-28 07:35:00,2025-03-28 07:39:00
+619790,2025-03-25,2025-03-28,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,16.0,count,E011,2025-03-28 06:33:00,2025-03-28 06:51:00
+619791,2025-03-27,2025-03-28,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,24.0,count,E012,2025-03-28 13:08:00,2025-03-28 13:45:00
+619792,2025-03-27,2025-03-28,203,Allegheny Bakery,1,Pittsburgh,15213,126,Croissant,bakery,24.0,count,E013,2025-03-28 09:15:00,2025-03-28 09:58:00
+619793,2025-03-26,2025-03-28,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,10.0,kg,E011,2025-03-28 11:06:00,2025-03-28 11:51:00
+619794,2025-03-26,2025-03-28,204,Laurel Highlands Meats,1,Pittsburgh,15213,129,Pork Chops,meat,10.0,kg,E013,2025-03-28 06:48:00,2025-03-28 07:45:00
+619795,2025-03-26,2025-03-28,205,Great Lakes Seafood,1,Pittsburgh,15213,130,Atlantic Salmon,seafood,10.0,kg,E014,2025-03-28 06:52:00,2025-03-28 07:26:00
+619796,2025-03-26,2025-03-28,205,Great Lakes Seafood,1,Pittsburgh,15213,131,Frozen Shrimp 1 lb,frozen,12.0,count,E014,2025-03-28 12:38:00,2025-03-28 13:05:00
+619797,2025-03-25,2025-03-28,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,14.0,count,E012,2025-03-28 07:08:00,2025-03-28 07:09:00
+619798,2025-03-25,2025-03-28,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,16.0,count,E014,2025-03-28 09:57:00,2025-03-28 10:01:00
+619799,2025-03-25,2025-03-28,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,10.0,count,E011,2025-03-28 10:24:00,2025-03-28 10:40:00
+619800,2025-03-25,2025-03-28,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,13.0,count,E013,2025-03-28 11:09:00,2025-03-28 12:25:00
+619801,2025-03-25,2025-03-28,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,6.0,count,E013,2025-03-28 09:03:00,2025-03-28 09:18:00
+619802,2025-03-25,2025-03-28,206,Three Rivers Beverages,1,Pittsburgh,15213,137,Iced Tea 1 gal,beverages,12.0,count,E012,2025-03-28 07:07:00,2025-03-28 07:27:00
+619803,2025-03-25,2025-03-28,207,Heartland Pantry,1,Pittsburgh,15213,138,Spaghetti 1 lb,pantry,20.0,count,E012,2025-03-28 10:14:00,2025-03-28 10:15:00
+619804,2025-03-25,2025-03-28,207,Heartland Pantry,1,Pittsburgh,15213,139,Marinara Sauce 24 oz,pantry,12.0,count,E011,2025-03-28 12:46:00,2025-03-28 13:13:00
+619805,2025-03-25,2025-03-28,207,Heartland Pantry,1,Pittsburgh,15213,140,Long Grain Rice 2 lb,pantry,12.0,count,E014,2025-03-28 08:13:00,2025-03-28 08:40:00
+619806,2025-03-25,2025-03-28,207,Heartland Pantry,1,Pittsburgh,15213,142,Peanut Butter 16 oz,pantry,12.0,count,E011,2025-03-28 09:22:00,2025-03-28 09:57:00
+619807,2025-03-25,2025-03-28,207,Heartland Pantry,1,Pittsburgh,15213,143,Tomato Soup,pantry,24.0,count,E011,2025-03-28 11:50:00,2025-03-28 12:48:00
+619808,2025-03-25,2025-03-28,207,Heartland Pantry,1,Pittsburgh,15213,144,Corn Flakes 18 oz,pantry,12.0,count,E014,2025-03-28 09:07:00,2025-03-28 09:09:00
+619809,2025-03-25,2025-03-28,208,Sunrise Frozen Foods,1,Pittsburgh,15213,148,Frozen Peas 16 oz,frozen,12.0,count,E013,2025-03-28 07:07:00,2025-03-28 07:17:00
+619810,2025-03-25,2025-03-28,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,8.0,count,E012,2025-03-28 10:59:00,2025-03-28 11:05:00
+619811,2025-03-25,2025-03-28,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,20.0,count,E014,2025-03-28 07:22:00,2025-03-28 07:37:00
+619812,2025-03-25,2025-03-28,209,CleanHome Supplies,1,Pittsburgh,15213,152,Dish Soap 20 oz,household,12.0,count,E011,2025-03-28 12:42:00,2025-03-28 12:48:00
+619813,2025-03-25,2025-03-28,209,CleanHome Supplies,1,Pittsburgh,15213,153,Laundry Detergent 100 oz,household,4.0,count,E014,2025-03-28 10:26:00,2025-03-28 10:58:00
+619814,2025-03-27,2025-03-28,211,Ohio Valley Farms,1,Pittsburgh,15213,158,Fresh Basil,produce,12.0,count,E013,2025-03-28 08:26:00,2025-03-28 08:32:00
+619815,2025-03-26,2025-03-28,204,Laurel Highlands Meats,1,Pittsburgh,15213,159,Sliced Deli Turkey,meat,10.0,kg,E013,2025-03-28 06:00:00,2025-03-28 06:19:00
+619816,2025-03-26,2025-03-28,212,Blue Ridge Grocery Supply,1,Pittsburgh,15213,160,Hummus 10 oz,dairy,12.0,count,E013,2025-03-28 09:26:00,2025-03-28 09:57:00
+620071,2025-03-28,2025-03-29,201,Fresh Fields Produce,1,Pittsburgh,15213,101,Banana,produce,36.0,kg,E011,2025-03-29 13:53:00,2025-03-29 14:38:00
+620072,2025-03-28,2025-03-29,211,Ohio Valley Farms,1,Pittsburgh,15213,103,Cauliflower,produce,12.0,count,E014,2025-03-29 10:42:00,2025-03-29 10:43:00
+620073,2025-03-28,2025-03-29,211,Ohio Valley Farms,1,Pittsburgh,15213,105,Gala Apple,produce,18.0,kg,E013,2025-03-29 11:51:00,2025-03-29 12:31:00
+620074,2025-03-28,2025-03-29,201,Fresh Fields Produce,1,Pittsburgh,15213,106,Tomato,produce,20.0,kg,E012,2025-03-29 08:06:00,2025-03-29 09:04:00
+620075,2025-03-28,2025-03-29,211,Ohio Valley Farms,1,Pittsburgh,15213,107,Iceberg Lettuce,produce,48.0,count,E014,2025-03-29 10:24:00,2025-03-29 10:28:00
+620076,2025-03-28,2025-03-29,201,Fresh Fields Produce,1,Pittsburgh,15213,108,Avocado,produce,48.0,count,E013,2025-03-29 13:56:00,2025-03-29 14:04:00
+620077,2025-03-28,2025-03-29,211,Ohio Valley Farms,1,Pittsburgh,15213,109,Carrots 2 lb Bag,produce,20.0,count,E011,2025-03-29 11:38:00,2025-03-29 11:45:00
+620078,2025-03-28,2025-03-29,211,Ohio Valley Farms,1,Pittsburgh,15213,110,Potato,produce,40.0,kg,E013,2025-03-29 06:12:00,2025-03-29 06:28:00
+620079,2025-03-28,2025-03-29,211,Ohio Valley Farms,1,Pittsburgh,15213,111,Yellow Onion,produce,20.0,kg,E014,2025-03-29 11:44:00,2025-03-29 13:16:00
+620080,2025-03-28,2025-03-29,201,Fresh Fields Produce,1,Pittsburgh,15213,112,Strawberries 1 lb,produce,24.0,count,E012,2025-03-29 08:30:00,2025-03-29 08:35:00
+620081,2025-03-28,2025-03-29,201,Fresh Fields Produce,1,Pittsburgh,15213,113,Lemon,produce,100.0,count,E013,2025-03-29 13:26:00,2025-03-29 14:05:00
+620082,2025-03-28,2025-03-29,201,Fresh Fields Produce,1,Pittsburgh,15213,115,Blueberries 6 oz,produce,12.0,count,E012,2025-03-29 09:49:00,2025-03-29 10:03:00
+620083,2025-03-28,2025-03-29,202,Keystone Dairy,1,Pittsburgh,15213,116,Whole Milk 1/2 gal,dairy,36.0,count,E011,2025-03-29 09:45:00,2025-03-29 09:48:00
+620084,2025-03-28,2025-03-29,202,Keystone Dairy,1,Pittsburgh,15213,117,Whole Milk 1 gal,dairy,52.0,count,E013,2025-03-29 09:58:00,2025-03-29 10:07:00
+620085,2025-03-28,2025-03-29,202,Keystone Dairy,1,Pittsburgh,15213,118,Large Eggs 12 ct,dairy,45.0,count,E014,2025-03-29 06:16:00,2025-03-29 06:55:00
+620086,2025-03-28,2025-03-29,202,Keystone Dairy,1,Pittsburgh,15213,119,Greek Yogurt 32 oz,dairy,12.0,count,E012,2025-03-29 08:32:00,2025-03-29 10:58:00
+620087,2025-03-28,2025-03-29,202,Keystone Dairy,1,Pittsburgh,15213,120,Cheddar Cheese 8 oz,dairy,12.0,count,E011,2025-03-29 08:17:00,2025-03-29 08:46:00
+620088,2025-03-28,2025-03-29,202,Keystone Dairy,1,Pittsburgh,15213,121,Salted Butter 1 lb,dairy,18.0,count,E013,2025-03-29 09:04:00,2025-03-29 09:17:00
+620089,2025-03-26,2025-03-29,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,16.0,count,E011,2025-03-29 07:23:00,2025-03-29 07:45:00
+620090,2025-03-28,2025-03-29,203,Allegheny Bakery,1,Pittsburgh,15213,123,White Bread,bakery,36.0,count,E013,2025-03-29 07:56:00,2025-03-29 09:06:00
+620091,2025-03-28,2025-03-29,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,24.0,count,E012,2025-03-29 08:24:00,2025-03-29 08:25:00
+620092,2025-03-28,2025-03-29,203,Allegheny Bakery,1,Pittsburgh,15213,126,Croissant,bakery,48.0,count,E013,2025-03-29 07:46:00,2025-03-29 07:50:00
+620093,2025-03-27,2025-03-29,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,30.0,kg,E012,2025-03-29 13:34:00,2025-03-29 14:15:00
+620094,2025-03-27,2025-03-29,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,20.0,kg,E012,2025-03-29 12:12:00,2025-03-29 13:17:00
+620095,2025-03-27,2025-03-29,204,Laurel Highlands Meats,1,Pittsburgh,15213,129,Pork Chops,meat,10.0,kg,E013,2025-03-29 06:40:00,2025-03-29 07:57:00
+620096,2025-03-26,2025-03-29,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,10.0,count,E013,2025-03-29 08:41:00,2025-03-29 08:47:00
+620097,2025-03-26,2025-03-29,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,12.0,count,E013,2025-03-29 09:47:00,2025-04-03 11:00:00
+620098,2025-03-26,2025-03-29,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,10.0,count,E011,2025-03-29 12:46:00,2025-04-03 13:21:00
+620099,2025-03-26,2025-03-29,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,9.0,count,E014,2025-03-29 11:37:00,2025-03-29 12:14:00
+620100,2025-03-26,2025-03-29,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,12.0,count,E013,2025-03-29 10:41:00,2025-03-29 11:31:00
+620101,2025-03-26,2025-03-29,207,Heartland Pantry,1,Pittsburgh,15213,138,Spaghetti 1 lb,pantry,20.0,count,E013,2025-03-29 12:45:00,2025-03-29 13:02:00
+620102,2025-03-26,2025-03-29,207,Heartland Pantry,1,Pittsburgh,15213,139,Marinara Sauce 24 oz,pantry,12.0,count,E013,2025-03-29 08:38:00,2025-03-29 09:52:00
+620103,2025-03-26,2025-03-29,207,Heartland Pantry,1,Pittsburgh,15213,141,Long Grain Rice 5 lb,pantry,8.0,count,E013,2025-03-29 13:24:00,2025-03-29 13:51:00
+620104,2025-03-26,2025-03-29,207,Heartland Pantry,1,Pittsburgh,15213,142,Peanut Butter 16 oz,pantry,12.0,count,E011,2025-03-29 09:43:00,2025-03-29 10:03:00
+620105,2025-03-26,2025-03-29,207,Heartland Pantry,1,Pittsburgh,15213,144,Corn Flakes 18 oz,pantry,12.0,count,E014,2025-03-29 13:01:00,2025-03-29 13:38:00
+620106,2025-03-26,2025-03-29,207,Heartland Pantry,1,Pittsburgh,15213,145,Olive Oil 1 L,pantry,12.0,count,E012,2025-03-29 08:20:00,2025-04-02 08:58:00
+620107,2025-03-26,2025-03-29,208,Sunrise Frozen Foods,1,Pittsburgh,15213,147,Frozen Pizza,frozen,10.0,count,E011,2025-03-29 07:36:00,2025-03-29 08:18:00
+620108,2025-03-26,2025-03-29,208,Sunrise Frozen Foods,1,Pittsburgh,15213,149,Ice Cubes 7 lb,frozen,6.0,count,E014,2025-03-29 13:54:00,2025-03-29 13:54:00
+620109,2025-03-26,2025-03-29,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,8.0,count,E014,2025-03-29 07:48:00,2025-03-29 08:20:00
+620110,2025-03-26,2025-03-29,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,8.0,count,E014,2025-03-29 13:05:00,2025-03-29 14:07:00
+620111,2025-03-26,2025-03-29,209,CleanHome Supplies,1,Pittsburgh,15213,153,Laundry Detergent 100 oz,household,4.0,count,E011,2025-03-29 09:01:00,2025-03-29 09:25:00
+620112,2025-03-27,2025-03-29,210,EcoRefill Co.,1,Pittsburgh,15213,154,Refill Laundry Detergent,refill,20.0,liter,E014,2025-03-29 09:11:00,2025-03-29 09:32:00
+620113,2025-03-27,2025-03-29,210,EcoRefill Co.,1,Pittsburgh,15213,155,Refill Dish Soap,refill,20.0,liter,E013,2025-03-29 06:07:00,2025-03-29 06:38:00
+620114,2025-03-27,2025-03-29,210,EcoRefill Co.,1,Pittsburgh,15213,157,Refill Oat Milk,refill,20.0,liter,E014,2025-03-29 13:17:00,2025-03-29 13:18:00
+620115,2025-03-28,2025-03-29,211,Ohio Valley Farms,1,Pittsburgh,15213,158,Fresh Basil,produce,12.0,count,E011,2025-03-29 07:12:00,2025-03-29 07:36:00
+620116,2025-03-27,2025-03-29,204,Laurel Highlands Meats,1,Pittsburgh,15213,159,Sliced Deli Turkey,meat,10.0,kg,E014,2025-03-29 08:48:00,2025-03-29 08:58:00
+620117,2025-03-27,2025-03-29,212,Blue Ridge Grocery Supply,1,Pittsburgh,15213,160,Hummus 10 oz,dairy,12.0,count,E013,2025-03-29 06:10:00,2025-03-29 06:18:00
+620429,2025-03-29,2025-03-30,201,Fresh Fields Produce,1,Pittsburgh,15213,101,Banana,produce,36.0,kg,E011,2025-03-30 08:26:00,2025-03-30 08:39:00
+620430,2025-03-29,2025-03-30,211,Ohio Valley Farms,1,Pittsburgh,15213,102,Cucumber,produce,72.0,count,E012,2025-03-30 09:28:00,2025-03-30 10:02:00
+620431,2025-03-29,2025-03-30,211,Ohio Valley Farms,1,Pittsburgh,15213,103,Cauliflower,produce,12.0,count,E012,2025-03-30 07:47:00,2025-03-30 07:58:00
+620432,2025-03-29,2025-03-30,201,Fresh Fields Produce,1,Pittsburgh,15213,104,Organic Banana,produce,18.0,kg,E014,2025-03-30 08:31:00,2025-03-30 09:34:00
+620433,2025-03-29,2025-03-30,211,Ohio Valley Farms,1,Pittsburgh,15213,105,Gala Apple,produce,36.0,kg,E014,2025-03-30 11:54:00,2025-03-30 12:04:00
+620434,2025-03-29,2025-03-30,201,Fresh Fields Produce,1,Pittsburgh,15213,106,Tomato,produce,20.0,kg,E013,2025-03-30 12:31:00,2025-03-30 13:20:00
+620435,2025-03-29,2025-03-30,201,Fresh Fields Produce,1,Pittsburgh,15213,112,Strawberries 1 lb,produce,24.0,count,E014,2025-03-30 09:21:00,2025-03-30 09:21:00
+620436,2025-03-29,2025-03-30,201,Fresh Fields Produce,1,Pittsburgh,15213,114,Watermelon,produce,12.0,count,E013,2025-03-30 13:46:00,2025-03-30 14:31:00
+620437,2025-03-29,2025-03-30,201,Fresh Fields Produce,1,Pittsburgh,15213,115,Blueberries 6 oz,produce,12.0,count,E013,2025-03-30 13:35:00,2025-03-30 13:45:00
+620438,2025-03-29,2025-03-30,202,Keystone Dairy,1,Pittsburgh,15213,116,Whole Milk 1/2 gal,dairy,36.0,count,E012,2025-03-30 07:02:00,2025-03-30 07:06:00
+620439,2025-03-29,2025-03-30,202,Keystone Dairy,1,Pittsburgh,15213,117,Whole Milk 1 gal,dairy,32.0,count,E012,2025-03-30 09:35:00,2025-03-30 10:14:00
+620440,2025-03-29,2025-03-30,202,Keystone Dairy,1,Pittsburgh,15213,118,Large Eggs 12 ct,dairy,15.0,count,E013,2025-03-30 13:46:00,2025-03-30 14:10:00
+620441,2025-03-29,2025-03-30,202,Keystone Dairy,1,Pittsburgh,15213,119,Greek Yogurt 32 oz,dairy,24.0,count,E012,2025-03-30 08:33:00,2025-03-30 08:49:00
+620442,2025-03-29,2025-03-30,202,Keystone Dairy,1,Pittsburgh,15213,120,Cheddar Cheese 8 oz,dairy,24.0,count,E014,2025-03-30 06:15:00,2025-03-30 07:03:00
+620443,2025-03-27,2025-03-30,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,16.0,count,E012,2025-03-30 12:13:00,2025-03-30 12:32:00
+620444,2025-03-29,2025-03-30,203,Allegheny Bakery,1,Pittsburgh,15213,123,White Bread,bakery,24.0,count,E013,2025-03-30 09:46:00,2025-03-30 09:50:00
+620445,2025-03-29,2025-03-30,203,Allegheny Bakery,1,Pittsburgh,15213,124,Whole Wheat Bread,bakery,36.0,count,E012,2025-03-30 10:21:00,2025-03-30 10:28:00
+620446,2025-03-29,2025-03-30,203,Allegheny Bakery,1,Pittsburgh,15213,125,Bagels 6 ct,bakery,24.0,count,E012,2025-03-30 13:33:00,2025-03-30 13:34:00
+620447,2025-03-28,2025-03-30,204,Laurel Highlands Meats,1,Pittsburgh,15213,127,Chicken Breast,meat,30.0,kg,E014,2025-03-30 06:53:00,2025-03-30 08:09:00
+620448,2025-03-28,2025-03-30,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,10.0,kg,E011,2025-03-30 09:17:00,2025-03-30 09:38:00
+620449,2025-03-28,2025-03-30,204,Laurel Highlands Meats,1,Pittsburgh,15213,129,Pork Chops,meat,10.0,kg,E014,2025-03-30 06:23:00,2025-03-30 08:29:00
+620450,2025-03-28,2025-03-30,205,Great Lakes Seafood,1,Pittsburgh,15213,130,Atlantic Salmon,seafood,10.0,kg,E014,2025-03-30 12:12:00,2025-03-30 13:27:00
+620451,2025-03-28,2025-03-30,205,Great Lakes Seafood,1,Pittsburgh,15213,131,Frozen Shrimp 1 lb,frozen,12.0,count,E011,2025-03-30 13:02:00,2025-03-30 13:51:00
+620452,2025-03-27,2025-03-30,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,22.0,count,E011,2025-03-30 08:43:00,2025-03-30 09:23:00
+620453,2025-03-27,2025-03-30,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,24.0,count,E013,2025-03-30 07:36:00,2025-03-30 08:34:00
+620454,2025-03-27,2025-03-30,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,14.0,count,E012,2025-03-30 08:36:00,2025-03-30 08:50:00
+620455,2025-03-27,2025-03-30,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,24.0,count,E012,2025-03-30 09:25:00,2025-03-30 09:32:00
+620456,2025-03-27,2025-03-30,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,12.0,count,E014,2025-03-30 11:07:00,2025-03-30 11:13:00
+620457,2025-03-27,2025-03-30,206,Three Rivers Beverages,1,Pittsburgh,15213,137,Iced Tea 1 gal,beverages,16.0,count,E013,2025-03-30 12:09:00,2025-03-30 12:17:00
+620458,2025-03-27,2025-03-30,207,Heartland Pantry,1,Pittsburgh,15213,140,Long Grain Rice 2 lb,pantry,12.0,count,E011,2025-03-30 12:33:00,2025-03-30 12:51:00
+620459,2025-03-27,2025-03-30,207,Heartland Pantry,1,Pittsburgh,15213,141,Long Grain Rice 5 lb,pantry,8.0,count,E013,2025-03-30 13:53:00,2025-03-30 14:50:00
+620460,2025-03-27,2025-03-30,207,Heartland Pantry,1,Pittsburgh,15213,142,Peanut Butter 16 oz,pantry,12.0,count,E013,2025-03-30 08:20:00,2025-03-30 10:11:00
+620461,2025-03-27,2025-03-30,207,Heartland Pantry,1,Pittsburgh,15213,143,Tomato Soup,pantry,24.0,count,E014,2025-03-30 07:59:00,2025-03-30 08:45:00
+620462,2025-03-27,2025-03-30,207,Heartland Pantry,1,Pittsburgh,15213,144,Corn Flakes 18 oz,pantry,12.0,count,E014,2025-03-30 08:06:00,2025-03-30 08:33:00
+620463,2025-03-27,2025-03-30,208,Sunrise Frozen Foods,1,Pittsburgh,15213,146,Vanilla Ice Cream 1.5 qt,frozen,12.0,count,E013,2025-03-30 12:42:00,2025-03-30 12:52:00
+620464,2025-03-27,2025-03-30,208,Sunrise Frozen Foods,1,Pittsburgh,15213,147,Frozen Pizza,frozen,20.0,count,E011,2025-03-30 10:03:00,2025-03-30 10:52:00
+620465,2025-03-27,2025-03-30,208,Sunrise Frozen Foods,1,Pittsburgh,15213,148,Frozen Peas 16 oz,frozen,12.0,count,E013,2025-03-30 10:08:00,2025-03-30 10:23:00
+620466,2025-03-27,2025-03-30,208,Sunrise Frozen Foods,1,Pittsburgh,15213,149,Ice Cubes 7 lb,frozen,6.0,count,E014,2025-03-30 08:37:00,2025-03-30 09:04:00
+620467,2025-03-27,2025-03-30,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,8.0,count,E012,2025-03-30 11:58:00,2025-03-30 12:02:00
+620468,2025-03-27,2025-03-30,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,16.0,count,E014,2025-03-30 10:43:00,2025-03-30 11:28:00
+620469,2025-03-27,2025-03-30,209,CleanHome Supplies,1,Pittsburgh,15213,152,Dish Soap 20 oz,household,12.0,count,E013,2025-03-30 10:20:00,2025-03-30 11:22:00
+620470,2025-03-28,2025-03-30,212,Blue Ridge Grocery Supply,1,Pittsburgh,15213,160,Hummus 10 oz,dairy,12.0,count,E013,2025-03-30 11:44:00,2025-03-30 12:53:00
+620734,2025-03-30,2025-03-31,211,Ohio Valley Farms,1,Pittsburgh,15213,103,Cauliflower,produce,24.0,count,E012,2025-03-31 11:52:00,2025-03-31 12:00:00
+620735,2025-03-30,2025-03-31,211,Ohio Valley Farms,1,Pittsburgh,15213,111,Yellow Onion,produce,20.0,kg,E014,2025-03-31 07:45:00,2025-03-31 08:36:00
+620736,2025-03-30,2025-03-31,202,Keystone Dairy,1,Pittsburgh,15213,118,Large Eggs 12 ct,dairy,30.0,count,E013,2025-03-31 09:58:00,2025-03-31 10:35:00
+620737,2025-03-28,2025-03-31,206,Three Rivers Beverages,1,Pittsburgh,15213,122,Orange Juice 52 oz,beverages,8.0,count,E012,2025-03-31 09:21:00,2025-03-31 09:21:00
+620738,2025-03-29,2025-03-31,204,Laurel Highlands Meats,1,Pittsburgh,15213,128,Ground Beef,meat,10.0,kg,E012,2025-03-31 10:31:00,2025-03-31 11:20:00
+620739,2025-03-29,2025-03-31,205,Great Lakes Seafood,1,Pittsburgh,15213,130,Atlantic Salmon,seafood,5.0,kg,E013,2025-03-31 13:00:00,2025-03-31 13:56:00
+620740,2025-03-28,2025-03-31,206,Three Rivers Beverages,1,Pittsburgh,15213,132,Sparkling Water 12 pk,beverages,18.0,count,E014,2025-03-31 13:03:00,2025-03-31 13:36:00
+620741,2025-03-28,2025-03-31,206,Three Rivers Beverages,1,Pittsburgh,15213,133,Cola 6 pk,beverages,20.0,count,E014,2025-03-31 06:45:00,2025-03-31 06:55:00
+620742,2025-03-28,2025-03-31,206,Three Rivers Beverages,1,Pittsburgh,15213,134,Cola 12 pk,beverages,8.0,count,E012,2025-03-31 10:35:00,2025-03-31 10:50:00
+620743,2025-03-28,2025-03-31,206,Three Rivers Beverages,1,Pittsburgh,15213,135,Bottled Water 24 pk,beverages,26.0,count,E013,2025-03-31 12:53:00,2025-03-31 13:22:00
+620744,2025-03-28,2025-03-31,207,Heartland Pantry,1,Pittsburgh,15213,136,Ground Coffee 12 oz,pantry,18.0,count,E011,2025-03-31 11:56:00,2025-03-31 12:56:00
+620745,2025-03-28,2025-03-31,206,Three Rivers Beverages,1,Pittsburgh,15213,137,Iced Tea 1 gal,beverages,4.0,count,E014,2025-03-31 11:49:00,2025-04-05 12:29:00
+620746,2025-03-28,2025-03-31,207,Heartland Pantry,1,Pittsburgh,15213,138,Spaghetti 1 lb,pantry,20.0,count,E014,2025-03-31 08:50:00,2025-03-31 09:06:00
+620747,2025-03-28,2025-03-31,207,Heartland Pantry,1,Pittsburgh,15213,139,Marinara Sauce 24 oz,pantry,12.0,count,E012,2025-03-31 12:27:00,2025-03-31 13:09:00
+620748,2025-03-28,2025-03-31,207,Heartland Pantry,1,Pittsburgh,15213,140,Long Grain Rice 2 lb,pantry,12.0,count,E011,2025-03-31 12:13:00,2025-03-31 12:21:00
+620749,2025-03-28,2025-03-31,207,Heartland Pantry,1,Pittsburgh,15213,142,Peanut Butter 16 oz,pantry,12.0,count,E011,2025-03-31 12:41:00,2025-03-31 12:54:00
+620750,2025-03-28,2025-03-31,207,Heartland Pantry,1,Pittsburgh,15213,144,Corn Flakes 18 oz,pantry,24.0,count,E014,2025-03-31 12:14:00,2025-03-31 13:07:00
+620751,2025-03-28,2025-03-31,207,Heartland Pantry,1,Pittsburgh,15213,145,Olive Oil 1 L,pantry,12.0,count,E013,2025-03-31 06:56:00,2025-03-31 07:13:00
+620752,2025-03-28,2025-03-31,208,Sunrise Frozen Foods,1,Pittsburgh,15213,146,Vanilla Ice Cream 1.5 qt,frozen,30.0,count,E012,2025-03-31 06:43:00,2025-03-31 06:54:00
+620753,2025-03-28,2025-03-31,208,Sunrise Frozen Foods,1,Pittsburgh,15213,147,Frozen Pizza,frozen,20.0,count,E013,2025-03-31 10:44:00,2025-03-31 10:51:00
+620754,2025-03-28,2025-03-31,208,Sunrise Frozen Foods,1,Pittsburgh,15213,148,Frozen Peas 16 oz,frozen,12.0,count,E012,2025-03-31 08:01:00,2025-03-31 08:25:00
+620755,2025-03-28,2025-03-31,209,CleanHome Supplies,1,Pittsburgh,15213,150,Paper Towels 6 rolls,household,12.0,count,E012,2025-03-31 08:43:00,2025-03-31 08:47:00
+620756,2025-03-28,2025-03-31,209,CleanHome Supplies,1,Pittsburgh,15213,151,Toilet Paper 12 rolls,household,16.0,count,E011,2025-03-31 11:56:00,2025-03-31 12:54:00
+620757,2025-03-28,2025-03-31,209,CleanHome Supplies,1,Pittsburgh,15213,152,Dish Soap 20 oz,household,12.0,count,E011,2025-03-31 06:31:00,2025-03-31 07:05:00
+620758,2025-03-29,2025-03-31,204,Laurel Highlands Meats,1,Pittsburgh,15213,159,Sliced Deli Turkey,meat,5.0,kg,E012,2025-03-31 13:11:00,2025-03-31 13:32:00

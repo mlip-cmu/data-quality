@@ -2,7 +2,8 @@
 __pycache__/
 *.pyc
 out/
-inventory-data/data/
+inventory-data/data/**/*.parquet
+inventory-data/data/VERSION-*
 .pytest_cache/
 .ruff_cache/
 __marimo__/

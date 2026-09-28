@@ -45,6 +45,12 @@ jobs:
           version: "0.12.19"
           enable-cache: true
       - run: ./run_all.sh ${{ matrix.project }}
+      - name: The committed CSV files match the generator
+        if: matrix.project == 'inventory-data'
+        run: |
+          uv run --directory inventory-data inventory-data --force
+          git status --porcelain -- inventory-data/data
+          test -z "$(git status --porcelain -- inventory-data/data)"
       - uses: actions/upload-artifact@v4
         if: always()
         with:

@@ -20,8 +20,47 @@ def ensure(force: bool = False) -> Path:
         generate.build(DATA_DIR / "clean")
         corrupt.build(DATA_DIR / "clean", DATA_DIR / "dirty")
         scenarios.build(DATA_DIR / "drift")
+        export_csv()
+        export_preview()
         stamp.touch()
     return DATA_DIR
+
+
+def export_csv() -> None:
+    """Write every Parquet table also as CSV (committed to git, so it can be read on GitHub)."""
+    for path in sorted(DATA_DIR.glob("*/*.parquet")):
+        df = pd.read_parquet(path)
+        df.round({c: 4 for c in df.columns if df[c].dtype.kind == "f"}).to_csv(
+            path.with_suffix(".csv"), index=False
+        )
+
+
+PREVIEW = {"store_id": 1, "from": "2025-03-01", "to": "2025-03-31"}
+PREVIEW_DRIFT = {"store_id": 7, "from": "2025-08-15", "to": "2025-09-15"}
+
+
+def export_preview(max_bytes: int = 500_000) -> None:
+    """Small CSV files that GitHub shows as a table: small tables in full, an extract of each
+    large table (one store and one month; for drift, store 7 around the POS switch to lb)."""
+    preview = DATA_DIR / "preview"
+    preview.mkdir(exist_ok=True)
+    for f in preview.glob("*.csv"):
+        f.unlink()
+    for path in sorted(DATA_DIR.glob("*/*.csv")):
+        if path.parent == preview:
+            continue
+        name = f"{path.parent.name}_{path.stem}"
+        df = pd.read_csv(path, dtype=str, keep_default_na=False)
+        if path.stat().st_size > max_bytes:
+            p = PREVIEW_DRIFT if path.parent.name == "drift" else PREVIEW
+            date = next(c for c in ("date", "delivery_date", "event_time") if c in df.columns)
+            day = df[date].str[:10]
+            keep = (day >= p["from"]) & (day <= p["to"])
+            if "store_id" in df.columns:
+                keep &= df.store_id == str(p["store_id"])
+            df = df[keep]
+            name += f"_store{p['store_id']}_{p['from']}_{p['to']}"
+        df.to_csv(preview / f"{name}.csv", index=False)
 
 
 def _read(kind: str, name: str) -> pd.DataFrame:
@@ -30,10 +69,10 @@ def _read(kind: str, name: str) -> pd.DataFrame:
 
 def _table(name: str):
     def load(dirty: bool = False) -> pd.DataFrame:
-        csv = ensure() / "dirty" / f"{name}.csv"
-        if dirty and csv.exists():
-            return pd.read_csv(csv)
-        return _read("dirty" if dirty else "clean", name)
+        kind = "dirty" if dirty else "clean"
+        if not (ensure() / kind / f"{name}.parquet").exists():
+            return pd.read_csv(DATA_DIR / kind / f"{name}.csv")
+        return _read(kind, name)
 
     load.__name__ = name
     load.__doc__ = f"The `{name}` table (clean, or with injected errors if dirty=True)."

@@ -1,0 +1,9 @@
+id,name,city,state,zip,region,size_sqm,opened,station
+1,Oakland,Pittsburgh,PA,15213,Pittsburgh,2400,2010-05-01 00:00:00,PIT
+2,Squirrel Hill,Pittsburg,PA,15217,Pittsburgh,2100,2012-03-15 00:00:00,PIT
+3,Downtown,Pittsburgh,PA,15222,Pittsburgh,1500,2016-09-01 00:00:00,PIT
+4,Cranberry,Cranberry Township,Pennsylvania,16066,Pittsburgh,3200,2014-06-01 00:00:00,PIT
+5,Monroeville,Monroeville,PA,15213,Pittsburgh,2800,2011-11-01 00:00:00,PIT
+6,Erie Bayfront,USA,PA,16501,Northwest PA,2200,2018-04-01 00:00:00,ERI
+7,Harrisburg,Harrisburg,PA,17101,Central PA,2500,2019-10-01 00:00:00,MDT
+8,Cleveland Flats,Cleveland,OH,44113,Ohio,2600,2021-02-01 00:00:00,CLE
