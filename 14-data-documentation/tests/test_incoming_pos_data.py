@@ -25,8 +25,9 @@ def test_clean_batch_has_the_expected_structure():
 
 def test_clean_batch_has_the_expected_distribution():
     sales = d.sales()
-    assert distribution_problems(month(sales, "2025-09-01"), month(sales, "2024-09-01"),
-                                 UNITS) == []
+    assert (
+        distribution_problems(month(sales, "2025-09-01"), month(sales, "2024-09-01"), UNITS) == []
+    )
 
 
 def test_lb_switch_passes_the_schema_but_not_the_distribution_check(drift_sales):

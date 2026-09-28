@@ -7,8 +7,17 @@ import pandas as pd
 import inventory_data as d
 
 dl = d.deliveries(dirty=True)
-COLUMNS = ["product_id", "product_name", "category", "unit", "supplier_id", "supplier_name",
-           "store_id", "store_city", "store_zip"]
+COLUMNS = [
+    "product_id",
+    "product_name",
+    "category",
+    "unit",
+    "supplier_id",
+    "supplier_name",
+    "store_id",
+    "store_city",
+    "store_zip",
+]
 errors = d.errors().query("table == 'deliveries'")
 
 
@@ -34,8 +43,14 @@ mode = dl.groupby("product_id").product_name.agg(lambda s: s.mode()[0])
 flagged = dl[dl.product_name != dl.product_id.map(mode)]
 kinds = errors[errors.row_id.isin(flagged.delivery_id.astype(str))].error_type.value_counts()
 print(f"  {len(flagged)} rows flagged; injected errors among them: {kinds.to_dict()}")
-print(flagged[["delivery_id", "product_id", "product_name"]].head(5).assign(
-    usual_name=lambda f: f.product_id.map(mode)).to_string(index=False))
-print("\nA flagged row says only that the ID and the name disagree: a typo in the name, or a wrong ID.")
+print(
+    flagged[["delivery_id", "product_id", "product_name"]]
+    .head(5)
+    .assign(usual_name=lambda f: f.product_id.map(mode))
+    .to_string(index=False)
+)
+print(
+    "\nA flagged row says only that the ID and the name disagree: a typo in the name or a wrong ID."
+)
 print("Some learned patterns are only 'usually true' (a supplier mostly delivers one category, but")
 print("the seafood supplier also sells frozen shrimp). Rows that break those are often correct.")

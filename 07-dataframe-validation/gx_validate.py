@@ -21,14 +21,22 @@ def batch(dirty: bool):
 
 
 context = gx.get_context(mode="ephemeral")
-context.add_data_docs_site("local", {
-    "class_name": "SiteBuilder",
-    "site_index_builder": {"class_name": "DefaultSiteIndexBuilder"},
-    "store_backend": {"class_name": "TupleFilesystemStoreBackend",
-                      "base_directory": str(OUT / "gx_docs")},
-})
-deliveries = (context.data_sources.add_pandas("receiving").add_dataframe_asset("deliveries")
-              .add_batch_definition_whole_dataframe("month"))
+context.add_data_docs_site(
+    "local",
+    {
+        "class_name": "SiteBuilder",
+        "site_index_builder": {"class_name": "DefaultSiteIndexBuilder"},
+        "store_backend": {
+            "class_name": "TupleFilesystemStoreBackend",
+            "base_directory": str(OUT / "gx_docs"),
+        },
+    },
+)
+deliveries = (
+    context.data_sources.add_pandas("receiving")
+    .add_dataframe_asset("deliveries")
+    .add_batch_definition_whole_dataframe("month")
+)
 
 suite = context.suites.add(gx.ExpectationSuite(name="deliveries"))
 for expectation in [
@@ -41,14 +49,18 @@ for expectation in [
     gxe.ExpectColumnValuesToBeOfType(column="supplier_id", type_="int64"),
     # more checks on the same batch
     gxe.ExpectColumnValuesToBeInSet(column="supplier_id", value_set=d.suppliers().id.tolist()),
-    gxe.ExpectColumnValuesToBeInSet(column="category", value_set=d.products().category.unique()
-                                    .tolist()),
-    gxe.ExpectColumnValuesToBeBetween(column="delivery_date", min_value=datetime(2024, 1, 1),
-                                      max_value=datetime(2025, 12, 31)),
-    gxe.ExpectColumnPairValuesAToBeGreaterThanB(column_A="entered_at", column_B="received_at",
-                                                or_equal=True),
+    gxe.ExpectColumnValuesToBeInSet(
+        column="category", value_set=d.products().category.unique().tolist()
+    ),
+    gxe.ExpectColumnValuesToBeBetween(
+        column="delivery_date", min_value=datetime(2024, 1, 1), max_value=datetime(2025, 12, 31)
+    ),
+    gxe.ExpectColumnPairValuesAToBeGreaterThanB(
+        column_A="entered_at", column_B="received_at", or_equal=True
+    ),
     gxe.ExpectCompoundColumnsToBeUnique(
-        column_list=["delivery_date", "store_id", "product_id", "quantity"]),
+        column_list=["delivery_date", "store_id", "product_id", "quantity"]
+    ),
     gxe.ExpectColumnMedianToBeBetween(column="quantity", min_value=10, max_value=60),
     gxe.ExpectColumnStdevToBeBetween(column="quantity", max_value=200),
     gxe.ExpectColumnMaxToBeBetween(column="quantity", max_value=2000),
@@ -56,16 +68,23 @@ for expectation in [
     suite.add_expectation(expectation)
 
 validation = context.validation_definitions.add(
-    gx.ValidationDefinition(name="monthly deliveries", data=deliveries, suite=suite))
+    gx.ValidationDefinition(name="monthly deliveries", data=deliveries, suite=suite)
+)
 
 for label, dirty in [("clean batch", False), ("batch as entered by staff", True)]:
     df = batch(dirty)
-    result = validation.run(batch_parameters={"dataframe": df},
-                            result_format={"result_format": "COMPLETE",
-                                           "unexpected_index_column_names": ["delivery_id"]})
+    result = validation.run(
+        batch_parameters={"dataframe": df},
+        result_format={
+            "result_format": "COMPLETE",
+            "unexpected_index_column_names": ["delivery_id"],
+        },
+    )
     stats = result.statistics
-    print(f"\n=== {label}: {len(df)} deliveries, {stats['successful_expectations']} of "
-          f"{stats['evaluated_expectations']} expectations met ===\n")
+    print(
+        f"\n=== {label}: {len(df)} deliveries, {stats['successful_expectations']} of "
+        f"{stats['evaluated_expectations']} expectations met ===\n"
+    )
     for r in result.results:
         cfg = r.expectation_config
         args = {k: v for k, v in cfg.kwargs.items() if k in ("column", "column_A", "column_list")}
@@ -74,10 +93,14 @@ for label, dirty in [("clean batch", False), ("batch as entered by staff", True)
             res = r.result
             if "unexpected_count" in res:
                 values = res.get("unexpected_list", [])
-                examples = sorted({str(v) for v in values})[:4] if values and not isinstance(
-                    values[0], dict) else []
+                examples = (
+                    sorted({str(v) for v in values})[:4]
+                    if values and not isinstance(values[0], dict)
+                    else []
+                )
                 detail = f"{res['unexpected_count']} unexpected" + (
-                    f", e.g. {examples}" if examples else "")
+                    f", e.g. {examples}" if examples else ""
+                )
             elif "observed_value" in res:
                 detail = f"observed {res['observed_value']}"
         column = str(list(args.values())[0])

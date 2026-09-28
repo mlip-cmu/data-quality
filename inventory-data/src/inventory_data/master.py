@@ -74,7 +74,20 @@ PRODUCTS = [
     (150, "Paper Towels 6 rolls", "household", "count", 8.99, 209, 7, 1825, 1.2, 4, None, None),
     (151, "Toilet Paper 12 rolls", "household", "count", 9.99, 209, 9, 1825, 1.5, 4, None, None),
     (152, "Dish Soap 20 oz", "household", "count", 2.99, 209, 5, 1095, 0.65, 12, None, None),
-    (153, "Laundry Detergent 100 oz", "household", "count", 12.99, 209, 4, 1095, 3.2, 4, None, None),
+    (
+        153,
+        "Laundry Detergent 100 oz",
+        "household",
+        "count",
+        12.99,
+        209,
+        4,
+        1095,
+        3.2,
+        4,
+        None,
+        None,
+    ),
     (154, "Refill Laundry Detergent", "refill", "liter", 3.99, 210, 6, 365, 1.05, 20, None, None),
     (155, "Refill Dish Soap", "refill", "liter", 3.49, 210, 3, 365, 1.03, 20, None, None),
     (156, "Refill Olive Oil", "refill", "liter", 11.99, 210, 2, 540, 0.92, 10, None, None),
@@ -85,15 +98,39 @@ PRODUCTS = [
 ]
 
 # Change of demand per degree Celsius above 15 °C (relative).
-TEMP_SENSITIVITY = {114: 0.04, 132: 0.02, 135: 0.025, 137: 0.035, 146: 0.035, 149: 0.06,
-                    143: -0.015, 112: 0.015, 106: 0.01}
+TEMP_SENSITIVITY = {
+    114: 0.04,
+    132: 0.02,
+    135: 0.025,
+    137: 0.035,
+    146: 0.035,
+    149: 0.06,
+    143: -0.015,
+    112: 0.015,
+    106: 0.01,
+}
 # Seasonal amplitude and peak day of year.
-SEASON = {"produce": (0.10, 200), "beverages": (0.10, 200), "frozen": (0.05, 200),
-          "bakery": (0.05, 350), "pantry": (0.05, 20), "meat": (0.08, 190)}
+SEASON = {
+    "produce": (0.10, 200),
+    "beverages": (0.10, 200),
+    "frozen": (0.05, 200),
+    "bakery": (0.05, 350),
+    "pantry": (0.05, 20),
+    "meat": (0.08, 190),
+}
 SEASON_OVERRIDE = {114: (0.9, 205), 143: (0.3, 20), 146: (0.3, 200), 103: (0.25, 20)}
-DENSITY_KG_PER_L = {"produce": 0.45, "dairy": 0.9, "bakery": 0.25, "meat": 0.8, "seafood": 0.8,
-                    "frozen": 0.6, "beverages": 0.9, "pantry": 0.6, "household": 0.3,
-                    "refill": 1.0}
+DENSITY_KG_PER_L = {
+    "produce": 0.45,
+    "dairy": 0.9,
+    "bakery": 0.25,
+    "meat": 0.8,
+    "seafood": 0.8,
+    "frozen": 0.6,
+    "beverages": 0.9,
+    "pantry": 0.6,
+    "household": 0.3,
+    "refill": 1.0,
+}
 
 # id, name, city, state, zip, region, size_sqm, opened, weather_station
 STORES = [
@@ -111,16 +148,29 @@ STORES = [
 NEW_STORES = {9, 10}
 
 ZIP_CODES = [
-    ("15213", "Pittsburgh", "PA"), ("15217", "Pittsburgh", "PA"), ("15222", "Pittsburgh", "PA"),
-    ("15232", "Pittsburgh", "PA"), ("16066", "Cranberry Township", "PA"),
-    ("15146", "Monroeville", "PA"), ("16501", "Erie", "PA"), ("17101", "Harrisburg", "PA"),
-    ("44113", "Cleveland", "OH"), ("43215", "Columbus", "OH"), ("33602", "Tampa", "FL"),
+    ("15213", "Pittsburgh", "PA"),
+    ("15217", "Pittsburgh", "PA"),
+    ("15222", "Pittsburgh", "PA"),
+    ("15232", "Pittsburgh", "PA"),
+    ("16066", "Cranberry Township", "PA"),
+    ("15146", "Monroeville", "PA"),
+    ("16501", "Erie", "PA"),
+    ("17101", "Harrisburg", "PA"),
+    ("44113", "Cleveland", "OH"),
+    ("43215", "Columbus", "OH"),
+    ("33602", "Tampa", "FL"),
     ("32801", "Orlando", "FL"),
 ]
 
 # station: mean annual temperature, seasonal amplitude (°C)
-WEATHER_STATIONS = {"PIT": (11.0, 12.0), "ERI": (10.0, 12.0), "MDT": (12.5, 12.0),
-                    "CLE": (10.5, 12.5), "TPA": (23.5, 5.5), "MCO": (22.5, 5.5)}
+WEATHER_STATIONS = {
+    "PIT": (11.0, 12.0),
+    "ERI": (10.0, 12.0),
+    "MDT": (12.5, 12.0),
+    "CLE": (10.5, 12.5),
+    "TPA": (23.5, 5.5),
+    "MCO": (22.5, 5.5),
+}
 
 UNITS = ["count", "kg", "liter"]
 CATEGORIES = sorted(DENSITY_KG_PER_L)
@@ -153,12 +203,26 @@ def suppliers() -> pd.DataFrame:
 
 
 def products() -> pd.DataFrame:
-    cols = ["id", "name", "category", "unit", "unit_price", "supplier_id", "base_demand",
-            "shelf_life_days", "unit_weight_kg", "case_pack", "family", "size"]
+    cols = [
+        "id",
+        "name",
+        "category",
+        "unit",
+        "unit_price",
+        "supplier_id",
+        "base_demand",
+        "shelf_life_days",
+        "unit_weight_kg",
+        "case_pack",
+        "family",
+        "size",
+    ]
     df = pd.DataFrame(PRODUCTS, columns=cols)
     df.insert(1, "gtin", [gtin13(s, i) for s, i in zip(df.supplier_id, df.id, strict=True)])
-    dims = [_case_dims_cm(w, c, cat) for w, c, cat in
-            zip(df.unit_weight_kg, df.case_pack, df.category, strict=True)]
+    dims = [
+        _case_dims_cm(w, c, cat)
+        for w, c, cat in zip(df.unit_weight_kg, df.case_pack, df.category, strict=True)
+    ]
     df["case_length_cm"], df["case_width_cm"], df["case_height_cm"] = zip(*dims, strict=True)
     return df
 

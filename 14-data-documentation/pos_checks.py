@@ -22,8 +22,9 @@ class DailySales(pa.DataFrameModel):
         unique = ["date", "store_id", "product_id"]
 
 
-def distribution_problems(batch: pd.DataFrame, history: pd.DataFrame,
-                          units: pd.Series, tolerance: float = 0.35) -> list[str]:
+def distribution_problems(
+    batch: pd.DataFrame, history: pd.DataFrame, units: pd.Series, tolerance: float = 0.35
+) -> list[str]:
     """Distribution: each store sells about as much per product as in the same period of history."""
     problems = []
     unit = batch.product_id.map(units)

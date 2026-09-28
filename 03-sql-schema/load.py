@@ -17,12 +17,14 @@ INSERT = f"INSERT INTO Products ({COLS}) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
 def connect() -> duckdb.DuckDBPyConnection:
     con = duckdb.connect()
     con.execute(Path("schema.sql").read_text())
-    supplier_rows = d.suppliers()[["id", "name", "contact_name", "contact_phone"]]
+    supplier_rows = d.suppliers()[["id", "name", "contact_name", "contact_phone"]]  # noqa: F841
     con.execute("INSERT INTO Suppliers SELECT * FROM supplier_rows")
     stock = d.inventory().query("date == date.max() and store_id == 1").set_index("product_id")
-    catalog = d.products().assign(qty=lambda p: p.id.map(stock.on_hand_system).round())
-    con.execute("INSERT INTO Products SELECT id, gtin, name, category, unit_price, qty, unit, "
-                "supplier_id FROM catalog")
+    catalog = d.products().assign(qty=lambda p: p.id.map(stock.on_hand_system).round())  # noqa: F841
+    con.execute(
+        "INSERT INTO Products SELECT id, gtin, name, category, unit_price, qty, unit, "
+        "supplier_id FROM catalog"
+    )
     return con
 
 
@@ -38,8 +40,11 @@ def count(con) -> int:
 
 
 with open("new_products.csv") as f:
-    batch = [[v if v != "" else None for v in row] for row in csv.DictReader(f)
-             for row in [list(row.values())]]
+    batch = [
+        [v if v != "" else None for v in row]
+        for row in csv.DictReader(f)
+        for row in [list(row.values())]
+    ]
 
 print("1. Insert the new rows one by one\n")
 con = connect()
@@ -53,8 +58,10 @@ for row in batch:
         rejected.append(row + [type(e).__name__, reason(e)])
         print(f"   REJECTED  {row[0]:>4} {row[2] or '(no name)':<20} {reason(e)}")
 qty = con.sql("SELECT QuantityInStock FROM Products WHERE ID = 163").fetchone()[0]
-print(f"\n   Note: row 163 has QuantityInStock '75.5' for a count unit. It was accepted and "
-      f"silently stored as {qty}.")
+print(
+    f"\n   Note: row 163 has QuantityInStock '75.5' for a count unit. It was accepted and "
+    f"silently stored as {qty}."
+)
 
 print("\n2. Insert the whole batch in one statement (a database transaction)\n")
 con = connect()
@@ -76,10 +83,12 @@ print(f"   {len(accepted)} rows loaded, {len(rejected)} rows written to out/reje
 
 print("\n4. Dates and dependencies between attributes (Deliveries)\n")
 con = connect()
-for row in [(1, 101, "2025-06-02", "2025-06-09", 18.0),
-            (2, 101, "2025-13-02", "2025-06-09", 18.0),
-            (3, 123, "2025-06-02", "2025-05-28", 12.0),
-            (4, 999, "2025-06-02", "2025-06-09", 5.0)]:
+for row in [
+    (1, 101, "2025-06-02", "2025-06-09", 18.0),
+    (2, 101, "2025-13-02", "2025-06-09", 18.0),
+    (3, 123, "2025-06-02", "2025-05-28", 12.0),
+    (4, 999, "2025-06-02", "2025-06-09", 5.0),
+]:
     try:
         con.execute("INSERT INTO Deliveries VALUES (?, ?, ?, ?, ?)", row)
         print(f"   ok        {row}")

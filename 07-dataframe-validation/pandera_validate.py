@@ -22,9 +22,20 @@ class ProductMaster(pa.DataFrameModel):
     id: Series[int] = pa.Field(unique=True, gt=100)
     gtin: Series[str] = pa.Field(str_matches=r"^\d{13}$", unique=True)
     name: Series[str] = pa.Field(str_length={"min_value": 2, "max_value": 255})
-    category: Series[str] = pa.Field(isin=["produce", "dairy", "bakery", "meat", "seafood",
-                                           "beverages", "pantry", "frozen", "household",
-                                           "refill"])
+    category: Series[str] = pa.Field(
+        isin=[
+            "produce",
+            "dairy",
+            "bakery",
+            "meat",
+            "seafood",
+            "beverages",
+            "pantry",
+            "frozen",
+            "household",
+            "refill",
+        ]
+    )
     unit: Series[str] = pa.Field(isin=["count", "kg", "liter"])
     unit_price: Series[float] = pa.Field(gt=0, le=500)
     supplier_id: Series[int] = pa.Field(isin=SUPPLIERS)
@@ -52,9 +63,12 @@ print(f"{len(raw)} rows in the product master data (read as text)\n")
 def reasons(failures: pd.DataFrame) -> pd.Series:
     f = failures.dropna(subset=["index"])
     frame = "produce_is_sold_by_count_or_kg"
-    f = f.assign(reason=[
-        chk if chk == frame else f"{col} {re.sub(r'\\(\\[.*\\]\\)', '(...)', chk)} [{case}]"
-        for col, chk, case in zip(f.column, f.check.astype(str), f.failure_case, strict=True)])
+    f = f.assign(
+        reason=[
+            chk if chk == frame else f"{col} {re.sub(r'\\(\\[.*\\]\\)', '(...)', chk)} [{case}]"
+            for col, chk, case in zip(f.column, f.check.astype(str), f.failure_case, strict=True)
+        ]
+    )
     return f.drop_duplicates(["index", "reason"]).groupby("index").reason.agg("; ".join)
 
 
@@ -72,8 +86,10 @@ quarantine = pd.concat(rejected)
 quarantine.to_csv(OUT / "quarantine.csv", index=False)
 good.to_parquet(OUT / "products_valid.parquet")
 print(quarantine[["id", "name", "reason"]].to_string(index=False, max_colwidth=90))
-print(f"\n{len(good)} valid rows -> out/products_valid.parquet, "
-      f"{len(quarantine)} rows -> out/quarantine.csv")
+print(
+    f"\n{len(good)} valid rows -> out/products_valid.parquet, "
+    f"{len(quarantine)} rows -> out/quarantine.csv"
+)
 print("Not caught: most case dimensions in inches (plausible numbers), a price that is too low,")
 print("a near-duplicate name. These need rules across rows and tables (see 08 and 09).")
 
@@ -105,5 +121,7 @@ except pa.errors.SchemaErrors as e:
     flagged = mar.loc[e.failure_cases["index"].dropna().astype(int).unique(), "delivery_id"]
     injected = d.errors().query("table == 'deliveries' and column == 'quantity'").row_id
     real = flagged.astype(str).isin(injected).sum()
-    print(f"  {len(flagged)} March deliveries flagged, {real} of them are injected errors; the other "
-          f"{len(flagged) - real} are only larger than anything seen in February.")
+    print(
+        f"  {len(flagged)} March deliveries flagged, {real} of them are injected errors; the other "
+        f"{len(flagged) - real} are only larger than anything seen in February."
+    )

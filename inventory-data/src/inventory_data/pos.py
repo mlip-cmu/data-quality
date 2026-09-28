@@ -9,7 +9,9 @@ EVENT_STORES = [1, 2, 3]
 
 def events(sales: pd.DataFrame, products: pd.DataFrame, rng, log) -> pd.DataFrame:
     """Checkout events as they arrive in the event stream (late, duplicated, clock skew)."""
-    s = sales[sales.date.isin(EVENT_DAYS) & sales.store_id.isin(EVENT_STORES) & (sales.quantity > 0)]
+    s = sales[
+        sales.date.isin(EVENT_DAYS) & sales.store_id.isin(EVENT_STORES) & (sales.quantity > 0)
+    ]
     s = s.merge(products[["id", "unit"]], left_on="product_id", right_on="id")
     rows = []
     for r in s.itertuples():
@@ -19,14 +21,21 @@ def events(sales: pd.DataFrame, products: pd.DataFrame, rng, log) -> pd.DataFram
             parts = _split_weight(r.quantity, rng)
         for q in parts:
             rows.append((r.date, r.store_id, r.product_id, q, r.unit, r.unit_price, r.promo))
-    e = pd.DataFrame(rows, columns=["date", "store_id", "product_id", "quantity", "unit",
-                                    "unit_price", "promo"])
+    e = pd.DataFrame(
+        rows, columns=["date", "store_id", "product_id", "quantity", "unit", "unit_price", "promo"]
+    )
     secs = rng.uniform(7 * 3600, 22 * 3600, len(e))
     e["event_time"] = (e.date + pd.to_timedelta(secs, unit="s")).dt.tz_localize("America/New_York")
     e["terminal_id"] = [f"T{k}" for k in rng.integers(1, 6, len(e))]
     e = e.sort_values(["store_id", "event_time"]).reset_index(drop=True)
-    e.insert(0, "event_id", [f"{s}-{t:%Y%m%d}-{i:05d}" for i, (s, t) in
-                             enumerate(zip(e.store_id, e.event_time, strict=True))])
+    e.insert(
+        0,
+        "event_id",
+        [
+            f"{s}-{t:%Y%m%d}-{i:05d}"
+            for i, (s, t) in enumerate(zip(e.store_id, e.event_time, strict=True))
+        ],
+    )
     e["ingested_at"] = e.event_time + pd.to_timedelta(rng.exponential(2, len(e)), unit="s")
 
     late = rng.random(len(e)) < 0.01
@@ -83,29 +92,43 @@ def checkout_lines(products: pd.DataFrame, seed: int = 11) -> pd.DataFrame:
             term = rng.integers(1, 6, n)
             cashier = [f"C{store}{k}" for k in rng.integers(1, 7, n)]
             weight = rng.gamma(3, 0.4, n).round(3)
-            rows.append(pd.DataFrame({"date": day, "store_id": store, "terminal_id": term,
-                                      "cashier_id": cashier, "hour": hour, "product_id": pid,
-                                      "true_quantity": weight}))
+            rows.append(
+                pd.DataFrame(
+                    {
+                        "date": day,
+                        "store_id": store,
+                        "terminal_id": term,
+                        "cashier_id": cashier,
+                        "hour": hour,
+                        "product_id": pid,
+                        "true_quantity": weight,
+                    }
+                )
+            )
     lines = pd.concat(rows, ignore_index=True)
     lines["terminal_id"] = "T" + lines.terminal_id.astype(str)
     q = lines.true_quantity.to_numpy().copy()
     p = lines.product_id.to_numpy().copy()
 
-    bad_scale = ((lines.store_id == 2) & (lines.terminal_id == "T3")
-                 & (lines.date >= "2025-03-10")).to_numpy()
+    bad_scale = (
+        (lines.store_id == 2) & (lines.terminal_id == "T3") & (lines.date >= "2025-03-10")
+    ).to_numpy()
     q[bad_scale] *= 1.15
     wrong_plu = (lines.cashier_id == "C25").to_numpy() & (rng.random(len(lines)) < 0.12)
     wrong_plu |= (lines.hour >= 20).to_numpy() & (rng.random(len(lines)) < 0.03)
     wrong_plu &= lines.product_id.isin(LOOKALIKE).to_numpy()
     p[wrong_plu] = [LOOKALIKE[x] for x in p[wrong_plu]]
-    no_tare = lines.product_id.isin([127, 128, 129, 159]).to_numpy() & (rng.random(len(lines)) < 0.04)
+    no_tare = lines.product_id.isin([127, 128, 129, 159]).to_numpy() & (
+        rng.random(len(lines)) < 0.04
+    )
     q[no_tare] += rng.uniform(0.08, 0.2, no_tare.sum())
 
     lines["product_id"] = p
     lines["quantity"] = q.round(3)
     lines["unit_price"] = lines.product_id.map(price)
     lines["was_corrected"] = bad_scale | wrong_plu | no_tare
-    lines["error_cause"] = np.select([bad_scale, wrong_plu, no_tare],
-                                     ["scale", "wrong_plu", "no_tare"], "")
+    lines["error_cause"] = np.select(
+        [bad_scale, wrong_plu, no_tare], ["scale", "wrong_plu", "no_tare"], ""
+    )
     lines.insert(0, "line_id", np.arange(1, len(lines) + 1))
     return lines

@@ -78,7 +78,7 @@ def oos_reports() -> pd.DataFrame:
 
 
 def truth() -> pd.DataFrame:
-    """Expected and true demand, lost sales, waste, shrinkage and on-hand stock (not observable in practice)."""
+    """Expected and true demand, lost sales, waste, shrinkage, true stock (not observable)."""
     return _read("clean", "truth")
 
 

@@ -10,26 +10,62 @@ from . import master, sim
 LB_PER_KG = 2.20462
 
 EVENTS = [
-    {"start": "2025-01-15", "end": None, "kind": "concept drift",
-     "event": "Fad diet: cucumber demand more than doubles (also in winter)",
-     "stores": "all", "products": "102"},
-    {"start": "2025-03-01", "end": "2025-08-31", "kind": "sensor drift",
-     "event": "Checkout scales in store 2 read a little higher every day; recalibrated 2025-09-01",
-     "stores": "2", "products": "kg items"},
-    {"start": "2025-04-01", "end": None, "kind": "concept drift",
-     "event": "A competitor opens next to store 3: 30 % less demand for the same inputs",
-     "stores": "3", "products": "all"},
-    {"start": "2025-06-01", "end": None, "kind": "data drift",
-     "event": "Two new stores open in Florida (much warmer climate)",
-     "stores": "9, 10", "products": "all"},
-    {"start": "2025-07-10", "end": "2025-07-31", "kind": "data drift",
-     "event": "Heatwave in PA and OH (+8 °C)", "stores": "1-8", "products": "all"},
-    {"start": "2025-09-01", "end": None, "kind": "schema drift",
-     "event": "POS software update in stores 7 and 8 records weights in lb instead of kg",
-     "stores": "7, 8", "products": "kg items"},
-    {"start": "2025-10-15", "end": None, "kind": "schema drift",
-     "event": "The weather API changes temp_c from °C to °F (the column name stays the same)",
-     "stores": "all", "products": "all"},
+    {
+        "start": "2025-01-15",
+        "end": None,
+        "kind": "concept drift",
+        "event": "Fad diet: cucumber demand more than doubles (also in winter)",
+        "stores": "all",
+        "products": "102",
+    },
+    {
+        "start": "2025-03-01",
+        "end": "2025-08-31",
+        "kind": "sensor drift",
+        "event": "Checkout scales in store 2 read a bit higher every day; recalibrated 2025-09-01",
+        "stores": "2",
+        "products": "kg items",
+    },
+    {
+        "start": "2025-04-01",
+        "end": None,
+        "kind": "concept drift",
+        "event": "A competitor opens next to store 3: 30 % less demand for the same inputs",
+        "stores": "3",
+        "products": "all",
+    },
+    {
+        "start": "2025-06-01",
+        "end": None,
+        "kind": "data drift",
+        "event": "Two new stores open in Florida (much warmer climate)",
+        "stores": "9, 10",
+        "products": "all",
+    },
+    {
+        "start": "2025-07-10",
+        "end": "2025-07-31",
+        "kind": "data drift",
+        "event": "Heatwave in PA and OH (+8 °C)",
+        "stores": "1-8",
+        "products": "all",
+    },
+    {
+        "start": "2025-09-01",
+        "end": None,
+        "kind": "schema drift",
+        "event": "POS software update in stores 7 and 8 records weights in lb instead of kg",
+        "stores": "7, 8",
+        "products": "kg items",
+    },
+    {
+        "start": "2025-10-15",
+        "end": None,
+        "kind": "schema drift",
+        "event": "The weather API changes temp_c from °C to °F (the column name stays the same)",
+        "stores": "all",
+        "products": "all",
+    },
 ]
 
 
@@ -49,8 +85,9 @@ def build(out: Path, seed: int = 42) -> None:
     def competitor(w: sim.World) -> None:
         w.lam[w.days >= "2025-04-01", _idx(w.stores, 3), :] *= 0.7
 
-    world = sim.make_world(stores, products, days, seed=seed, modifiers=[fad_diet, competitor],
-                           weather_df=wx)
+    world = sim.make_world(
+        stores, products, days, seed=seed, modifiers=[fad_diet, competitor], weather_df=wx
+    )
     result = sim.simulate(world, master.shelf_volume_l(products, stores))
 
     kg = (products.unit == "kg").to_numpy()
@@ -65,16 +102,24 @@ def build(out: Path, seed: int = 42) -> None:
     recorded = np.where(kg, (result["sales"] * factor * noise).round(2), result["sales"])
 
     price = products.unit_price.to_numpy()[None, None, :] * np.where(world.promo, 0.8, 1.0)[:, None]
-    long = sim.to_long(world, {
-        "quantity": recorded, "unit_price": np.broadcast_to(price, recorded.shape).round(2),
-        "promo": np.broadcast_to(world.promo[:, None, :], recorded.shape),
-        "demand": world.demand, "true_sales": result["sales"], "lost": result["lost"],
-        "expected_demand": world.lam,
-    })
+    long = sim.to_long(
+        world,
+        {
+            "quantity": recorded,
+            "unit_price": np.broadcast_to(price, recorded.shape).round(2),
+            "promo": np.broadcast_to(world.promo[:, None, :], recorded.shape),
+            "demand": world.demand,
+            "true_sales": result["sales"],
+            "lost": result["lost"],
+            "expected_demand": world.lam,
+        },
+    )
     long[["date", "store_id", "product_id", "quantity", "unit_price", "promo"]].to_parquet(
-        out / "sales.parquet", index=False)
-    long[["date", "store_id", "product_id", "expected_demand", "demand", "true_sales", "lost"]
-         ].to_parquet(out / "truth.parquet", index=False)
+        out / "sales.parquet", index=False
+    )
+    long[
+        ["date", "store_id", "product_id", "expected_demand", "demand", "true_sales", "lost"]
+    ].to_parquet(out / "truth.parquet", index=False)
 
     reported = wx.copy()
     f = reported.date >= "2025-10-15"
@@ -89,7 +134,8 @@ def build(out: Path, seed: int = 42) -> None:
                 mean = 1.2 * factor[di, si, _idx(products, 101)] * (1 + rng.normal(0, 0.02))
                 rows.append((day, s.id, round(float(mean), 3)))
     pd.DataFrame(rows, columns=["date", "store_id", "mean_banana_line_kg"]).to_parquet(
-        out / "scale_readings.parquet", index=False)
+        out / "scale_readings.parquet", index=False
+    )
 
 
 def _idx(df: pd.DataFrame, value: int) -> int:

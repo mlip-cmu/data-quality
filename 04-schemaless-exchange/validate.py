@@ -8,8 +8,7 @@ from jsonschema import Draft202012Validator
 print("=== CSV: Frictionless data package (datapackage.yaml) ===\n")
 report = Package("datapackage.yaml").validate()
 print(f"valid: {report.valid}\n")
-for task, row, field, kind, note in report.flatten(
-        ["taskNumber", "rowNumber", "fieldName", "type", "note"]):
+for row, field, kind, note in report.flatten(["rowNumber", "fieldName", "type", "note"]):
     print(f"  row {row or '-':>3}  {field or '':<13} {kind:<17} {note}")
 
 print("\n=== JSON: JSON Schema (feed.schema.json) ===\n")

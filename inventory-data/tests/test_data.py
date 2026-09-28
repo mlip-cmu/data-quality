@@ -32,11 +32,21 @@ def test_every_changed_product_cell_is_logged():
     clean = d.products().astype(str).set_index("id")
     dirty = pd.read_csv(d.path("dirty", "products.csv"), dtype=str, keep_default_na=False)
     dirty = dirty.drop_duplicates("id").set_index("id").loc[clean.index]
-    logged = set(d.errors().query("table == 'products'").pipe(
-        lambda e: zip(e.row_id, e.column)))
+    logged = set(
+        d.errors().query("table == 'products'").pipe(lambda e: zip(e.row_id, e.column, strict=True))
+    )
     for pid in clean.index:
-        for col in ["name", "category", "unit", "unit_price", "supplier_id", "gtin",
-                    "case_pack", "case_height_cm", "shelf_life_days"]:
+        for col in [
+            "name",
+            "category",
+            "unit",
+            "unit_price",
+            "supplier_id",
+            "gtin",
+            "case_pack",
+            "case_height_cm",
+            "shelf_life_days",
+        ]:
             a, b = clean.at[pid, col], dirty.at[pid, col]
             if a != b and not (a in ("nan", "None") and b == "") and _num(a) != _num(b):
                 assert (pid, col) in logged, (pid, col, a, b)
@@ -47,7 +57,9 @@ def test_delivery_duplicates_and_missing_rows_are_logged():
     e = d.errors().query("table == 'deliveries'")
     extra = set(dirty.delivery_id) - set(clean.delivery_id)
     missing = set(clean.delivery_id) - set(dirty.delivery_id)
-    assert extra == set(e[e.error_type.isin(["duplicate_record", "near_duplicate"])].row_id.astype(int))
+    assert extra == set(
+        e[e.error_type.isin(["duplicate_record", "near_duplicate"])].row_id.astype(int)
+    )
     assert missing == set(e[e.error_type == "missing_record"].row_id.astype(int))
 
 

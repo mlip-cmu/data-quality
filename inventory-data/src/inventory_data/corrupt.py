@@ -16,9 +16,16 @@ class ErrorLog:
         self.rows: list[dict] = []
 
     def add(self, table, row_id, column, error_type, clean, dirty) -> None:
-        self.rows.append({"table": table, "row_id": str(row_id), "column": column,
-                          "error_type": error_type, "clean_value": _s(clean),
-                          "dirty_value": _s(dirty)})
+        self.rows.append(
+            {
+                "table": table,
+                "row_id": str(row_id),
+                "column": column,
+                "error_type": error_type,
+                "clean_value": _s(clean),
+                "dirty_value": _s(dirty),
+            }
+        )
 
     def frame(self) -> pd.DataFrame:
         return pd.DataFrame(self.rows)
@@ -35,14 +42,18 @@ def build(clean: Path, out: Path, seed: int = 7) -> None:
     products = pd.read_parquet(clean / "products.parquet")
     _products(products, log).to_csv(out / "products.csv", index=False)
     _suppliers(pd.read_parquet(clean / "suppliers.parquet"), log).to_csv(
-        out / "suppliers.csv", index=False)
+        out / "suppliers.csv", index=False
+    )
     _stores(pd.read_parquet(clean / "stores.parquet"), log).to_csv(out / "stores.csv", index=False)
     _deliveries(pd.read_parquet(clean / "deliveries.parquet"), rng, log).to_parquet(
-        out / "deliveries.parquet", index=False)
+        out / "deliveries.parquet", index=False
+    )
     _sales(pd.read_parquet(clean / "sales.parquet"), log).to_parquet(
-        out / "sales.parquet", index=False)
+        out / "sales.parquet", index=False
+    )
     _counts(pd.read_parquet(clean / "stock_counts.parquet"), products, rng, log).to_parquet(
-        out / "stock_counts.parquet", index=False)
+        out / "stock_counts.parquet", index=False
+    )
     events = pos.events(pd.read_parquet(clean / "sales.parquet"), products, rng, log)
     events.to_parquet(out / "pos_events.parquet", index=False)
     pos.checkout_lines(products).to_parquet(out / "checkout_lines.parquet", index=False)
@@ -123,13 +134,20 @@ def _stores(s: pd.DataFrame, log: ErrorLog) -> pd.DataFrame:
     return s
 
 
-TYPO_UNITS = {"kg": ["Kg", "kgs", "KG", "kilogram"], "count": ["ct", "each", "Count"],
-              "liter": ["l", "Liter", "ltr"]}
+TYPO_UNITS = {
+    "kg": ["Kg", "kgs", "KG", "kilogram"],
+    "count": ["ct", "each", "Count"],
+    "liter": ["l", "Liter", "ltr"],
+}
 
 
 def _typo(word: str, rng) -> str:
     i = int(rng.integers(1, max(2, len(word) - 1)))
-    return word[:i] + word[i + 1:] if rng.random() < 0.5 else word[:i - 1] + word[i] + word[i - 1] + word[i + 1:]
+    return (
+        word[:i] + word[i + 1 :]
+        if rng.random() < 0.5
+        else word[: i - 1] + word[i] + word[i - 1] + word[i + 1 :]
+    )
 
 
 def _deliveries(d: pd.DataFrame, rng, log: ErrorLog) -> pd.DataFrame:
@@ -137,7 +155,8 @@ def _deliveries(d: pd.DataFrame, rng, log: ErrorLog) -> pd.DataFrame:
     t = "deliveries"
     n = len(d)
     pick = lambda frac, mask=None: rng.choice(  # noqa: E731
-        d.index[mask] if mask is not None else d.index, max(1, int(frac * n)), replace=False)
+        d.index[mask] if mask is not None else d.index, max(1, int(frac * n)), replace=False
+    )
     used: set[int] = set()
 
     def fresh(idx):
@@ -147,15 +166,28 @@ def _deliveries(d: pd.DataFrame, rng, log: ErrorLog) -> pd.DataFrame:
 
     kg = (d.unit == "kg").to_numpy()
     for i in fresh(pick(0.001, kg)):
-        log.add(t, d.at[i, "delivery_id"], "quantity", "wrong_unit", d.at[i, "quantity"],
-                d.at[i, "quantity"] * 1000)
+        log.add(
+            t,
+            d.at[i, "delivery_id"],
+            "quantity",
+            "wrong_unit",
+            d.at[i, "quantity"],
+            d.at[i, "quantity"] * 1000,
+        )
         d.at[i, "quantity"] *= 1000
     for i in fresh(pick(0.001)):
-        log.add(t, d.at[i, "delivery_id"], "quantity", "outlier", d.at[i, "quantity"],
-                d.at[i, "quantity"] * 10)
+        log.add(
+            t,
+            d.at[i, "delivery_id"],
+            "quantity",
+            "outlier",
+            d.at[i, "quantity"],
+            d.at[i, "quantity"] * 10,
+        )
         d.at[i, "quantity"] *= 10
-    banana = d.index[(d.product_id == 101) & (d.store_id == 1)
-                     & (d.delivery_date == "2025-03-14")][0]
+    banana = d.index[(d.product_id == 101) & (d.store_id == 1) & (d.delivery_date == "2025-03-14")][
+        0
+    ]
     log.add(t, d.at[banana, "delivery_id"], "quantity", "outlier", d.at[banana, "quantity"], 80000)
     d.at[banana, "quantity"] = 80000.0
     used.add(banana)
@@ -165,8 +197,9 @@ def _deliveries(d: pd.DataFrame, rng, log: ErrorLog) -> pd.DataFrame:
         d.at[i, "unit"] = new
     for i in fresh(pick(0.003)):
         new = _typo(d.at[i, "product_name"], rng)
-        log.add(t, d.at[i, "delivery_id"], "product_name", "misspelling",
-                d.at[i, "product_name"], new)
+        log.add(
+            t, d.at[i, "delivery_id"], "product_name", "misspelling", d.at[i, "product_name"], new
+        )
         d.at[i, "product_name"] = new
     ids = np.sort(d.product_id.unique())
     for i in fresh(pick(0.002)):
@@ -176,20 +209,44 @@ def _deliveries(d: pd.DataFrame, rng, log: ErrorLog) -> pd.DataFrame:
         d.at[i, "product_id"] = new
     for i in fresh(pick(0.002)):
         new = "Pittsburg" if d.at[i, "store_city"] == "Pittsburgh" else "Pittsburgh"
-        log.add(t, d.at[i, "delivery_id"], "store_city", "violated_dependency",
-                d.at[i, "store_city"], new)
+        log.add(
+            t,
+            d.at[i, "delivery_id"],
+            "store_city",
+            "violated_dependency",
+            d.at[i, "store_city"],
+            new,
+        )
         d.at[i, "store_city"] = new
     for i in fresh(pick(0.001)):
-        log.add(t, d.at[i, "delivery_id"], "category", "misfielded_value", d.at[i, "category"],
-                d.at[i, "supplier_name"])
+        log.add(
+            t,
+            d.at[i, "delivery_id"],
+            "category",
+            "misfielded_value",
+            d.at[i, "category"],
+            d.at[i, "supplier_name"],
+        )
         d.at[i, "category"] = d.at[i, "supplier_name"]
     for i in fresh(pick(0.0005)):
-        log.add(t, d.at[i, "delivery_id"], "delivery_date", "placeholder",
-                d.at[i, "delivery_date"].date(), "1900-01-01")
+        log.add(
+            t,
+            d.at[i, "delivery_id"],
+            "delivery_date",
+            "placeholder",
+            d.at[i, "delivery_date"].date(),
+            "1900-01-01",
+        )
         d.at[i, "delivery_date"] = pd.Timestamp("1900-01-01")
     for i in fresh(pick(0.0005)):
-        log.add(t, d.at[i, "delivery_id"], "quantity", "illegal_value", d.at[i, "quantity"],
-                -d.at[i, "quantity"])
+        log.add(
+            t,
+            d.at[i, "delivery_id"],
+            "quantity",
+            "illegal_value",
+            d.at[i, "quantity"],
+            -d.at[i, "quantity"],
+        )
         d.at[i, "quantity"] = -d.at[i, "quantity"]
 
     missing = fresh(pick(0.003))
@@ -201,12 +258,19 @@ def _deliveries(d: pd.DataFrame, rng, log: ErrorLog) -> pd.DataFrame:
     dups = src.copy()
     dups["entered_at"] = dups.entered_at + pd.to_timedelta(rng.integers(5, 240, len(dups)), "m")
     near = rng.random(len(dups)) < 0.3
-    dups.loc[near, "quantity"] = (dups.loc[near, "quantity"]
-                                  * rng.choice([0.9, 1.1], near.sum())).round(1)
+    dups.loc[near, "quantity"] = (
+        dups.loc[near, "quantity"] * rng.choice([0.9, 1.1], near.sum())
+    ).round(1)
     dups["delivery_id"] = np.arange(900001, 900001 + len(dups))
     for (_, a), (_, b), is_near in zip(src.iterrows(), dups.iterrows(), near, strict=True):
-        log.add(t, b.delivery_id, "*", "near_duplicate" if is_near else "duplicate_record",
-                None, f"copy of {a.delivery_id}")
+        log.add(
+            t,
+            b.delivery_id,
+            "*",
+            "near_duplicate" if is_near else "duplicate_record",
+            None,
+            f"copy of {a.delivery_id}",
+        )
     return pd.concat([d, dups]).sort_values(["delivery_date", "entered_at"]).reset_index(drop=True)
 
 
@@ -214,8 +278,14 @@ def _sales(s: pd.DataFrame, log: ErrorLog) -> pd.DataFrame:
     s = s.copy()
     stale = (s.product_id == 136) & s.store_id.isin([7, 8]) & (s.date >= "2025-03-01") & ~s.promo
     for r in s[stale].itertuples():
-        log.add("sales", f"{r.date.date()}|{r.store_id}|{r.product_id}", "unit_price",
-                "inconsistent_value", r.unit_price, 7.99)
+        log.add(
+            "sales",
+            f"{r.date.date()}|{r.store_id}|{r.product_id}",
+            "unit_price",
+            "inconsistent_value",
+            r.unit_price,
+            7.99,
+        )
     s.loc[stale, "unit_price"] = 7.99
     s.loc[stale, "revenue"] = (s.loc[stale, "quantity"] * 7.99).round(2)
     outage = (s.store_id == 6) & s.date.between("2025-02-10", "2025-02-12")
@@ -223,19 +293,31 @@ def _sales(s: pd.DataFrame, log: ErrorLog) -> pd.DataFrame:
         log.add("sales", f"{pd.Timestamp(day).date()}|6", "*", "missing_record", "store-day", None)
     dup = s[(s.store_id == 3) & (s.date == "2025-05-05")]
     log.add("sales", "2025-05-05|3", "*", "duplicate_record", None, "uploaded twice")
-    return pd.concat([s[~outage], dup]).sort_values(["date", "store_id", "product_id"]).reset_index(
-        drop=True)
+    return (
+        pd.concat([s[~outage], dup])
+        .sort_values(["date", "store_id", "product_id"])
+        .reset_index(drop=True)
+    )
 
 
 def _counts(c: pd.DataFrame, products: pd.DataFrame, rng, log: ErrorLog) -> pd.DataFrame:
     c = c.copy()
     count_ids = set(products.id[products.unit == "count"])
-    two_digit = c.product_id.isin(count_ids) & c.counted_qty.between(12, 98) & (
-        c.counted_qty % 10 != c.counted_qty // 10)
+    two_digit = (
+        c.product_id.isin(count_ids)
+        & c.counted_qty.between(12, 98)
+        & (c.counted_qty % 10 != c.counted_qty // 10)
+    )
     for i in rng.choice(c.index[two_digit], int(0.005 * len(c)), replace=False):
         v = int(c.at[i, "counted_qty"])
         new = float(str(v)[::-1])
-        log.add("stock_counts", f"{c.at[i, 'date'].date()}|{c.at[i, 'store_id']}|"
-                f"{c.at[i, 'product_id']}", "counted_qty", "transposed_digits", v, new)
+        log.add(
+            "stock_counts",
+            f"{c.at[i, 'date'].date()}|{c.at[i, 'store_id']}|{c.at[i, 'product_id']}",
+            "counted_qty",
+            "transposed_digits",
+            v,
+            new,
+        )
         c.at[i, "counted_qty"] = new
     return c

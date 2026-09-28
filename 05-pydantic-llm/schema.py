@@ -1,4 +1,4 @@
-"""The schema of a delivery notice: the interface between the e-mail inbox and the inventory system."""
+"""The schema of a delivery notice: the interface between the e-mail inbox and the inventory."""
 
 from datetime import date
 from typing import Literal

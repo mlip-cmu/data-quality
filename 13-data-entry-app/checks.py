@@ -9,10 +9,24 @@ from rapidfuzz import fuzz, process
 
 from inventory_data.master import DENSITY_KG_PER_L, gtin_is_valid
 
-Category = Literal["produce", "dairy", "bakery", "meat", "seafood", "beverages", "pantry",
-                   "frozen", "household", "refill"]
-UNITS_BY_CATEGORY = {"produce": {"count", "kg"}, "meat": {"count", "kg"},
-                     "seafood": {"count", "kg"}, "refill": {"liter"}}
+Category = Literal[
+    "produce",
+    "dairy",
+    "bakery",
+    "meat",
+    "seafood",
+    "beverages",
+    "pantry",
+    "frozen",
+    "household",
+    "refill",
+]
+UNITS_BY_CATEGORY = {
+    "produce": {"count", "kg"},
+    "meat": {"count", "kg"},
+    "seafood": {"count", "kg"},
+    "refill": {"liter"},
+}
 
 
 class NewProduct(BaseModel):
@@ -57,19 +71,34 @@ def check(values: dict, catalog: pd.DataFrame) -> list[Finding]:
     density = p.unit_weight_kg * p.case_pack / volume_l
     typical = DENSITY_KG_PER_L[p.category]
     if density > 3 * typical and density / 2.54**3 < 3 * typical:
-        found.append(Finding("warning", "case dimensions",
-                             f"a full case would weigh {density:.1f} kg per liter: these "
-                             f"dimensions look like inches, not cm (× 2.54 = "
-                             f"{p.case_length_cm * 2.54:.0f} × {p.case_width_cm * 2.54:.0f} × "
-                             f"{p.case_height_cm * 2.54:.0f} cm)"))
+        found.append(
+            Finding(
+                "warning",
+                "case dimensions",
+                f"a full case would weigh {density:.1f} kg per liter: these "
+                f"dimensions look like inches, not cm (× 2.54 = "
+                f"{p.case_length_cm * 2.54:.0f} × {p.case_width_cm * 2.54:.0f} × "
+                f"{p.case_height_cm * 2.54:.0f} cm)",
+            )
+        )
     elif not typical / 4 < density < 4 * typical:
-        found.append(Finding("warning", "case dimensions",
-                             f"a full case would weigh {density:.2f} kg per liter; typical for "
-                             f"{p.category} is about {typical} (fields swapped?)"))
+        found.append(
+            Finding(
+                "warning",
+                "case dimensions",
+                f"a full case would weigh {density:.2f} kg per liter; typical for "
+                f"{p.category} is about {typical} (fields swapped?)",
+            )
+        )
 
     match = process.extractOne(p.name, catalog.name, scorer=fuzz.token_sort_ratio)
     if match and match[1] >= 80:
         pid = catalog.id[match[2]]
-        found.append(Finding("warning", "name", f"possible duplicate of '{match[0]}' "
-                             f"(product {pid}, {match[1]:.0f} % similar)"))
+        found.append(
+            Finding(
+                "warning",
+                "name",
+                f"possible duplicate of '{match[0]}' (product {pid}, {match[1]:.0f} % similar)",
+            )
+        )
     return found

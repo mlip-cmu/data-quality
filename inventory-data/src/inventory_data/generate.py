@@ -21,23 +21,45 @@ def build(out: Path, seed: int = 42) -> None:
     days = world.days
     price = products.unit_price.to_numpy()[None, None, :] * np.where(world.promo, 0.8, 1.0)[:, None]
     price = np.broadcast_to(price, world.lam.shape).round(2)
-    long = sim.to_long(world, {
-        "quantity": result["sales"], "unit_price": price,
-        "promo": np.broadcast_to(world.promo[:, None, :], world.lam.shape),
-        "on_hand_system": result["on_hand_system"], "counted": result["counted"],
-        "expected_demand": world.lam, "demand": world.demand, "lost": result["lost"], "waste": result["waste"],
-        "shrink": result["shrink"], "on_hand": result["on_hand"],
-        "arrivals": result["arrivals"], "orders": result["orders"],
-    })
+    long = sim.to_long(
+        world,
+        {
+            "quantity": result["sales"],
+            "unit_price": price,
+            "promo": np.broadcast_to(world.promo[:, None, :], world.lam.shape),
+            "on_hand_system": result["on_hand_system"],
+            "counted": result["counted"],
+            "expected_demand": world.lam,
+            "demand": world.demand,
+            "lost": result["lost"],
+            "waste": result["waste"],
+            "shrink": result["shrink"],
+            "on_hand": result["on_hand"],
+            "arrivals": result["arrivals"],
+            "orders": result["orders"],
+        },
+    )
 
     sales = long[["date", "store_id", "product_id", "quantity", "unit_price", "promo"]].copy()
     sales["revenue"] = (sales.quantity * sales.unit_price).round(2)
     sales.to_parquet(out / "sales.parquet", index=False)
     long[["date", "store_id", "product_id", "on_hand_system"]].to_parquet(
-        out / "inventory.parquet", index=False)
-    long[["date", "store_id", "product_id", "expected_demand", "demand", "quantity", "lost",
-          "waste", "shrink", "on_hand"]].rename(columns={"quantity": "sales"}).to_parquet(
-        out / "truth.parquet", index=False)
+        out / "inventory.parquet", index=False
+    )
+    long[
+        [
+            "date",
+            "store_id",
+            "product_id",
+            "expected_demand",
+            "demand",
+            "quantity",
+            "lost",
+            "waste",
+            "shrink",
+            "on_hand",
+        ]
+    ].rename(columns={"quantity": "sales"}).to_parquet(out / "truth.parquet", index=False)
 
     staff = {s: [f"E{s:02d}{k}" for k in range(1, 5)] for s in stores.id}
     counts = long[long.counted.notna()][["date", "store_id", "product_id", "counted", "on_hand"]]
@@ -63,13 +85,24 @@ def build(out: Path, seed: int = 42) -> None:
 def _deliveries(long, products, stores, suppliers, staff, rng) -> pd.DataFrame:
     d = long[long.arrivals > 0][["date", "store_id", "product_id", "arrivals"]].copy()
     d = d.rename(columns={"date": "delivery_date", "arrivals": "quantity"})
-    d = d.merge(products[["id", "name", "category", "unit", "supplier_id"]]
-                .rename(columns={"id": "product_id", "name": "product_name"}), on="product_id")
-    d = d.merge(suppliers[["id", "name", "lead_time_days"]]
-                .rename(columns={"id": "supplier_id", "name": "supplier_name"}), on="supplier_id")
-    d = d.merge(stores[["id", "city", "zip"]]
-                .rename(columns={"id": "store_id", "city": "store_city", "zip": "store_zip"}),
-                on="store_id")
+    d = d.merge(
+        products[["id", "name", "category", "unit", "supplier_id"]].rename(
+            columns={"id": "product_id", "name": "product_name"}
+        ),
+        on="product_id",
+    )
+    d = d.merge(
+        suppliers[["id", "name", "lead_time_days"]].rename(
+            columns={"id": "supplier_id", "name": "supplier_name"}
+        ),
+        on="supplier_id",
+    )
+    d = d.merge(
+        stores[["id", "city", "zip"]].rename(
+            columns={"id": "store_id", "city": "store_city", "zip": "store_zip"}
+        ),
+        on="store_id",
+    )
     d["order_date"] = d.delivery_date - pd.to_timedelta(d.lead_time_days, unit="D")
     d = d.sort_values(["delivery_date", "store_id", "product_id"]).reset_index(drop=True)
     d.insert(0, "delivery_id", np.arange(500001, 500001 + len(d)))
@@ -78,12 +111,28 @@ def _deliveries(long, products, stores, suppliers, staff, rng) -> pd.DataFrame:
     lag_days = np.where(rng.random(len(d)) < 0.03, rng.integers(1, 6, len(d)), 0)
     d["received_at"] = d.delivery_date + pd.to_timedelta(hours, unit="h")
     d["entered_at"] = d.received_at + pd.to_timedelta(
-        lag_days * 24 + rng.exponential(0.5, len(d)), unit="h")
+        lag_days * 24 + rng.exponential(0.5, len(d)), unit="h"
+    )
     d["received_at"] = d.received_at.dt.floor("min")
     d["entered_at"] = d.entered_at.dt.floor("min")
-    cols = ["delivery_id", "order_date", "delivery_date", "supplier_id", "supplier_name",
-            "store_id", "store_city", "store_zip", "product_id", "product_name", "category",
-            "quantity", "unit", "received_by", "received_at", "entered_at"]
+    cols = [
+        "delivery_id",
+        "order_date",
+        "delivery_date",
+        "supplier_id",
+        "supplier_name",
+        "store_id",
+        "store_city",
+        "store_zip",
+        "product_id",
+        "product_name",
+        "category",
+        "quantity",
+        "unit",
+        "received_by",
+        "received_at",
+        "entered_at",
+    ]
     return d[cols]
 
 

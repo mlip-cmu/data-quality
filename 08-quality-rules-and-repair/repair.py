@@ -14,11 +14,15 @@ errors = d.errors()
 
 def score(repairs: pd.DataFrame, table_errors: pd.DataFrame) -> str:
     """Compare repaired cells (delivery_id, column, value) with the clean data."""
-    truth = [clean_dl.at[i, c] if i in clean_dl.index else None
-             for i, c in zip(repairs.delivery_id, repairs.column, strict=True)]
+    truth = [
+        clean_dl.at[i, c] if i in clean_dl.index else None
+        for i, c in zip(repairs.delivery_id, repairs.column, strict=True)
+    ]
     right = sum(str(t) == str(v) for t, v in zip(truth, repairs.value, strict=True))
-    return (f"{len(repairs)} cells repaired: {right} correct, {len(repairs) - right} wrong; "
-            f"{len(table_errors)} injected errors of these kinds")
+    return (
+        f"{len(repairs)} cells repaired: {right} correct, {len(repairs) - right} wrong; "
+        f"{len(table_errors)} injected errors of these kinds"
+    )
 
 
 print("=== 1. Repair rules ===\n")
@@ -31,12 +35,27 @@ for s in fixed[fixed.city != stores.city].itertuples():
     ok = "correct" if s.city == truth[s.id] else "WRONG: the ZIP was wrong, not the city"
     print(f"  store {s.id}: city '{stores.set_index('id').city[s.id]}' -> '{s.city}'  {ok}")
 
-units = {"Kg": "kg", "kgs": "kg", "KG": "kg", "kilogram": "kg", "ct": "count", "each": "count",
-         "Count": "count", "l": "liter", "Liter": "liter", "ltr": "liter"}
+units = {
+    "Kg": "kg",
+    "kgs": "kg",
+    "KG": "kg",
+    "kilogram": "kg",
+    "ct": "count",
+    "each": "count",
+    "Count": "count",
+    "l": "liter",
+    "Liter": "liter",
+    "ltr": "liter",
+}
 bad_unit = dirty_dl.unit.isin(units)
-repairs = pd.DataFrame({"delivery_id": dirty_dl.index[bad_unit], "column": "unit",
-                        "value": dirty_dl.unit[bad_unit].map(units)})
-print(f"\n  units: {score(repairs, errors.query('table == \"deliveries\" and column == \"unit\"'))}")
+repairs = pd.DataFrame(
+    {
+        "delivery_id": dirty_dl.index[bad_unit],
+        "column": "unit",
+        "value": dirty_dl.unit[bad_unit].map(units),
+    }
+)
+print(f"\n  units: {score(repairs, errors.query('table == "deliveries" and column == "unit"'))}")
 
 print("\n=== 2. Fuzzy matching against the product catalog ===\n")
 catalog = d.products().set_index("id").name
@@ -49,10 +68,15 @@ for i, row in suspect.iterrows():
     else:
         review.append((i, row.product_id, row.product_name, best_id, round(similarity)))
 auto = pd.DataFrame(auto, columns=["delivery_id", "column", "value"])
-print(f"  typos fixed automatically: {score(auto, errors.query('error_type == \"misspelling\" and table == \"deliveries\"'))}")
-print(f"  {len(review)} deliveries to a human: the name points to another product than the ID, e.g.")
+typos = errors.query("error_type == 'misspelling' and table == 'deliveries'")
+print(f"  typos fixed automatically: {score(auto, typos)}")
+print(
+    f"  {len(review)} deliveries to a human: the name points to another product than the ID, e.g."
+)
 for i, pid, name, best, sim in review[:3]:
-    print(f"    delivery {i}: product_id {pid} ({catalog[pid]}) but name '{name}' -> {best}? ({sim} %)")
+    print(
+        f"    delivery {i}: product_id {pid} ({catalog[pid]}), name '{name}' -> {best}? ({sim} %)"
+    )
 
 print("\n=== 3. HoloClean-style repair: learn the constraints from the data itself ===\n")
 ENTITY = ["product_id", "product_name", "category", "unit", "supplier_id"]
@@ -76,7 +100,8 @@ def repair_candidates(rows: pd.DataFrame, entity: list[str], min_support: int = 
             if len(diff) <= 2:
                 logp = math.log(support) + sum(
                     math.log(1 - EPS) if a == b else math.log(EPS * similarity(a, b, c))
-                    for c, a, b in zip(entity, observed, tup, strict=True))
+                    for c, a, b in zip(entity, observed, tup, strict=True)
+                )
                 cands.append((logp, tup, diff))
         if cands and observed not in known:
             top = max(c[0] for c in cands)
@@ -87,7 +112,7 @@ def repair_candidates(rows: pd.DataFrame, entity: list[str], min_support: int = 
 
 rows = dirty_dl[ENTITY].astype(str)
 applied, review = [], []
-for observed, best, diff, p, n in repair_candidates(rows, ENTITY):
+for observed, best, diff, p, _ in repair_candidates(rows, ENTITY):
     target = applied if p >= 0.9 else review
     mask = (rows[ENTITY] == pd.Series(observed, index=ENTITY)).all(axis=1)
     for i in rows.index[mask]:
@@ -95,11 +120,15 @@ for observed, best, diff, p, n in repair_candidates(rows, ENTITY):
             target.append((i, c, best[ENTITY.index(c)], p))
 applied = pd.DataFrame(applied, columns=["delivery_id", "column", "value", "p"])
 review = pd.DataFrame(review, columns=["delivery_id", "column", "value", "p"])
-kinds = errors.query("table == 'deliveries' and column in @ENTITY and error_type != 'missing_record'")
+kinds = errors.query(
+    "table == 'deliveries' and column in @ENTITY and error_type != 'missing_record'"
+)
 print(f"  {score(applied, kinds)}")
 print(f"  {len(review)} more cells have a repair with p < 0.9 and go to a human")
 examples = applied.drop_duplicates("column").head(4)
 for r in examples.itertuples():
-    print(f"    delivery {r.delivery_id}: {r.column} '{dirty_dl.at[r.delivery_id, r.column]}' -> "
-          f"'{r.value}' (p = {r.p:.3f})")
+    print(
+        f"    delivery {r.delivery_id}: {r.column} '{dirty_dl.at[r.delivery_id, r.column]}' -> "
+        f"'{r.value}' (p = {r.p:.3f})"
+    )
 print("\n  No reference data was used: the frequent value combinations are the 'constraints'.")

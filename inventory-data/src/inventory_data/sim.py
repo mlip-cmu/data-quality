@@ -10,10 +10,22 @@ from . import master
 
 START, END = "2024-01-01", "2025-12-31"
 WEEKDAY = np.array([0.85, 0.85, 0.9, 0.95, 1.1, 1.3, 1.05])
-HOLIDAYS = pd.to_datetime([
-    "2024-01-01", "2024-05-27", "2024-07-04", "2024-09-02", "2024-11-28", "2024-12-25",
-    "2025-01-01", "2025-05-26", "2025-07-04", "2025-09-01", "2025-11-27", "2025-12-25",
-])
+HOLIDAYS = pd.to_datetime(
+    [
+        "2024-01-01",
+        "2024-05-27",
+        "2024-07-04",
+        "2024-09-02",
+        "2024-11-28",
+        "2024-12-25",
+        "2025-01-01",
+        "2025-05-26",
+        "2025-07-04",
+        "2025-09-01",
+        "2025-11-27",
+        "2025-12-25",
+    ]
+)
 
 
 def dates(start: str = START, end: str = END) -> pd.DatetimeIndex:
@@ -28,8 +40,16 @@ def weather(days: pd.DatetimeIndex, rng: np.random.Generator) -> pd.DataFrame:
         noise = (shared if station not in ("TPA", "MCO") else 0) + _ar1(len(days), 0.6, 1.2, rng)
         temp = mean - amp * np.cos(2 * np.pi * (doy - 20) / 365) + noise
         rain = np.where(rng.random(len(days)) < 0.35, rng.gamma(1.2, 6, len(days)), 0.0)
-        rows.append(pd.DataFrame({"date": days, "station": station,
-                                  "temp_c": temp.round(1), "precip_mm": rain.round(1)}))
+        rows.append(
+            pd.DataFrame(
+                {
+                    "date": days,
+                    "station": station,
+                    "temp_c": temp.round(1),
+                    "precip_mm": rain.round(1),
+                }
+            )
+        )
     return pd.concat(rows, ignore_index=True)
 
 
@@ -41,8 +61,9 @@ def _ar1(n: int, phi: float, sd: float, rng: np.random.Generator) -> np.ndarray:
     return x
 
 
-def promotions(days: pd.DatetimeIndex, products_df: pd.DataFrame,
-               rng: np.random.Generator) -> np.ndarray:
+def promotions(
+    days: pd.DatetimeIndex, products_df: pd.DataFrame, rng: np.random.Generator
+) -> np.ndarray:
     """Chain-wide promotion weeks, (days, products) bool."""
     weeks = (days - days[0]).days // 7
     on = rng.random((weeks.max() + 1, len(products_df))) < 0.06
@@ -61,20 +82,29 @@ class World:
     open_: np.ndarray  # (D, S)
 
 
-def make_world(stores_df: pd.DataFrame, products_df: pd.DataFrame,
-               days: pd.DatetimeIndex | None = None, seed: int = 42,
-               modifiers: list[Callable[[World], None]] | None = None,
-               weather_df: pd.DataFrame | None = None) -> World:
+def make_world(
+    stores_df: pd.DataFrame,
+    products_df: pd.DataFrame,
+    days: pd.DatetimeIndex | None = None,
+    seed: int = 42,
+    modifiers: list[Callable[[World], None]] | None = None,
+    weather_df: pd.DataFrame | None = None,
+) -> World:
     rng = np.random.default_rng(seed)
     days = dates() if days is None else days
     wx = weather(days, rng) if weather_df is None else weather_df
-    temp = (wx.pivot(index="date", columns="station", values="temp_c")
-            .reindex(days)[stores_df.station].to_numpy())
+    temp = (
+        wx.pivot(index="date", columns="station", values="temp_c")
+        .reindex(days)[stores_df.station]
+        .to_numpy()
+    )
     promo = promotions(days, products_df, rng)
     doy = days.dayofyear.to_numpy()[:, None]
 
-    amp_peak = [master.SEASON_OVERRIDE.get(p.id, master.SEASON.get(p.category, (0.0, 1)))
-                for p in products_df.itertuples()]
+    amp_peak = [
+        master.SEASON_OVERRIDE.get(p.id, master.SEASON.get(p.category, (0.0, 1)))
+        for p in products_df.itertuples()
+    ]
     amp = np.array([a for a, _ in amp_peak])[None, :]
     peak = np.array([pk for _, pk in amp_peak])[None, :]
     season = 1 + amp * np.cos(2 * np.pi * (doy - peak) / 365)
@@ -90,9 +120,15 @@ def make_world(stores_df: pd.DataFrame, products_df: pd.DataFrame,
     day_eff = (weekday * holiday * trend)[:, None, None]
 
     base = products_df.base_demand.to_numpy(float)
-    lam = (base[None, None, :] * store_scale[None, :, None] * day_eff * season[:, None, :]
-           * temp_eff * np.where(promo, 1.6, 1.0)[:, None, :])
-    open_ = (days.to_numpy()[:, None] >= stores_df.opened.to_numpy()[None, :])
+    lam = (
+        base[None, None, :]
+        * store_scale[None, :, None]
+        * day_eff
+        * season[:, None, :]
+        * temp_eff
+        * np.where(promo, 1.6, 1.0)[:, None, :]
+    )
+    open_ = days.to_numpy()[:, None] >= stores_df.opened.to_numpy()[None, :]
     world = World(days, stores_df, products_df, temp, promo, lam, np.zeros_like(lam), open_)
     for modify in modifiers or []:
         modify(world)
@@ -128,8 +164,19 @@ class Inventory:
         rng = np.random.default_rng(self.seed)
         n_days, n_s, n_p = self.demand.shape
         shape = self.demand.shape
-        o = {k: np.zeros(shape) for k in ("sales", "lost", "waste", "shrink", "orders",
-                                          "arrivals", "on_hand", "on_hand_system")}
+        o = {
+            k: np.zeros(shape)
+            for k in (
+                "sales",
+                "lost",
+                "waste",
+                "shrink",
+                "orders",
+                "arrivals",
+                "on_hand",
+                "on_hand_system",
+            )
+        }
         o["counted"] = np.full(shape, np.nan)
         self.true = np.minimum(self.capacity, self.demand[:7].mean(0) * 3)
         self.true = np.where(self.is_count, np.round(self.true), self.true)
@@ -165,7 +212,7 @@ class Inventory:
         return o
 
     def on_order(self) -> np.ndarray:
-        return self.pipeline[self.day + 1:].sum(0)
+        return self.pipeline[self.day + 1 :].sum(0)
 
     def _rand_round(self, base: np.ndarray, rate, rng) -> np.ndarray:
         amount = np.maximum(base, 0) * rate
@@ -174,13 +221,15 @@ class Inventory:
 
     def _count(self, rng) -> np.ndarray:
         err = np.where(rng.random(self.true.shape) < 0.1, rng.integers(-3, 4, self.true.shape), 0)
-        noisy = np.where(self.is_count, self.true + err,
-                         self.true * rng.normal(1, 0.03, self.true.shape))
+        noisy = np.where(
+            self.is_count, self.true + err, self.true * rng.normal(1, 0.03, self.true.shape)
+        )
         return np.maximum(noisy, 0).round(2)
 
 
-def shelf_capacity(products_df: pd.DataFrame, stores_df: pd.DataFrame,
-                   planogram: pd.DataFrame) -> np.ndarray:
+def shelf_capacity(
+    products_df: pd.DataFrame, stores_df: pd.DataFrame, planogram: pd.DataFrame
+) -> np.ndarray:
     """Units that fit on the shelf, computed from the case dimensions in the master data."""
     vol = planogram.pivot(index="store_id", columns="product_id", values="shelf_volume_l")
     vol = vol.loc[stores_df.id, products_df.id].to_numpy()
@@ -188,8 +237,9 @@ def shelf_capacity(products_df: pd.DataFrame, stores_df: pd.DataFrame,
     return np.maximum(cases, 1) * products_df.case_pack.to_numpy()[None, :]
 
 
-def reorder_policy(forecast: np.ndarray, capacity: np.ndarray, lead_time: np.ndarray,
-                   safety: float = 1.3) -> Callable[[int, Inventory], np.ndarray]:
+def reorder_policy(
+    forecast: np.ndarray, capacity: np.ndarray, lead_time: np.ndarray, safety: float = 1.3
+) -> Callable[[int, Inventory], np.ndarray]:
     """(s, S) policy: reorder when stock + open orders fall below the expected demand."""
 
     def policy(d: int, inv: Inventory) -> np.ndarray:
@@ -202,17 +252,32 @@ def reorder_policy(forecast: np.ndarray, capacity: np.ndarray, lead_time: np.nda
     return policy
 
 
-def simulate(world: World, planogram: pd.DataFrame, products_df: pd.DataFrame | None = None,
-             lead_times: np.ndarray | None = None, forecast: np.ndarray | None = None,
-             shrink_rate: float = 0.003, count_every: int | None = 7, seed: int = 1) -> dict:
+def simulate(
+    world: World,
+    planogram: pd.DataFrame,
+    products_df: pd.DataFrame | None = None,
+    lead_times: np.ndarray | None = None,
+    forecast: np.ndarray | None = None,
+    shrink_rate: float = 0.003,
+    count_every: int | None = 7,
+    seed: int = 1,
+) -> dict:
     """Run the inventory loop. `products_df` is the master data the *system* uses
     (it may contain errors); the true world is in `world`."""
     p = world.products if products_df is None else products_df
     capacity = shelf_capacity(p, world.stores, planogram)
     lead = lead_times if lead_times is not None else _lead_times(world.products)
-    inv = Inventory(world.demand, capacity, p.case_pack.to_numpy(float), lead,
-                    world.products.shelf_life_days.to_numpy(), (world.products.unit == "count")
-                    .to_numpy(), shrink_rate=shrink_rate, count_every=count_every, seed=seed)
+    inv = Inventory(
+        world.demand,
+        capacity,
+        p.case_pack.to_numpy(float),
+        lead,
+        world.products.shelf_life_days.to_numpy(),
+        (world.products.unit == "count").to_numpy(),
+        shrink_rate=shrink_rate,
+        count_every=count_every,
+        seed=seed,
+    )
     inv.run(reorder_policy(world.lam if forecast is None else forecast, capacity, lead))
     return inv.out | {"capacity": capacity}
 
@@ -224,11 +289,19 @@ def _lead_times(products_df: pd.DataFrame) -> np.ndarray:
 
 def to_long(world: World, arrays: dict[str, np.ndarray]) -> pd.DataFrame:
     """(D, S, P) arrays -> long table with one row per open store, product and day."""
-    d, s, p = np.meshgrid(np.arange(len(world.days)), np.arange(len(world.stores)),
-                          np.arange(len(world.products)), indexing="ij")
-    df = pd.DataFrame({"date": world.days[d.ravel()],
-                       "store_id": world.stores.id.to_numpy()[s.ravel()],
-                       "product_id": world.products.id.to_numpy()[p.ravel()]})
+    d, s, p = np.meshgrid(
+        np.arange(len(world.days)),
+        np.arange(len(world.stores)),
+        np.arange(len(world.products)),
+        indexing="ij",
+    )
+    df = pd.DataFrame(
+        {
+            "date": world.days[d.ravel()],
+            "store_id": world.stores.id.to_numpy()[s.ravel()],
+            "product_id": world.products.id.to_numpy()[p.ravel()],
+        }
+    )
     for name, arr in arrays.items():
         df[name] = arr.ravel()
     return df[world.open_[d.ravel(), s.ravel()]].reset_index(drop=True)

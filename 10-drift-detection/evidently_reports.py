@@ -27,7 +27,8 @@ data["product_id"] = data.product_id.astype(str)
 definition = DataDefinition(
     numerical_columns=["temp_c", "unit_price", "quantity", "pred"],
     categorical_columns=["store_id", "product_id", "dow", "promo"],
-    regression=[Regression(target="quantity", prediction="pred")])
+    regression=[Regression(target="quantity", prediction="pred")],
+)
 columns = definition.numerical_columns + definition.categorical_columns
 
 
@@ -36,17 +37,23 @@ def window(month: str):
     return Dataset.from_pandas(rows[columns], data_definition=definition)
 
 
-for current, reference in [("2025-03", "2024-03"), ("2025-06", "2024-06"),
-                           ("2025-11", "2024-11")]:
-    report = Report([DataDriftPreset(), MAE(mean_tests=[lte(3.3)]),
-                     MeanError(mean_tests=[gte(-0.3), lte(0.3)])], include_tests=True)
+for current, reference in [("2025-03", "2024-03"), ("2025-06", "2024-06"), ("2025-11", "2024-11")]:
+    report = Report(
+        [
+            DataDriftPreset(),
+            MAE(mean_tests=[lte(3.3)]),
+            MeanError(mean_tests=[gte(-0.3), lte(0.3)]),
+        ],
+        include_tests=True,
+    )
     snapshot = report.run(current_data=window(current), reference_data=window(reference))
     path = OUT / f"drift_{current}.html"
     snapshot.save_html(str(path))
     tests = snapshot.dict()["tests"]
     failed = [t["name"] for t in tests if t["status"] != "SUCCESS"]
-    print(f"{current} vs {reference}: {len(tests) - len(failed)} of {len(tests)} tests pass "
-          f"-> {path}")
+    print(
+        f"{current} vs {reference}: {len(tests) - len(failed)} of {len(tests)} tests pass -> {path}"
+    )
     for name in failed[:8]:
         print(f"   FAIL {name}")
     if len(failed) > 8:

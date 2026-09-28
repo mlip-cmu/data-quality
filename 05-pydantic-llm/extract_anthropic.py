@@ -1,4 +1,4 @@
-"""The same extraction with the official Anthropic SDK: messages.parse validates the Pydantic model."""
+"""The same extraction with the official Anthropic SDK: messages.parse validates the model."""
 
 import os
 import sys
@@ -15,8 +15,10 @@ if not os.environ.get("ANTHROPIC_API_KEY"):
     sys.exit(0)
 
 client = anthropic.Anthropic()
-system = ("Extract the delivery notice from the supplier e-mail. Use the product names of the "
-          "supermarket catalog: " + ", ".join(d.products().name))
+system = (
+    "Extract the delivery notice from the supplier e-mail. Use the product names of the "
+    "supermarket catalog: " + ", ".join(d.products().name)
+)
 
 for email in sorted(Path("emails").glob("*.txt")):
     try:
@@ -42,5 +44,7 @@ for email in sorted(Path("emails").glob("*.txt")):
         print(f"{email.name}: the model declined the request")
         continue
     notice = response.parsed_output
-    print(f"{email.name}: {notice.supplier}, {notice.delivery_date}, "
-          f"{[(i.product, i.quantity, i.unit) for i in notice.items]}")
+    print(
+        f"{email.name}: {notice.supplier}, {notice.delivery_date}, "
+        f"{[(i.product, i.quantity, i.unit) for i in notice.items]}"
+    )

@@ -7,16 +7,31 @@ def run(tmp_path, monkeypatch, **fields) -> AppTest:
     monkeypatch.setenv("ENTRIES_PATH", str(tmp_path / "entries.csv"))
     at = AppTest.from_file("app.py", default_timeout=30).run()
     for key, value in fields.items():
-        widget = at.text_input(key=key) if key in ("name", "gtin") else (
-            at.selectbox(key=key) if key in ("category", "unit", "supplier") else
-            at.number_input(key=key))
+        widget = (
+            at.text_input(key=key)
+            if key in ("name", "gtin")
+            else (
+                at.selectbox(key=key)
+                if key in ("category", "unit", "supplier")
+                else at.number_input(key=key)
+            )
+        )
         widget.set_value(value)
     return at.run()
 
 
-GOOD = {"name": "Plantain", "gtin": gtin13(201, 161), "category": "produce", "unit": "kg",
-        "supplier": 201, "length": 50.0, "width": 33.0, "height": 27.0, "pack": 18,
-        "weight": 1.0}
+GOOD = {
+    "name": "Plantain",
+    "gtin": gtin13(201, 161),
+    "category": "produce",
+    "unit": "kg",
+    "supplier": 201,
+    "length": 50.0,
+    "width": 33.0,
+    "height": 27.0,
+    "pack": 18,
+    "weight": 1.0,
+}
 
 
 def messages(at: AppTest) -> str:

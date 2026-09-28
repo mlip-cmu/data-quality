@@ -30,9 +30,11 @@ model = forecast.train(data[data.date < "2025-01-01"])
 data["pred"] = forecast.predict(model, data)
 data = data.astype({"store_id": str, "product_id": str})
 INPUTS = ["store_id", "product_id", "promo", "temp_c", "unit_price"]
-definition = DataDefinition(numerical_columns=["temp_c", "unit_price", "quantity", "pred"],
-                            categorical_columns=["store_id", "product_id", "promo"],
-                            regression=[Regression(target="quantity", prediction="pred")])
+definition = DataDefinition(
+    numerical_columns=["temp_c", "unit_price", "quantity", "pred"],
+    categorical_columns=["store_id", "product_id", "promo"],
+    regression=[Regression(target="quantity", prediction="pred")],
+)
 CHECKS = {
     "share of drifted input columns": ("DriftedColumnsCount", "share"),
     "temperatures out of range (-30..45 °C)": ("OutRangeValueCount", "count"),
@@ -44,29 +46,49 @@ thresholds = yaml.safe_load(open("thresholds.yaml"))
 ws = Workspace.create(str(WORKSPACE))
 project = ws.create_project("Inventory forecasting: weekly monitoring")
 for title, (metric, label) in CHECKS.items():
-    project.dashboard.add_panel(line_plot_panel(
-        title=title, values=[PanelMetric(metric=metric, metric_labels={"value_type": label},
-                                         legend=title)], size="half"))
+    project.dashboard.add_panel(
+        line_plot_panel(
+            title=title,
+            values=[PanelMetric(metric=metric, metric_labels={"value_type": label}, legend=title)],
+            size="half",
+        )
+    )
 
 alerts = []
 for week in pd.date_range("2025-01-06", "2025-12-22", freq="7D"):
     cur = data[data.date.between(week, week + pd.Timedelta(days=6))]
     ref_start = week - pd.Timedelta(days=364 + 14)
     ref = data[data.date.between(ref_start, ref_start + pd.Timedelta(days=34))].sample(
-        8000, random_state=1)
-    report = Report([DriftedColumnsCount(columns=INPUTS), MAE(), MeanError(),
-                     OutRangeValueCount(column="temp_c", left=-30, right=45)])
-    snapshot = report.run(current_data=Dataset.from_pandas(cur, data_definition=definition),
-                          reference_data=Dataset.from_pandas(ref, data_definition=definition),
-                          timestamp=week.to_pydatetime())
+        8000, random_state=1
+    )
+    report = Report(
+        [
+            DriftedColumnsCount(columns=INPUTS),
+            MAE(),
+            MeanError(),
+            OutRangeValueCount(column="temp_c", left=-30, right=45),
+        ]
+    )
+    snapshot = report.run(
+        current_data=Dataset.from_pandas(cur, data_definition=definition),
+        reference_data=Dataset.from_pandas(ref, data_definition=definition),
+        timestamp=week.to_pydatetime(),
+    )
     ws.add_run(project.id, snapshot, include_data=False)
     values = {m["config"]["type"].split(":")[-1]: m["value"] for m in snapshot.dict()["metrics"]}
     for rule in thresholds:
         metric, label = CHECKS[rule["metric"]]
         v = values[metric][label]
         if v > rule.get("max", float("inf")) or v < rule.get("min", float("-inf")):
-            alerts.append({"week": str(week.date()), "check": rule["metric"], "value": round(v, 3),
-                           "limits": [rule.get("min"), rule.get("max")], "owner": rule["owner"]})
+            alerts.append(
+                {
+                    "week": str(week.date()),
+                    "check": rule["metric"],
+                    "value": round(v, 3),
+                    "limits": [rule.get("min"), rule.get("max")],
+                    "owner": rule["owner"],
+                }
+            )
 
 with open(OUT / "alerts.jsonl", "w") as f:
     f.writelines(json.dumps(a) + "\n" for a in alerts)

@@ -34,20 +34,23 @@ def _(mo):
 
 @app.cell
 def _(d, forecast, np):
-    PRODUCTS = [101, 102, 103, 104, 105, 106, 110, 117, 123, 127, 128, 132, 143, 146, 151, 154]
+    PRODUCTS = [101, 102, 103, 104, 105, 106, 110, 117, 123, 127, 128, 132, 143, 146, 151, 154]  # noqa: F841, E501
     sales = d.drift_sales().query("product_id in @PRODUCTS")
     truth = d.drift_truth().query("product_id in @PRODUCTS")[
-        ["date", "store_id", "product_id", "true_sales"]]
+        ["date", "store_id", "product_id", "true_sales"]
+    ]
     stores = d.drift_stores()
     data = forecast.features(sales, stores, d.drift_weather()).merge(
-        truth, on=["date", "store_id", "product_id"])
+        truth, on=["date", "store_id", "product_id"]
+    )
 
     kg = data.product_id.isin(d.products().query("unit == 'kg'").id)
     lb = kg & data.store_id.isin([7, 8]) & (data.date >= "2025-09-01")
     fahrenheit = data.date >= "2025-10-15"
     repaired = data.assign(
         quantity=np.where(lb, data.quantity / 2.20462, data.quantity),
-        temp_c=np.where(fahrenheit, (data.temp_c - 32) * 5 / 9, data.temp_c))
+        temp_c=np.where(fahrenheit, (data.temp_c - 32) * 5 / 9, data.temp_c),
+    )
     return data, repaired
 
 
@@ -61,7 +64,8 @@ def _(drift, forecast, pd):
         for day in pd.date_range("2025-01-01", "2025-12-31"):
             history = data[data.date < day]
             due = (when == "monthly" and day.day == 1 and day > last) or (
-                when == "alarm" and detector.drift_detected and (day - last).days >= 14)
+                when == "alarm" and detector.drift_detected and (day - last).days >= 14
+            )
             if due:
                 start = day - pd.Timedelta(days=window_days) if window_days else history.date.min()
                 model = forecast.train(history[history.date >= start], max_iter=100)
@@ -83,8 +87,7 @@ def _(backtest, data, repaired):
         "retrain monthly, all data": backtest(data, "monthly"),
         "retrain monthly, last 90 days": backtest(data, "monthly", window_days=90),
         "retrain on a drift alarm, last 90 days": backtest(data, "alarm", window_days=90),
-        "repair the data, retrain monthly (90 days)": backtest(repaired, "monthly",
-                                                               window_days=90),
+        "repair the data, retrain monthly (90 days)": backtest(repaired, "monthly", window_days=90),
     }
     return (runs,)
 
@@ -94,33 +97,58 @@ def _(np, pd, runs):
     rows = []
     for name, (pred, retrains) in runs.items():
         m = pred.assign(month=pred.date.dt.to_period("M").dt.to_timestamp())
-        g = m.groupby("month").apply(lambda x: pd.Series({
-            "WAPE vs true sales": np.abs(x.pred - x.true_sales).sum() / x.true_sales.sum()}),
-            include_groups=False).reset_index()
+        g = (
+            m.groupby("month")
+            .apply(
+                lambda x: pd.Series(
+                    {"WAPE vs true sales": np.abs(x.pred - x.true_sales).sum() / x.true_sales.sum()}
+                ),
+                include_groups=False,
+            )
+            .reset_index()
+        )
         rows.append(g.assign(strategy=name, retrains=len(retrains)))
     monthly_error = pd.concat(rows)
-    summary = monthly_error.groupby("strategy", sort=False).agg(
-        **{"mean WAPE Jan-Aug": ("WAPE vs true sales", lambda s: s.iloc[:8].mean()),
-           "mean WAPE Sep-Dec": ("WAPE vs true sales", lambda s: s.iloc[8:].mean()),
-           "retrains": ("retrains", "first")}).round(3)
+    summary = (
+        monthly_error.groupby("strategy", sort=False)
+        .agg(
+            **{
+                "mean WAPE Jan-Aug": ("WAPE vs true sales", lambda s: s.iloc[:8].mean()),
+                "mean WAPE Sep-Dec": ("WAPE vs true sales", lambda s: s.iloc[8:].mean()),
+                "retrains": ("retrains", "first"),
+            }
+        )
+        .round(3)
+    )
     return monthly_error, summary
 
 
 @app.cell
 def _(alt, d, mo, monthly_error, pd, summary):
     ev = d.drift_events().assign(start=lambda e: pd.to_datetime(e.start))
-    _rules = alt.Chart(ev).mark_rule(color="#898781", strokeDash=[2, 2]).encode(
-        x="start:T", tooltip=["start", "kind", "event"])
+    _rules = (
+        alt.Chart(ev)
+        .mark_rule(color="#898781", strokeDash=[2, 2])
+        .encode(x="start:T", tooltip=["start", "kind", "event"])
+    )
     _base = alt.Chart(monthly_error).encode(
-        x=alt.X("month:T", title=None), y=alt.Y("WAPE vs true sales:Q", title="error (WAPE)"),
+        x=alt.X("month:T", title=None),
+        y=alt.Y("WAPE vs true sales:Q", title="error (WAPE)"),
         color=alt.Color("strategy:N", sort=list(summary.index)),
-        tooltip=["strategy", alt.Tooltip("month:T", format="%b %Y"),
-                 alt.Tooltip("WAPE vs true sales:Q", format=".3f")])
-    mo.vstack([
-        (_rules + _base.mark_line() + _base.mark_point()).properties(
-            width=640, height=300, title="Monthly forecast error against the true sales"),
-        summary,
-    ])
+        tooltip=[
+            "strategy",
+            alt.Tooltip("month:T", format="%b %Y"),
+            alt.Tooltip("WAPE vs true sales:Q", format=".3f"),
+        ],
+    )
+    mo.vstack(
+        [
+            (_rules + _base.mark_line() + _base.mark_point()).properties(
+                width=640, height=300, title="Monthly forecast error against the true sales"
+            ),
+            summary,
+        ]
+    )
     return
 
 

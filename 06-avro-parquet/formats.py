@@ -14,8 +14,9 @@ import inventory_data as d
 OUT = Path("out")
 OUT.mkdir(exist_ok=True)
 events = d.pos_events()
-events = pd.concat([events.assign(event_id=events.event_id + f"-{k}") for k in range(20)],
-                   ignore_index=True)
+events = pd.concat(
+    [events.assign(event_id=events.event_id + f"-{k}") for k in range(20)], ignore_index=True
+)
 events["event_time"] = events.event_time.dt.floor("ms")
 schema = parse_schema(json.load(open("schemas/sale_event.v1.avsc")))
 columns = [f["name"] for f in json.load(open("schemas/sale_event.v1.avsc"))["fields"]]
@@ -35,12 +36,17 @@ def read_avro(path: Path) -> pd.DataFrame:
 
 formats = {
     "CSV": ("events.csv", lambda p: events.to_csv(p, index=False), pd.read_csv),
-    "JSON Lines": ("events.jsonl", lambda p: events.to_json(p, orient="records", lines=True,
-                                                            date_format="iso"),
-                   lambda p: pd.read_json(p, lines=True)),
+    "JSON Lines": (
+        "events.jsonl",
+        lambda p: events.to_json(p, orient="records", lines=True, date_format="iso"),
+        lambda p: pd.read_json(p, lines=True),
+    ),
     "Avro (deflate)": ("events.avro", write_avro, read_avro),
-    "Parquet (zstd)": ("events.parquet", lambda p: events.to_parquet(p, compression="zstd"),
-                       pd.read_parquet),
+    "Parquet (zstd)": (
+        "events.parquet",
+        lambda p: events.to_parquet(p, compression="zstd"),
+        pd.read_parquet,
+    ),
 }
 rows, back = [], {}
 for name, (file, write, read) in formats.items():
@@ -53,8 +59,11 @@ for name, (file, write, read) in formats.items():
     rows.append((name, path.stat().st_size / 1e6, (t1 - t0) * 1000, (t2 - t1) * 1000))
 
 print(f"{len(events):,} POS events\n")
-print(pd.DataFrame(rows, columns=["format", "MB", "write ms", "read ms"]).round(2)
-      .to_string(index=False))
+print(
+    pd.DataFrame(rows, columns=["format", "MB", "write ms", "read ms"])
+    .round(2)
+    .to_string(index=False)
+)
 
 print("\nTypes after reading the file back:\n")
 types = pd.DataFrame({name: df.dtypes.astype(str) for name, df in back.items()})

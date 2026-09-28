@@ -1,0 +1,53 @@
+name: demos
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.12.19"
+      - run: uvx ruff check .
+      - run: uvx ruff format --check .
+
+  demo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        project:
+          - inventory-data
+          - 01-accuracy-vs-precision
+          - 02-quality-dimensions
+          - 03-sql-schema
+          - 04-schemaless-exchange
+          - 05-pydantic-llm
+          - 06-avro-parquet
+          - 07-dataframe-validation
+          - 08-quality-rules-and-repair
+          - 09-ml-error-detection
+          - 10-drift-detection
+          - 11-dealing-with-drift
+          - 12-data-cascades
+          - 13-data-entry-app
+          - 14-data-documentation
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.12.19"
+          enable-cache: true
+      - run: ./run_all.sh ${{ matrix.project }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: out-${{ matrix.project }}
+          path: ${{ matrix.project }}/out/*.html
+          if-no-files-found: ignore
