@@ -1,0 +1,7 @@
+[
+  {"supplier_id": 201, "gtin": "0702010001014", "name": "Banana", "pack": {"size": 18, "unit": "kg"}, "price": 0.62},
+  {"supplier_id": 201, "gtin": "0702010001045", "name": "Organic Banana", "pack": {"size": "18", "unit": "KG"}, "price": 0.89},
+  {"supplier_id": "201", "gtin": 702010001069, "name": "Tomato", "pack": {"size": 10, "unit": "kg"}, "price": "1.95"},
+  {"supplier_id": 201, "gtin": "0702010001083", "title": "Avocado", "pack": {"size": 48, "unit": "count"}, "price": 0.51},
+  {"supplier_id": 201, "gtin": "0702010001120", "name": "Strawberries 1 lb", "pack": {"size": 8}, "price": 1.80, "organic": true}
+]

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Supplier product feed",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["supplier_id", "gtin", "name", "pack", "price"],
+    "additionalProperties": false,
+    "properties": {
+      "supplier_id": {"type": "integer"},
+      "gtin": {"type": "string", "pattern": "^[0-9]{13}$"},
+      "name": {"type": "string", "minLength": 1},
+      "pack": {
+        "type": "object",
+        "required": ["size", "unit"],
+        "properties": {
+          "size": {"type": "number", "exclusiveMinimum": 0},
+          "unit": {"enum": ["count", "kg", "liter"]}
+        }
+      },
+      "price": {"type": "number", "exclusiveMinimum": 0}
+    }
+  }
+}

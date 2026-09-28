@@ -1,0 +1,34 @@
+name: product-export
+resources:
+  - name: products
+    path: products_export.csv
+    schema:
+      fields:
+        - name: ProductID
+          type: integer
+          constraints: {required: true, minimum: 1}
+        - name: Product Name
+          type: string
+          constraints: {required: true, minLength: 1, maxLength: 255}
+        - name: Quantity
+          type: number
+          constraints: {required: true, minimum: 0}
+        - name: Unit
+          type: string
+          constraints: {required: true, enum: [count, kg, liter]}
+        - name: SupplierID
+          type: integer
+          constraints: {required: true, minimum: 1}
+      primaryKey: [ProductID]
+      foreignKeys:
+        - fields: [SupplierID]
+          reference: {resource: suppliers, fields: [id]}
+  - name: suppliers
+    path: suppliers.csv
+    schema:
+      fields:
+        - {name: id, type: integer, constraints: {required: true}}
+        - {name: name, type: string, constraints: {required: true}}
+        - {name: contact_name, type: string}
+        - {name: contact_phone, type: string, constraints: {pattern: "[0-9]{3}-[0-9]{3}-[0-9]{4}"}}
+      primaryKey: [id]

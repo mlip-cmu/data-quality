@@ -1,0 +1,12 @@
+ProductID,Product Name,Quantity,Unit,SupplierID
+101,Banana,50,kg,201
+102,Cucumber,75.5,kg,502
+103,Cauliflower,30,count,283
+104,Organic Banana,12.5,kg,201
+105,Gala Apple,7O,kg,211
+106,Tomato,-4,kg,201
+107,,14,count,211
+108,Avocado,48,lbs,201
+108,Avocado,48,count,201
+109,Carrots 2 lb Bag,20,count,211,Ohio Valley Farms
+110,Potato,,kg,211
