@@ -1,0 +1,17 @@
+[project]
+name = "inventory-data"
+version = "0.1.0"
+description = "Synthetic supermarket inventory dataset shared by all demos"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = ["numpy>=2.2", "pandas>=2.2", "pyarrow>=18"]
+
+[project.scripts]
+inventory-data = "inventory_data.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["uv_build>=0.12,<0.13"]
+build-backend = "uv_build"

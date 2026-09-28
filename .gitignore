@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+out/
+inventory-data/data/
+.pytest_cache/
+.ruff_cache/
+__marimo__/
+.streamlit/secrets.toml
