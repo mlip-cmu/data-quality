@@ -1,0 +1,21 @@
+[project]
+name = "dq13-data-entry-app"
+version = "0.1.0"
+description = "Product data entry with live data quality feedback (Streamlit)"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "inventory-data",
+    "streamlit>=1.64",
+    "pydantic>=2.13",
+    "rapidfuzz>=3.14",
+    "pandas>=2.2",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+inventory-data = { path = "../inventory-data", editable = true }
+
+[dependency-groups]
+dev = ["pytest>=8"]
