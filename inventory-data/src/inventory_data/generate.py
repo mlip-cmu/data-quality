@@ -25,7 +25,7 @@ def build(out: Path, seed: int = 42) -> None:
         "quantity": result["sales"], "unit_price": price,
         "promo": np.broadcast_to(world.promo[:, None, :], world.lam.shape),
         "on_hand_system": result["on_hand_system"], "counted": result["counted"],
-        "demand": world.demand, "lost": result["lost"], "waste": result["waste"],
+        "expected_demand": world.lam, "demand": world.demand, "lost": result["lost"], "waste": result["waste"],
         "shrink": result["shrink"], "on_hand": result["on_hand"],
         "arrivals": result["arrivals"], "orders": result["orders"],
     })
@@ -35,8 +35,8 @@ def build(out: Path, seed: int = 42) -> None:
     sales.to_parquet(out / "sales.parquet", index=False)
     long[["date", "store_id", "product_id", "on_hand_system"]].to_parquet(
         out / "inventory.parquet", index=False)
-    long[["date", "store_id", "product_id", "demand", "quantity", "lost", "waste", "shrink",
-          "on_hand"]].rename(columns={"quantity": "sales"}).to_parquet(
+    long[["date", "store_id", "product_id", "expected_demand", "demand", "quantity", "lost",
+          "waste", "shrink", "on_hand"]].rename(columns={"quantity": "sales"}).to_parquet(
         out / "truth.parquet", index=False)
 
     staff = {s: [f"E{s:02d}{k}" for k in range(1, 5)] for s in stores.id}

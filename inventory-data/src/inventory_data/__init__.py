@@ -9,7 +9,7 @@ from pathlib import Path
 import pandas as pd
 
 DATA_DIR = Path(os.environ.get("INVENTORY_DATA_DIR", Path(__file__).resolve().parents[2] / "data"))
-VERSION = "1"
+VERSION = "2"
 
 
 def ensure(force: bool = False) -> Path:
@@ -78,7 +78,7 @@ def oos_reports() -> pd.DataFrame:
 
 
 def truth() -> pd.DataFrame:
-    """True demand, lost sales, waste, shrinkage and on-hand stock (not observable in practice)."""
+    """Expected and true demand, lost sales, waste, shrinkage and on-hand stock (not observable in practice)."""
     return _read("clean", "truth")
 
 
