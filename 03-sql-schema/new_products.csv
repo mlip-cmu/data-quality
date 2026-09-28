@@ -1,0 +1,15 @@
+ID,GTIN,Name,Category,UnitPrice,QuantityInStock,Unit,SupplierID
+161,0702010001618,Plantain,produce,1.99,40,kg,201
+162,0702010001625,Mango,produce,1.49,30,count,201
+163,0702110001631,Mini Cucumbers 6 ct,produce,2.99,75.5,count,211
+164,0702110001648,Romanesco,produce,3.49,12,count,283
+165,0702110001655,Cucumber Organic,produce,1.29,20,count,502
+101,0702010001014,Banana,produce,1.49,50,kg,201
+166,0702010001014,Bananas,produce,1.49,20,kg,201
+167,0702060001675,Kombucha,beverages,3.99,24,bottle,206
+168,0702030001681,Sourdough Bread,bakery,-4.99,10,count,203
+169,0702020001691,,dairy,2.49,10,count,202
+170,0702100001702,Oat Milk,produce,3.49,18,liter,210
+171,0702110001716,Honeycrisp Apple,produce,"4,99",25,kg,211
+172,0702070001726,Tahini 16 oz,pantry,6.49,twelve,count,207
+173,702120001737,Falafel Mix,pantry,3.29,8,count,212
