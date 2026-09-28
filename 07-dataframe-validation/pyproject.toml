@@ -1,0 +1,17 @@
+[project]
+name = "dq07-dataframe-validation"
+version = "0.1.0"
+description = "Schema checks after loading: Great Expectations and Pandera"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "inventory-data",
+    "great-expectations>=1.23",
+    "pandera[pandas,io]>=0.33",
+    "pandas>=2.2",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+inventory-data = { path = "../inventory-data", editable = true }
