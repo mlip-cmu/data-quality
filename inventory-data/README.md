@@ -16,9 +16,10 @@ uv run pytest                  # checks: deterministic, clean data meets all rul
 
 ```python
 import inventory_data as d
-d.products()              # clean master data
-d.products(dirty=True)    # the same table with injected errors (read from CSV)
-d.errors()                # ground truth: table, row_id, column, error_type, clean/dirty value
+
+d.products()  # clean master data
+d.products(dirty=True)  # the same table with injected errors (read from CSV)
+d.errors()  # ground truth: table, row_id, column, error_type, clean/dirty value
 ```
 
 ## How the data is made

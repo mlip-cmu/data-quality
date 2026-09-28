@@ -13,9 +13,10 @@
 
 ```python
 import inventory_data as d
-d.sales()               # daily sales per store and product (clean)
-d.deliveries(dirty=True) # the same table with realistic entry errors
-d.errors()              # ground truth of every injected error
+
+d.sales()  # daily sales per store and product (clean)
+d.deliveries(dirty=True)  # the same table with realistic entry errors
+d.errors()  # ground truth of every injected error
 ```
 
 - Use the **clean** tables to train and evaluate models; use the **dirty** tables and

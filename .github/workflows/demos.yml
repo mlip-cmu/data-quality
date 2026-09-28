@@ -13,8 +13,8 @@ jobs:
       - uses: astral-sh/setup-uv@v6
         with:
           version: "0.12.19"
-      - run: uvx ruff check .
-      - run: uvx ruff format --check .
+      - run: uvx ruff@0.16.9 check .
+      - run: uvx ruff@0.16.9 format --check .
 
   demo:
     runs-on: ubuntu-latest
