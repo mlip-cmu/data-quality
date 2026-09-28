@@ -1,0 +1,67 @@
+{
+  "$defs": {
+    "LineItem": {
+      "additionalProperties": false,
+      "properties": {
+        "product": {
+          "description": "product name, as in the supermarket catalog if possible",
+          "title": "Product",
+          "type": "string"
+        },
+        "quantity": {
+          "description": "number of units in `unit`",
+          "title": "Quantity",
+          "type": "number"
+        },
+        "unit": {
+          "description": "convert lb to kg, gallons to count",
+          "enum": [
+            "count",
+            "kg",
+            "liter"
+          ],
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "product",
+        "quantity",
+        "unit"
+      ],
+      "title": "LineItem",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "supplier": {
+      "title": "Supplier",
+      "type": "string"
+    },
+    "store_city": {
+      "title": "Store City",
+      "type": "string"
+    },
+    "delivery_date": {
+      "format": "date",
+      "title": "Delivery Date",
+      "type": "string"
+    },
+    "items": {
+      "items": {
+        "$ref": "#/$defs/LineItem"
+      },
+      "title": "Items",
+      "type": "array"
+    }
+  },
+  "required": [
+    "supplier",
+    "store_city",
+    "delivery_date",
+    "items"
+  ],
+  "title": "DeliveryNotice",
+  "type": "object"
+}
