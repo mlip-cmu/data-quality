@@ -6,11 +6,19 @@ with 8 stores in Pennsylvania and Ohio (plus 2 new stores in Florida in the drif
 when, and how many.
 
 Every other project uses this package as a local path dependency. The data is generated on
-first use (about 10 s) and cached in `data/` (git-ignored):
+first use (about 10 s) and cached as Parquet in `data/`.
+
+The same data is committed as CSV, so you can look at it on GitHub:
+
+- `data/clean/`: the true data; `data/dirty/`: the same tables with injected errors and
+  `errors.csv` (a log of each error); `data/drift/`: the drift scenario.
+- `data/preview/`: files that are small enough for the table view of GitHub. Small tables
+  are complete. Large tables are an extract of store 1 in March 2025 (drift: store 7 from
+  2025-08-15 to 2025-09-15, around the POS switch to lb).
 
 ```sh
 uv run inventory-data          # generate (or show) the cached files
-uv run inventory-data --force  # regenerate
+uv run inventory-data --force  # regenerate (the CSV files are the same each time)
 uv run pytest                  # checks: deterministic, clean data meets all rules, errors logged
 ```
 

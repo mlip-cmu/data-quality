@@ -1,29 +1,25 @@
 # 04 · Schema-less data exchange
 
-**Slides:** *Schema-Less Data Exchange* (CSV, JSON, REST, DataFrames; benefits, drawbacks, how to
-enforce a schema) · *CSV Schema* · *Many Schema Libraries/Formats*
+**Slides:** *Modern Databases: Schema-Less* · *Schema-Less Data Exchange* · *CSV Schema* ·
+*Many Schema Libraries/Formats*
 
-Files exchanged between systems: `products_export.csv` (the CSV from the slide plus more rows
-from the same export), `stock_export.csv` (a store system), `supplier_feed.json` (a supplier's
-product feed), and `suppliers.csv`.
+Files that systems exchange: `products_export.csv` (the CSV from the slide, plus more rows of
+the same export), `stock_export.csv` (a store system), `supplier_feed.json` (the product feed
+of a supplier), and `suppliers.csv`.
 
-```sh
-uv run pitfalls.py   # what pandas does without a schema
-uv run validate.py   # enforce a schema: Frictionless Table Schema (CSV) and JSON Schema
-uv run frictionless validate datapackage.yaml   # the same check from the command line
-```
+## What this project illustrates
 
-`pitfalls.py` shows that a reader without a schema guesses, and the guesses fail silently:
-- one value `75.5` makes all quantities floats; one typo `7O` makes the column text, and
-  `sum()` then concatenates strings;
-- the GTIN is read as a number, so the leading zero is lost and the join with the catalog finds
-  nothing, even after `astype(str)`;
-- `N/A` becomes NaN, a decimal comma stays text, `06/03/2025` is ambiguous;
-- a row with an extra field fails the whole read, or is dropped with `on_bad_lines`;
-- JSON records have different keys, types, and nesting.
+| Point | Where to see it |
+|---|---|
+| Without a schema, the reader guesses the types, and wrong guesses fail silently | `pitfalls.py`: one value `75.5` makes all quantities floats; one typo `7O` makes the column text, and `sum()` then joins strings. |
+| Implicit type conversion breaks joins | `pitfalls.py`: the GTIN is read as a number, the leading zero is lost, and the join with the catalog finds nothing, also after `astype(str)`. |
+| Missing values and formats are ambiguous | `pitfalls.py`: `N/A` becomes NaN, a decimal comma stays text, `06/03/2025` can be March or June. |
+| Wrong field order and extra fields | `pitfalls.py`: a row with an extra field stops the whole read, or `on_bad_lines` drops it. |
+| Schema-less JSON (document stores, REST) | `pitfalls.py`: the records of the supplier feed have different keys, types, and nesting (`json_normalize`). |
+| Enforce a schema on CSV (CSV Schema) | `datapackage.yaml` + `validate.py`: a Frictionless Table Schema finds type errors, constraint errors, duplicate primary keys, unknown suppliers (foreign keys), and extra cells. |
+| Enforce a schema on JSON | `feed.schema.json` + `validate.py`: JSON Schema finds each bad record of the supplier feed. |
 
-`validate.py` checks the same files against an explicit schema. The Table Schema in
-`datapackage.yaml` is the Python-friendly equivalent of the CSV Schema on the slide:
+The CSV Schema from the slide and the same rules as a Table Schema (`datapackage.yaml`):
 
 ```text
 version 1.1                               fields:
@@ -35,6 +31,12 @@ unit: is("count") or is("kg") or is("liter")  - {name: SupplierID, type: integer
 supplierId: positiveInteger                 primaryKey + foreignKeys to suppliers.csv
 ```
 
-Frictionless also checks the primary key, the foreign key to `suppliers.csv` (the slide's
-suppliers `502` and `283` do not exist), and extra cells. Foreign keys are only checked when
-you validate the whole package. `feed.schema.json` does the same for the JSON feed.
+Frictionless checks foreign keys only when it validates the whole package.
+
+## Run
+
+```sh
+uv run pitfalls.py                              # what pandas does without a schema
+uv run validate.py                              # Frictionless (CSV) and JSON Schema
+uv run frictionless validate datapackage.yaml   # the same check from the command line
+```

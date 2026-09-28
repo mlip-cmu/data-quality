@@ -4,12 +4,13 @@ set -euo pipefail
 cd "$(dirname "$0")"
 export DO_NOT_TRACK=1 MPLBACKEND=Agg
 
-notebook() { uv run marimo export html "$1" -o "out/${1%.py}.html" --no-sandbox -f; }
+# Notebooks run in place: the outputs are committed, so they can be read on GitHub.
+notebook() { uv run jupyter nbconvert --to notebook --execute --inplace "$1"; }
 
 demo() {
   case "$1" in
     inventory-data) uv run inventory-data && uv run pytest -q ;;
-    01-*) notebook accuracy_precision.py ;;
+    01-*) notebook accuracy_precision.ipynb ;;
     02-*) uv run scorecard.py ;;
     03-*) uv run load.py && uv run sqlite_contrast.py ;;
     04-*) uv run pitfalls.py && uv run validate.py ;;
@@ -19,9 +20,9 @@ demo() {
     08-*) uv run rules.py && uv run repair.py ;;
     09-*) uv run anomalies.py && uv run patterns.py && uv run duplicates.py \
             && uv run learn_from_repairs.py ;;
-    10-*) notebook drift_detection.py && uv run evidently_reports.py ;;
-    11-*) notebook retraining.py && uv run monitor.py ;;
-    12-*) notebook cascades.py ;;
+    10-*) notebook drift_detection.ipynb && uv run evidently_reports.py ;;
+    11-*) notebook retraining.ipynb && uv run monitor.py ;;
+    12-*) notebook cascades.ipynb ;;
     13-*) uv run pytest -q ;;
     14-*) uv run datacard_stats.py && uv run pytest -q ;;
     *) echo "unknown project: $1" >&2; return 1 ;;

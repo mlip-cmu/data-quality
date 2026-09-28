@@ -1,4 +1,4 @@
--- The schema from the slide (a comma was missing after the Unit line), plus a few more constraints.
+-- The schema from the slide, plus a few more constraints.
 CREATE TABLE Suppliers (
     ID INT PRIMARY KEY,
     Name VARCHAR(255) NOT NULL,

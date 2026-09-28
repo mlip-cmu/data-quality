@@ -14,17 +14,24 @@ drift scenario with documented events.
 
 ## How to run
 
-Install [uv](https://docs.astral.sh/uv/). Every folder is its own uv project (Python 3.13);
-`uv run` installs its dependencies, and the dataset is generated on first use (~10 s).
+You can read everything on GitHub without running it:
+
+- the notebooks (`01`, `10`, `11`, `12`) are committed with their outputs;
+- the data is committed as CSV files in [`inventory-data/data/`](inventory-data/data/), and
+  [`inventory-data/data/preview/`](inventory-data/data/preview/) has small extracts that
+  GitHub shows as a table.
+
+To run the code, install [uv](https://docs.astral.sh/uv/). Every folder is its own uv project
+(Python 3.13); `uv run` installs its dependencies.
 
 ```sh
 cd 07-dataframe-validation
 uv run gx_validate.py                         # scripts
 cd ../10-drift-detection
-uv run marimo edit drift_detection.py         # notebooks (marimo)
+uv run jupyter lab drift_detection.ipynb      # notebooks
 cd ../13-data-entry-app
 uv run streamlit run app.py                   # the app
-./run_all.sh                                  # run every demo (as the CI does)
+./run_all.sh                                  # run every demo and notebook (as the CI does)
 ./run_all.sh 03-sql-schema 08-quality-rules-and-repair
 ```
 
@@ -32,7 +39,7 @@ uv run streamlit run app.py                   # the app
 
 | Slides | Project | Tools |
 |---|---|---|
-| Accuracy vs. Precision; Data Accuracy and Precision: Impact on ML; Data Quality vs Quantity | [`01-accuracy-vs-precision`](01-accuracy-vs-precision/) | scikit-learn, marimo |
+| Accuracy vs. Precision; Data Accuracy and Precision: Impact on ML; Data Quality vs Quantity | [`01-accuracy-vs-precision`](01-accuracy-vs-precision/) | scikit-learn, Jupyter |
 | What do we mean by clean data?; Data comes from many sources; Data is noisy | [`02-quality-dimensions`](02-quality-dimensions/) | DuckDB |
 | Schema in Relational Databases; Data Schema; Schema Problems; What Happens When New Data Violates Schema? | [`03-sql-schema`](03-sql-schema/) | DuckDB, SQLite |
 | Modern Databases: Schema-Less; Schema-Less Data Exchange; CSV Schema | [`04-schemaless-exchange`](04-schemaless-exchange/) | pandas, Frictionless, JSON Schema |
@@ -43,7 +50,7 @@ uv run streamlit run app.py                   # the app
 | Detecting Inconsistencies; ML-based for Detecting Inconsistencies; Not many standard tools | [`09-ml-error-detection`](09-ml-error-detection/) | scikit-learn, PyOD, Splink |
 | Dealing with Drift; Types of Drift; Indicators of Concept/Data Drift; Detecting Data Drift; Drift Detection Tools | [`10-drift-detection`](10-drift-detection/) | scipy, river, Evidently |
 | Dealing with Drift (retrain, monitor, thresholds, humans); Azure Data Drift Dashboard | [`11-dealing-with-drift`](11-dealing-with-drift/) | Evidently UI, river |
-| Poor Data Quality has Consequences; GIGO: Target Canada; Raw Data is an Oxymoron; Data Cascades | [`12-data-cascades`](12-data-cascades/) | simulation, marimo |
+| Poor Data Quality has Consequences; GIGO: Target Canada; Raw Data is an Oxymoron; Data Cascades | [`12-data-cascades`](12-data-cascades/) | simulation, Jupyter |
 | GIGO: Target Canada (no validation at entry); Conflicting Reward Systems | [`13-data-entry-app`](13-data-entry-app/) | Streamlit, Pydantic |
 | Data Documentation; Data Quality Documentation; Data Card; Poor Cross-organizational Documentation | [`14-data-documentation`](14-data-documentation/) | Data Card, Pandera, pytest |
 
@@ -66,10 +73,3 @@ flowchart LR
 
 `12-data-cascades` simulates the whole loop, including what happens when checks are missing.
 
-## Notes on the slides
-
-- The SQL DDL on *Schema in Relational Databases* misses a comma after the `Unit` line.
-- The Great Expectations slide uses the pre-1.0 API; `07` uses GX Core 1.x.
-- "Two levels of data precision" uses *precision* in another sense than *Accuracy vs.
-  Precision*; "two levels of data quality problems" may be clearer.
-- Typo on *Poor Cross-organizational Documentation*: "feld partners".

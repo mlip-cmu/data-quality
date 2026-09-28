@@ -6,5 +6,5 @@ inventory-data/data/**/*.parquet
 inventory-data/data/VERSION-*
 .pytest_cache/
 .ruff_cache/
-__marimo__/
+.ipynb_checkpoints/
 .streamlit/secrets.toml

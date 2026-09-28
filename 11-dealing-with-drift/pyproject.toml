@@ -5,13 +5,16 @@ description = "Dealing with drift: retraining strategies and monitoring"
 requires-python = ">=3.12,<3.14"
 dependencies = [
     "inventory-data",
-    "marimo>=0.25",
     "altair>=6",
     "pandas>=2.2",
     "scikit-learn>=1.9",
     "river>=0.26",
     "evidently>=0.7.23",
     "pyyaml>=6",
+    "jupyterlab>=4.6.4",
+    "nbconvert>=7.17.1",
+    "ipykernel>=7.3.0",
+    "vl-convert-python>=1.9.0.post1",
 ]
 
 [tool.uv]
