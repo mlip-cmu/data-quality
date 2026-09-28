@@ -102,6 +102,11 @@ def drift_sales() -> pd.DataFrame:
     return _read("drift", "sales")
 
 
+def drift_stores() -> pd.DataFrame:
+    """Stores in the drift scenario (with the two new stores in Florida)."""
+    return _read("drift", "stores")
+
+
 def drift_truth() -> pd.DataFrame:
     return _read("drift", "truth")
 
