@@ -1,0 +1,21 @@
+[project]
+name = "dq11-dealing-with-drift"
+version = "0.1.0"
+description = "Dealing with drift: retraining strategies and monitoring"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "inventory-data",
+    "marimo>=0.25",
+    "altair>=6",
+    "pandas>=2.2",
+    "scikit-learn>=1.9",
+    "river>=0.26",
+    "evidently>=0.7.23",
+    "pyyaml>=6",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+inventory-data = { path = "../inventory-data", editable = true }

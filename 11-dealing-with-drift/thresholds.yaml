@@ -1,0 +1,14 @@
+# Alert thresholds for the weekly monitoring run; each alert goes to the owner of the check.
+- metric: share of drifted input columns
+  max: 0.2
+  owner: data engineering
+- metric: temperatures out of range (-30..45 °C)
+  max: 0
+  owner: data engineering (weather API)
+- metric: MAE (kg or count)
+  max: 4.0
+  owner: forecasting team
+- metric: mean error (kg or count)
+  min: -0.8
+  max: 0.8
+  owner: forecasting team
