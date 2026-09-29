@@ -1,9 +1,10 @@
 # inventory-data: the shared dataset
 
-A synthetic, deterministic dataset for the case study of the lecture: a supermarket chain
-with 8 stores in Pennsylvania and Ohio (plus 2 new stores in Florida in the drift scenario),
-60 products, and 12 suppliers. An ML model predicts future sales to decide what to restock,
-when, and how many.
+A synthetic, deterministic dataset of a supermarket chain with 8 stores in Pennsylvania and
+Ohio (plus 2 new stores in Florida in the drift scenario), 60 products, and 12 suppliers. An
+ML model predicts future sales to decide what to restock, when, and how many. Because the
+data is synthetic, the true values are known: each project can compare its results with the
+truth (the true demand, and a log of each injected error).
 
 Every other project uses this package as a local path dependency. The data is generated on
 first use (about 10 s) and cached as Parquet in `data/`.
@@ -62,7 +63,7 @@ resets the system stock.
 
 ## Dirty data (`dirty=True`, `errors()`)
 
-`corrupt.py` injects the problems from the lecture and logs each one: illegal values, wrong
+`corrupt.py` injects typical data quality problems and logs each one: illegal values, wrong
 format, missing values, placeholders (`999-9999999`, `1900-01-01`, shelf life `9999`),
 misspellings (`Pittsburg`, `Cauliflour`), misfielded values (`city=USA`), violated
 dependencies (ZIP ↔ city, unit ↔ category), duplicate keys and near-duplicate products,
@@ -82,3 +83,11 @@ transposed digits in stock counts, late and duplicated POS events, and a termina
 | 2025-07-10 | data drift | heatwave in PA and OH (+8 °C, 3 weeks) |
 | 2025-09-01 | schema drift | POS update in stores 7 and 8 records weights in lb |
 | 2025-10-15 | schema drift | the weather API reports `temp_c` in °F |
+
+## Tools
+
+- [NumPy](https://numpy.org): arrays and random numbers. Here: the seeded simulation.
+- [pandas](https://pandas.pydata.org): data frames. Here: all tables and the CSV export.
+- [PyArrow](https://arrow.apache.org/docs/python/): reads and writes the Parquet cache.
+- [pytest](https://pytest.org): the Python test framework. Here: checks that the data is
+  deterministic, that the clean data meets all rules, and that each injected error is logged.

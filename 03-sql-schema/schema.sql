@@ -1,4 +1,4 @@
--- The schema from the slide, plus a few more constraints.
+-- The product catalog of the inventory system, with its constraints.
 CREATE TABLE Suppliers (
     ID INT PRIMARY KEY,
     Name VARCHAR(255) NOT NULL,
