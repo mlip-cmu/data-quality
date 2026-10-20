@@ -107,6 +107,7 @@ The tables `sales` (376,560 rows), `stores` (10), `truth`, `weather`, and `scale
 
 - [NumPy](https://numpy.org): arrays and random numbers. Here: the seeded simulation.
 - [pandas](https://pandas.pydata.org): data frames. Here: all tables and the CSV export.
-- [PyArrow](https://arrow.apache.org/docs/python/): reads and writes the Parquet cache.
+- [PyArrow](https://arrow.apache.org/docs/python/): the Python library of Apache Arrow, with
+  Parquet support. Here: reads and writes the Parquet cache.
 - [pytest](https://pytest.org): the Python test framework. Here: checks that the data is
   deterministic, that the clean data meets all rules, and that each injected error is logged.
