@@ -38,7 +38,7 @@ def stats() -> str:
         products=("product_id", "nunique"), revenue=("revenue", "sum")
     )
     by_cat["share of revenue"] = (by_cat.revenue / by_cat.revenue.sum()).map("{:.1%}".format)
-    by_cat = by_cat.drop(columns="revenue").sort_values("products", ascending=False)
+    by_cat = by_cat.drop(columns="revenue").sort_values("products", ascending=False, kind="stable")
 
     per_day = (
         s.groupby(["unit"])

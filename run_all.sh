@@ -5,7 +5,8 @@ cd "$(dirname "$0")"
 export DO_NOT_TRACK=1 MPLBACKEND=Agg
 
 # Notebooks run in place: the outputs are committed, so they can be read on GitHub.
-notebook() { uv run jupyter nbconvert --to notebook --execute --inplace "$1"; }
+notebook() { uv run jupyter nbconvert --to notebook --execute --inplace \
+    --ExecutePreprocessor.record_timing=False "$1"; }
 
 demo() {
   case "$1" in

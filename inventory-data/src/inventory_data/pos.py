@@ -25,7 +25,7 @@ def events(sales: pd.DataFrame, products: pd.DataFrame, rng, log) -> pd.DataFram
         rows, columns=["date", "store_id", "product_id", "quantity", "unit", "unit_price", "promo"]
     )
     secs = rng.uniform(7 * 3600, 22 * 3600, len(e))
-    e["event_time"] = (e.date + pd.to_timedelta(secs, unit="s")).dt.tz_localize("America/New_York")
+    e["event_time"] = (e.date + _ms(secs)).dt.tz_localize("America/New_York")
     e["terminal_id"] = [f"T{k}" for k in rng.integers(1, 6, len(e))]
     e = e.sort_values(["store_id", "event_time"]).reset_index(drop=True)
     e.insert(
@@ -36,10 +36,10 @@ def events(sales: pd.DataFrame, products: pd.DataFrame, rng, log) -> pd.DataFram
             for i, (s, t) in enumerate(zip(e.store_id, e.event_time, strict=True))
         ],
     )
-    e["ingested_at"] = e.event_time + pd.to_timedelta(rng.exponential(2, len(e)), unit="s")
+    e["ingested_at"] = e.event_time + _ms(rng.exponential(2, len(e)))
 
     late = rng.random(len(e)) < 0.01
-    e.loc[late, "ingested_at"] += pd.to_timedelta(rng.uniform(10, 180, late.sum()), unit="m")
+    e.loc[late, "ingested_at"] += _ms(60 * rng.uniform(10, 180, late.sum()))
     for eid in e.event_id[late]:
         log.add("pos_events", eid, "ingested_at", "late_arrival", None, "10-180 min late")
     skew = (e.store_id == 2) & (e.terminal_id == "T4")
@@ -47,13 +47,18 @@ def events(sales: pd.DataFrame, products: pd.DataFrame, rng, log) -> pd.DataFram
         log.add("pos_events", eid, "event_time", "clock_skew", "local time", "UTC as local")
     e.loc[skew, "event_time"] += pd.Timedelta(hours=4)
     dup = e[rng.random(len(e)) < 0.005].copy()
-    dup["ingested_at"] += pd.to_timedelta(rng.uniform(1, 30, len(dup)), unit="s")
+    dup["ingested_at"] += _ms(rng.uniform(1, 30, len(dup)))
     for eid in dup.event_id:
         log.add("pos_events", eid, "*", "duplicate_record", None, "re-sent by terminal")
     e = pd.concat([e, dup]).sort_values("ingested_at").reset_index(drop=True)
     e["event_time"] = e.event_time.dt.tz_convert("UTC")
     e["ingested_at"] = e.ingested_at.dt.tz_convert("UTC")
     return e.drop(columns="date")
+
+
+def _ms(secs) -> pd.TimedeltaIndex:
+    """Seconds as whole milliseconds: nanoseconds from floats differ between CPUs."""
+    return pd.to_timedelta(np.round(np.asarray(secs) * 1000), unit="ms")
 
 
 def _split_counts(q: int, rng) -> list[int]:
