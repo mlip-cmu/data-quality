@@ -16,6 +16,7 @@ drift scenario with documented events.
 
 You can read everything on GitHub without running it:
 
+- each project has a README with the problem, the idea, code excerpts, and the results;
 - the notebooks (`01`, `10`, `11`, `12`) are committed with their outputs;
 - the data is committed as CSV files in [`inventory-data/data/`](inventory-data/data/), and
   [`inventory-data/data/preview/`](inventory-data/data/preview/) has small extracts that

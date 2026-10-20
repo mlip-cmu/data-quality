@@ -1,57 +1,40 @@
 # 04 · Schema-less data exchange
 
-Systems of a supermarket chain exchange files: a product export (`products_export.csv`), a
-stock export of a store system (`stock_export.csv`), the product feed of a supplier
-(`supplier_feed.json`), and a supplier list (`suppliers.csv`) ([dataset](../inventory-data/)).
+**Slides:** *Modern Databases: Schema-Less* · *Schema-Less Data Exchange* · *CSV Schema* ·
+*Many Schema Libraries/Formats*
 
-**Problem.** CSV, JSON, and data frames have no enforced schema. A reader guesses the types,
-and when the guess is wrong, nothing fails: numbers become text, IDs lose leading zeros,
-joins find nothing, and records with other keys or nesting are read without an error.
+The systems of the supermarket chain and its suppliers exchange files
+([dataset](../inventory-data/)). This folder has four of them: `products_export.csv` (the CSV
+from the slide, plus more rows of the same export), `stock_export.csv` (from a store system),
+`supplier_feed.json` (the product feed of a supplier), and `suppliers.csv`. `pitfalls.py`
+reads the files without a schema; `validate.py` checks them against a schema.
 
-**Idea.** Write the expected structure down as an explicit schema next to the data, and
-validate each file against it before it is used: a Table Schema for CSV, a JSON Schema for
-JSON.
+**Problem.** A CSV or JSON file carries no types and no rules. The program that reads it must
+infer the type of each column, the meaning of an empty cell, and the format of each date.
+Wrong guesses often produce no error: the data loads, and the problem shows up much later, as
+a failed join or a wrong sum.
 
-The schema is a separate file next to the data (`datapackage.yaml`). It gives each column a
-type and constraints, and declares the keys between the files:
+**Idea.** Exchange a schema together with the data, and validate each file when it arrives.
+For CSV, a [Frictionless](https://framework.frictionlessdata.io) Table Schema
+(`datapackage.yaml`) lists the columns, their types, constraints, the primary key, and
+foreign keys to other files. For JSON, a [JSON Schema](https://json-schema.org)
+(`feed.schema.json`) does the same for each record. When reading without a validator, at
+least give the types explicitly.
 
-```yaml
-- name: Unit
-  type: string
-  constraints: {required: true, enum: [count, kg, liter]}
-...
-primaryKey: [ProductID]
-foreignKeys:
-  - fields: [SupplierID]
-    reference: {resource: suppliers, fields: [id]}
-```
-
-One call validates all files of the package and reports each problem with its row and field
-(`validate.py`):
+The store export has GTINs (barcode numbers) with a leading zero. `pitfalls.py` reads it
+with pandas, which infers the type of each column from its values:
 
 ```python
-report = Package("datapackage.yaml").validate()
-for row, field, kind, note in report.flatten(["rowNumber", "fieldName", "type", "note"]):
-    print(f"  row {row or '-':>3}  {field or '':<13} {kind:<17} {note}")
+stock = pd.read_csv("stock_export.csv")
+catalog = d.products()
+print(f"GTIN read as {stock.gtin.dtype}: {stock.gtin[0]} (leading zero lost)")
+...
+fixed = stock.astype({"gtin": str}).merge(catalog, on="gtin")
+...
+ok = pd.read_csv("stock_export.csv", dtype={"gtin": str}).merge(catalog, on="gtin")
 ```
 
-## What the code shows
-
-- `pitfalls.py`, what pandas does without a schema:
-  - one value `75.5` makes all quantities floats; one typo `7O` makes the column text, and
-    `sum()` then joins strings;
-  - the GTIN is read as a number, the leading zero is lost, and the join with the catalog
-    finds nothing, also after `astype(str)`;
-  - `N/A` becomes NaN, a decimal comma stays text, and `06/03/2025` can be March or June;
-  - a row with an extra field stops the whole read, or `on_bad_lines` drops it silently;
-  - the JSON records have different keys, types, and nesting.
-- `datapackage.yaml` + `validate.py`: the Table Schema finds type errors, constraint errors,
-  duplicate keys, unknown suppliers (foreign keys), and extra cells in the CSV files.
-  Frictionless checks foreign keys only when it validates the whole package.
-- `feed.schema.json` + `validate.py`: JSON Schema reports each bad record of the supplier feed.
-
-The same rules in [CSV Schema](https://digital-preservation.github.io/csv-schema/) (another
-schema language for CSV) and in the Table Schema of `datapackage.yaml`:
+The CSV Schema from the slide and the same rules as a Table Schema (`datapackage.yaml`):
 
 ```text
 version 1.1                               fields:
@@ -63,15 +46,56 @@ unit: is("count") or is("kg") or is("liter")  - {name: SupplierID, type: integer
 supplierId: positiveInteger                 primaryKey + foreignKeys to suppliers.csv
 ```
 
+## What the code shows
+
+`pitfalls.py` (what pandas does without a schema):
+
+1. **Guessed types.** In the 3 rows of the slide, one value `75.5` makes `Quantity` a float
+   for all rows, also for products sold by count.
+2. **Extra fields.** In the full export, one row has 6 fields. `read_csv` stops with
+   `Expected 5 fields in line 11, saw 6`; with `on_bad_lines='warn'`, the row is silently
+   dropped.
+3. **One typo changes a column.** The quantity `7O` (letter O) makes `Quantity` a text column,
+   and `Quantity.sum()` joins the strings (`'5075.53012.57O-4144848'`). The missing name and
+   quantity become NaN, and the duplicate product ID 108 loads too. None of these problems
+   raises an error.
+4. **Implicit type conversion breaks joins.** The GTIN is read as an integer
+   (`702010001014`). The join with the catalog fails with a type error; after
+   `astype(str)`, 0 of 6 rows match, because the zero is gone. With
+   `dtype={'gtin': str}` in `read_csv`, 6 of 6 rows match.
+5. **Missing values and formats are ambiguous.** `N/A` becomes NaN; `38,2` (decimal comma)
+   and `7O` stay text. `06/03/2025` is parsed as June 3, but it means March 6 in most
+   countries outside the US.
+6. **Schema-less JSON.** `json_normalize` flattens the 5 records of the supplier feed into 8
+   columns: the price mixes numbers and strings, one record has the key `title` for the name,
+   one GTIN is a number without the leading zero, one pack has no unit, units differ in case
+   (`kg`, `KG`), and one record has an extra key `organic`. Document stores and REST APIs
+   return such data.
+
+`validate.py` (the same files with a schema):
+
+7. **A schema for CSV.** Frictionless validates the data package and finds 9 errors in
+   `products_export.csv`: 2 unknown suppliers (foreign keys `502`, `283`), a type error
+   (`7O`), a negative quantity, a missing name, the unit `lbs`, a duplicate primary key, an
+   extra cell, and a missing quantity. Frictionless checks foreign keys only when it validates
+   the whole package.
+8. **A schema for JSON.** JSON Schema finds 9 errors in 4 of the 5 records of the supplier
+   feed (only the first record is valid): strings in place of numbers, `KG`, the GTIN as a
+   number, the missing `name`, the unexpected keys `title` and `organic`, and the missing
+   unit.
+
 ## Tools
 
 - [pandas](https://pandas.pydata.org): data frames. Here: `read_csv` and `json_normalize`
-  without a schema.
-- [Frictionless](https://framework.frictionlessdata.io): validates tabular data against a
-  [Table Schema](https://specs.frictionlessdata.io/table-schema/) (types, constraints, keys),
-  from Python or the command line.
-- [jsonschema](https://python-jsonschema.readthedocs.io): validates JSON data against a
-  [JSON Schema](https://json-schema.org).
+  infer the types of the exchanged files.
+- [Frictionless](https://framework.frictionlessdata.io): a framework to describe and validate
+  tabular data (Table Schema, Data Package). Here: validates the CSV files against
+  `datapackage.yaml`, from Python and from the command line.
+- [jsonschema](https://python-jsonschema.readthedocs.io): validates JSON documents against a
+  [JSON Schema](https://json-schema.org). Here: validates the supplier feed against
+  `feed.schema.json` (draft 2020-12).
+- [`inventory_data`](../inventory-data/): the shared dataset of this repository. Here: the
+  product catalog for the join on the GTIN.
 
 ## Run
 

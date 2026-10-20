@@ -1,21 +1,29 @@
 # 01 · Accuracy vs precision of data
 
-A supermarket chain forecasts the banana sales of each store from the sales that the checkout
-scales record ([dataset](../inventory-data/)).
+**Slides:** *Accuracy vs. Precision (on Data)* · *Data Accuracy and Precision: Impact on ML* ·
+*Data Quality vs Quantity*
 
-**Problem.** Measurements can be *imprecise* (random noise: each reading is a bit off, in
-either direction) or *inaccurate* (systematic bias: a miscalibrated scale always reads too
-low). Both make the training data worse, but in different ways.
+Bananas are sold by weight. The checkout scales record the banana sales of the 8 stores
+([dataset](../inventory-data/)), and the forecasting model learns from these records. This
+folder has one notebook, `accuracy_precision.ipynb`. It trains on the recorded sales of 2024
+(2,928 rows: one per store and day) and scores each model against the true expected demand of
+2025 (2,920 rows): the pattern a model should learn, without the day-to-day randomness of the
+customers. In 2025, the stores sell 28.3 kg of bananas per day on average.
 
-**Idea.** Train the same model on clean, imprecise, inaccurate, and both kinds of data, and
-compare the models with the true demand. More data averages out noise, but not bias. Noise
-makes a model less confident; bias makes it confident and wrong.
+**Problem.** Measurements are never perfect. A scale can be *imprecise*: each reading has some
+random noise. A scale can also be *inaccurate*: it is miscalibrated and reads too low every
+time. Both kinds of error go into the training data, and the model learns from them.
 
-The notebook makes the four versions of the training data from the same recorded sales.
-Imprecise data gets zero-mean random noise on each reading; inaccurate data is lower by a
-fixed factor:
+**Idea.** Separate the two kinds of error and measure their effect on the model. Random noise
+averages out with more data. A systematic bias stays, however much data we collect, and it
+makes the model wrong in a consistent direction. So collecting more data helps only with
+noise; a bias must be found and fixed in the data itself.
+
+The notebook makes four versions of the same training data, with the parameters `NOISE = 30`
+(% noise of each reading) and `BIAS = 10` (% that the scales read too low):
 
 ```python
+rng = np.random.default_rng(0)
 eps = rng.normal(0, 1, len(train))
 s, b = NOISE / 100, BIAS / 100
 recorded = {
@@ -26,43 +34,63 @@ recorded = {
 }
 ```
 
-Each model is scored against the true expected demand, not against the recorded data, so
-the mean error shows the bias that the model learned:
+The features are the store, the day of the week, the season, a promotion flag, and the
+temperature.
 
-```python
-err = pred - test.expected_demand
-return float(np.mean(np.abs(err))), float(np.mean(err))  # MAE, mean error
-```
+## What the notebook shows
 
-## What the code shows (`accuracy_precision.ipynb`)
+Open `accuracy_precision.ipynb` on GitHub to see the outputs.
 
-- Scatter plots of recorded vs true sales: noise spreads the points around the diagonal; bias
-  moves all points below it.
-- Learning curves: with more training days, the error of the noisy data goes down toward the
-  clean data. The error of the biased data stays at the level of the bias, and the model
-  predicts too little.
-- Prediction intervals: noisy data gives wide intervals that contain the true value about as
-  often as they should; biased data gives narrow intervals in the wrong place.
-- With little, noisy data, a simple linear model is better than gradient boosting: a better
-  model does not fix bad data.
+1. **Accuracy vs precision.** Two scatter plots of recorded vs true kg (store 1, 2024) show the
+   "target" picture of the slides: the noise spreads the imprecise points around the diagonal;
+   the miscalibrated scale moves all inaccurate points below it.
+2. **More data, up to a point.** Learning curves for a gradient boosting model trained on 14 to
+   366 days (mean absolute error, MAE, in kg per store and day, averaged over 3 random samples
+   of days):
+
+   | days | clean | imprecise | inaccurate | both |
+   |---:|---:|---:|---:|---:|
+   | 14 | 5.84 | 6.47 | 6.57 | 7.16 |
+   | 56 | 3.46 | 4.93 | 4.05 | 5.15 |
+   | 366 | 2.59 | 3.23 | 3.93 | 4.37 |
+
+   The error goes down with more days, and then flattens.
+3. **Noisy data needs more data.** The error of the imprecise data halves from 6.47 to 3.23 kg
+   as the number of days grows. With 366 days of imprecise data, the error is close to the
+   error with 112 days of clean data (3.37 kg): more data makes up for the noise.
+4. **Inaccurate data gives a misleading model.** The error of the inaccurate data stays at about
+   4 kg from 56 days on: more data does not reduce it. With all 366 days, the mean error is
+   -3.61 kg for the inaccurate data and -0.88 kg for the clean data. The difference, 2.7 kg, is
+   about 10 % of the 28.3 kg: the model predicts too little, by the size of the bias.
+5. **A simpler model on noisy data.** On the imprecise data, a linear model (Ridge) has a lower
+   error than gradient boosting at every size: 5.34 vs 6.47 kg with 14 days, 1.65 vs 3.23 kg
+   with 366 days. A more complex model does not fix bad data. Invest in data quality, as well
+   as in more data or a better model.
+6. **Noisy data gives a less confident model.** Quantile models predict an 80 % interval for
+   each day of 2025. With the imprecise data, the intervals are wide (23.62 kg on average) and
+   contain the true sales on 82 % of the days, about as often as they should.
+7. **Inaccurate data gives a confident but wrong model.** With the inaccurate data, the
+   intervals are narrow (14.52 kg) and in the wrong place: they contain the true sales on
+   only 60 % of the days.
 
 ## Tools
 
-- [scikit-learn](https://scikit-learn.org): the standard Python library for classic machine
-  learning. Here: the forecast models (`Ridge`, `HistGradientBoostingRegressor`, also with a
-  quantile loss for prediction intervals).
 - [pandas](https://pandas.pydata.org) and [NumPy](https://numpy.org): data frames and arrays.
-  Here: the training data and the simulated noise and bias.
-- [Altair](https://altair-viz.github.io): declarative charts for Python, based on Vega-Lite.
-  [vl-convert](https://github.com/vega/vl-convert) saves the charts as PNG images, so that
-  GitHub can show them in the notebook.
-- [Jupyter](https://jupyter.org) (JupyterLab, nbconvert): notebooks that mix code, text, and
-  outputs. The notebook is committed with its outputs.
+  Here: join the sales, the weather, and the true demand; add the noise and the bias.
+- [scikit-learn](https://scikit-learn.org): a library of classic ML models. Here:
+  `HistGradientBoostingRegressor` (gradient boosting, also with a quantile loss for the
+  intervals) and `Ridge` (a linear model).
+- [Altair](https://altair-viz.github.io) with
+  [vl-convert](https://github.com/vega/vl-convert): declarative charts, as PNG images. Here:
+  the scatter plots, the learning curves, and the intervals.
+- [Jupyter](https://jupyter.org): notebooks with code and outputs.
+- [`inventory_data`](../inventory-data/): the shared dataset of this repository. Here: the
+  sales, the weather, and the true expected demand of the bananas (product 101).
 
 ## Run
 
-Open `accuracy_precision.ipynb` on GitHub to see the outputs. To change the noise and the
-bias (parameter cell at the top) and run it again, with [uv](https://docs.astral.sh/uv/):
+Open `accuracy_precision.ipynb` on GitHub to see the outputs. To change `NOISE` and `BIAS`
+(parameter cell at the top) and run it again, with [uv](https://docs.astral.sh/uv/):
 
 ```sh
 uv run jupyter lab accuracy_precision.ipynb
